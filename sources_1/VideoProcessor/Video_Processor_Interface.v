@@ -22,8 +22,8 @@
 
 module Video_Processor_Interface
   #(
-     parameter IMAGE_SIZE_H	= 16'd256,
-     parameter IMAGE_SIZE_V	= 16'd384
+     parameter IMAGE_SIZE_H	= 16'd1024,
+     parameter IMAGE_SIZE_V	= 16'd768
    )
    (
      input i_clk_pixel,
@@ -55,8 +55,8 @@ module Video_Processor_Interface
   wire [11:0]set_y;
 
   //存储图片的BRAM
-  reg [16:0]wr_addr = 0;
-  reg [16:0]rd_addr = 0;
+  reg [17:0]wr_addr = 0;
+  reg [17:0]rd_addr = 0;
   reg rd_enable = 0;
   wire [15:0]rd_data;
 
