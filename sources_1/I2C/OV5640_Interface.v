@@ -26,30 +26,30 @@
 // 2021/10/17			V1.4		 Erie		Change the IIC dependent version and integrate the OV5640 configuration file into this module.
 // 2021/10/19			V1.5		 Erie		Renamed to OV5640_Interface, Add JPEG/RGB565 data format parameter selection, exposure compensation/white balance/auto focus/saturation/brightness/contrast/sharpness/special effects and other parameter settings.
 ///////////////////////////////////Chinese////////////////////////////////////////
-// °æÈ¨¹éÊô:		¶«ÄÏ´óÑ§ÏÔÊ¾ÖĞĞÄ301ÊµÑéÊÒ
-// ¿ª·¢ÈËÔ±:		Erie
+// ç‰ˆæƒå½’å±:		ä¸œå—å¤§å­¦æ˜¾ç¤ºä¸­å¿ƒ301å®éªŒå®¤
+// å¼€å‘äººå‘˜:		Erie
 // 
-// ´´½¨ÈÕÆÚ: 		2020Äê07ÔÂ24ÈÕ
-// Éè¼ÆÃû³Æ: 		OV5640 Driver
-// Ä£¿éÃû³Æ: 		OV5640_Interface
-// Ïà¹ØÃû³Æ: 		None
+// åˆ›å»ºæ—¥æœŸ: 		2020å¹´07æœˆ24æ—¥
+// è®¾è®¡åç§°: 		OV5640 Driver
+// æ¨¡å—åç§°: 		OV5640_Interface
+// ç›¸å…³åç§°: 		None
 // 
-// ÒÀÀµ×ÊÁÏ: 		None
+// ä¾èµ–èµ„æ–™: 		None
 //
-// ÒÀÀµÄ£¿é:
-// 	  Ä£¿éÃû³Æ						 °æ±¾
+// ä¾èµ–æ¨¡å—:
+// 	  æ¨¡å—åç§°						 ç‰ˆæœ¬
 // IIC_Interface					 V2.0
 //
-// µ±Ç°°æ±¾:		V1.5
-// ĞŞ¶©ÈÕÆÚ:		2021Äê10ÔÂ19ÈÕ
-// ĞŞ¶©ÀúÊ·:
-//		Ê±¼ä			°æ±¾		ĞŞ¶©ÈË				ĞŞ¶©ÄÚÈİ	
-// 2020Äê07ÔÂ24ÈÕ		V1.0		 Erie		´´½¨ÎÄ¼ş,±àĞ´OV5640Çı¶¯Ä£¿é(Driver_OV5640)
-// 2020Äê10ÔÂ14ÈÕ		V1.1		 Erie		ĞŞ¸´ÒòÅäÖÃ´íÎóµ¼ÖÂµÄÉãÏñÍ·Êä³öÊÓÆµÍ¼ÏñÒì³£ÎÊÌâ
-// 2020Äê10ÔÂ30ÈÕ		V1.2		 Erie		ĞŞ¸´ÉãÏñÍ·Í¼Ïñ·Ö±æÂÊ´íÎóÎÊÌâ
-// 2020Äê11ÔÂ02ÈÕ		V1.3		 Erie		¸ü»»IICÒÀÀµ°æ±¾,ĞŞ¸ÄÅäÌ×µÄOV5640_ConfigÎÄ¼ş
-// 2021Äê10ÔÂ17ÈÕ		V1.4		 Erie		¸ü»»IICÒÀÀµ°æ±¾,½«OV5640ÅäÖÃÎÄ¼ş¼¯³É½ø±¾Ä£¿é
-// 2021Äê10ÔÂ19ÈÕ		V1.5		 Erie		¸üÃûÎªOV5640_Interface,Ôö¼ÓJPEG/RGB565Êı¾İ¸ñÊ½²ÎÊıÑ¡Ôñ,ÆØ¹â²¹³¥/°×Æ½ºâ/×Ô¶¯¾Û½¹/±¥ºÍ¶È/ÁÁ¶È/¶Ô±È¶È/Èñ¶È/ÌØĞ§µÈ²ÎÊıÉèÖÃ
+// å½“å‰ç‰ˆæœ¬:		V1.5
+// ä¿®è®¢æ—¥æœŸ:		2021å¹´10æœˆ19æ—¥
+// ä¿®è®¢å†å²:
+//		æ—¶é—´			ç‰ˆæœ¬		ä¿®è®¢äºº				ä¿®è®¢å†…å®¹	
+// 2020å¹´07æœˆ24æ—¥		V1.0		 Erie		åˆ›å»ºæ–‡ä»¶,ç¼–å†™OV5640é©±åŠ¨æ¨¡å—(Driver_OV5640)
+// 2020å¹´10æœˆ14æ—¥		V1.1		 Erie		ä¿®å¤å› é…ç½®é”™è¯¯å¯¼è‡´çš„æ‘„åƒå¤´è¾“å‡ºè§†é¢‘å›¾åƒå¼‚å¸¸é—®é¢˜
+// 2020å¹´10æœˆ30æ—¥		V1.2		 Erie		ä¿®å¤æ‘„åƒå¤´å›¾åƒåˆ†è¾¨ç‡é”™è¯¯é—®é¢˜
+// 2020å¹´11æœˆ02æ—¥		V1.3		 Erie		æ›´æ¢IICä¾èµ–ç‰ˆæœ¬,ä¿®æ”¹é…å¥—çš„OV5640_Configæ–‡ä»¶
+// 2021å¹´10æœˆ17æ—¥		V1.4		 Erie		æ›´æ¢IICä¾èµ–ç‰ˆæœ¬,å°†OV5640é…ç½®æ–‡ä»¶é›†æˆè¿›æœ¬æ¨¡å—
+// 2021å¹´10æœˆ19æ—¥		V1.5		 Erie		æ›´åä¸ºOV5640_Interface,å¢åŠ JPEG/RGB565æ•°æ®æ ¼å¼å‚æ•°é€‰æ‹©,æ›å…‰è¡¥å¿/ç™½å¹³è¡¡/è‡ªåŠ¨èšç„¦/é¥±å’Œåº¦/äº®åº¦/å¯¹æ¯”åº¦/é”åº¦/ç‰¹æ•ˆç­‰å‚æ•°è®¾ç½®
 
 module OV5640_Interface
 #(
@@ -60,15 +60,15 @@ module OV5640_Interface
 	input i_clk,
 	input i_rstn,
 	
-	//--------------IIC¹Ü½ÅĞÅºÅ-------------//
-	input i_iic_sda,						//IICÊäÈëSDAÊı¾İĞÅºÅ
-	output o_iic_scl,						//IICÊä³öSCLÊ±ÖÓĞÅºÅ
-	output o_iic_sda,						//IICÊä³öSDAÊı¾İĞÅºÅ
-	output o_iic_sda_dir					//IICÊä³öSDAĞÅºÅ·½Ïò
+	//--------------IICç®¡è„šä¿¡å·-------------//
+	input i_iic_sda,						//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+	output o_iic_scl,						//IICè¾“å‡ºSCLæ—¶é’Ÿä¿¡å·
+	output o_iic_sda,						//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+	output o_iic_sda_dir					//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 );
 
-	//------------Ä£¿éÊµÀı»¯ĞÅºÅ------------//
-	//ÅäÖÃÄ£Ê½ĞÅºÅ
+	//------------æ¨¡å—å®ä¾‹åŒ–ä¿¡å·------------//
+	//é…ç½®æ¨¡å¼ä¿¡å·
 	wire iic_mbus_rwslave_addr_mode;
 	wire iic_mbus_rwaddr_mode;
 	wire iic_mbus_rack;
@@ -76,203 +76,203 @@ module OV5640_Interface
 	wire iic_mbus_wack;
 	wire iic_mbus_rwmode;
 	
-	//ÅäÖÃÊı¾İĞÅºÅ
+	//é…ç½®æ•°æ®ä¿¡å·
 	wire [7:0]iic_mbus_rwslave_addr;
 	wire [7:0]iic_mbus_rwaddr_h;
 	wire [7:0]iic_mbus_rwaddr_l;
 	
-	//Ğ´Í¨µÀ
+	//å†™é€šé“
 	wire iic_mbus_wrq;
 	wire [7:0]iic_mbus_wdata;
 	wire iic_mbus_wvalid;
 	wire iic_mbus_wlast;
 	wire iic_mbus_wready;
 	
-	//¶ÁÍ¨µÀ
+	//è¯»é€šé“
 	wire iic_mbus_rrq;
 	wire iic_mbus_rready;
 	wire iic_mbus_rlast;
 	wire [7:0]iic_mbus_rdata;
 	wire iic_mbus_rvalid;
 	
-	//Ã¦Í¨µÀ
+	//å¿™é€šé“
 	wire iic_mbus_rwbusy;
 	wire iic_mbus_rwack_err;
 	
-	//OV5640ÅäÖÃÄ£¿éÊµÀı»¯
+	//OV5640é…ç½®æ¨¡å—å®ä¾‹åŒ–
 	OV5640_Config #(
 			.CLOCK_FREQ_MHZ(CLOCK_FREQ_MHZ),
-			.WAIT_TIME_MS(500),					//ÉÏµçºóµÈ´ıÊ±¼ä
-			.COLD_TIME_MS(5000),				//×Ô¶¯¶Ô½¹ÀäÈ´Ê±¼ä
-			.DEVICE_ADDRESS(8'h78),				//OV5640Éè±¸µØÖ·
-			.IMAGE_MODE(1'd0),					//Êä³öÍ¼ÏñÄ£Ê½,0:RGB565¸ñÊ½;1:JPEG¸ñÊ½;
-			.IMAGE_SIZE_H(16'd256),				//ĞĞÏñËØ,RGB565Ä£Ê½²»µÃ³¬¹ı1280;JPEGÄ£Ê½²»µÃ³¬¹ı2592
-			.IMAGE_SIZE_V(16'd384),				//³¡ÏñËØ,RGB565Ä£Ê½²»µÃ³¬¹ı800;JPEGÄ£Ê½²»µÃ³¬¹ı1944
-			.IMAGE_OFFEST_H(16'd4),				//ĞĞ¿ª´°Æ«ÒÆÖµ
-			.IMAGE_OFFEST_V(16'd0),				//³¡¿ª´°Æ«ÒÆÖµ
-			.AUTO_FOCUS_MODE(1'd0),				//×Ô¶¯¾Û½¹Ä£Ê½,0:¹Ø±Õ×Ô¶¯¾Û½¹Ä£Ê½;1:¿ªÆô×Ô¶¯¾Û½¹Ä£Ê½,ĞèÒªºÄ·Ñ´óÁ¿´æ´¢×ÊÔ´À´½øĞĞ¾Û½¹ÅäÖÃ
-			.AUTO_FOCUS_CONFIG_NUM(16'd4085),	//¾Û½¹ÅäÖÃÊı
-			.WHITE_BALANCE_MODE(3'd0),			//°×Æ½ºâÄ£Ê½,0:×Ô¶¯;1:ÈÕ¹â;2:°ì¹«ÊÒ;3:ÒõÌì;4:¼ÒÀï;
-			.SATURATION_MODE(3'd3),				//±¥ºÍ¶ÈÄ£Ê½,0~6¶ÔÓ¦-3~3
-			.BRIGHTNESS_MODE(4'd4),				//ÁÁ¶ÈÄ£Ê½,0~8¶ÔÓ¦-4~4
-			.CONTRAST_MODE(3'd3),				//¶Ô±È¶ÈÄ£Ê½,0~6¶ÔÓ¦-3~3
-			.SHARPNESS_MODE(8'd33),				//Èñ¶ÈÄ£Ê½,0~32ÎªÈË¹¤ÅäÖÃÄ£Ê½;33~?Îª×Ô¶¯Èñ¶ÈÄ£Ê½
-			.SPECIAL_EFECTS_MODE(3'd0),			//ÌØĞ§Ä£Ê½,0:Õı³£;1:ÀäÉ«;2:Å¯É«;3:ºÚ°×;4:Æ«»Æ;5:·´É«;6:Æ«ÂÌ;
-			.EXPOSURE_MODE(3'd3)				//ÆØ¹â²¹³¥Ä£Ê½,0~6¶ÔÓ¦-3~3
+			.WAIT_TIME_MS(500),					//ä¸Šç”µåç­‰å¾…æ—¶é—´
+			.COLD_TIME_MS(5000),				//è‡ªåŠ¨å¯¹ç„¦å†·å´æ—¶é—´
+			.DEVICE_ADDRESS(8'h78),				//OV5640è®¾å¤‡åœ°å€
+			.IMAGE_MODE(1'd0),					//è¾“å‡ºå›¾åƒæ¨¡å¼,0:RGB565æ ¼å¼;1:JPEGæ ¼å¼;
+			.IMAGE_SIZE_H(16'd256),				//è¡Œåƒç´ ,RGB565æ¨¡å¼ä¸å¾—è¶…è¿‡1280;JPEGæ¨¡å¼ä¸å¾—è¶…è¿‡2592
+			.IMAGE_SIZE_V(16'd384),				//åœºåƒç´ ,RGB565æ¨¡å¼ä¸å¾—è¶…è¿‡800;JPEGæ¨¡å¼ä¸å¾—è¶…è¿‡1944
+			.IMAGE_OFFEST_H(16'd4),				//è¡Œå¼€çª—åç§»å€¼
+			.IMAGE_OFFEST_V(16'd0),				//åœºå¼€çª—åç§»å€¼
+			.AUTO_FOCUS_MODE(1'd0),				//è‡ªåŠ¨èšç„¦æ¨¡å¼,0:å…³é—­è‡ªåŠ¨èšç„¦æ¨¡å¼;1:å¼€å¯è‡ªåŠ¨èšç„¦æ¨¡å¼,éœ€è¦è€—è´¹å¤§é‡å­˜å‚¨èµ„æºæ¥è¿›è¡Œèšç„¦é…ç½®
+			.AUTO_FOCUS_CONFIG_NUM(16'd4085),	//èšç„¦é…ç½®æ•°
+			.WHITE_BALANCE_MODE(3'd0),			//ç™½å¹³è¡¡æ¨¡å¼,0:è‡ªåŠ¨;1:æ—¥å…‰;2:åŠå…¬å®¤;3:é˜´å¤©;4:å®¶é‡Œ;
+			.SATURATION_MODE(3'd3),				//é¥±å’Œåº¦æ¨¡å¼,0~6å¯¹åº”-3~3
+			.BRIGHTNESS_MODE(4'd4),				//äº®åº¦æ¨¡å¼,0~8å¯¹åº”-4~4
+			.CONTRAST_MODE(3'd3),				//å¯¹æ¯”åº¦æ¨¡å¼,0~6å¯¹åº”-3~3
+			.SHARPNESS_MODE(8'd33),				//é”åº¦æ¨¡å¼,0~32ä¸ºäººå·¥é…ç½®æ¨¡å¼;33~?ä¸ºè‡ªåŠ¨é”åº¦æ¨¡å¼
+			.SPECIAL_EFECTS_MODE(3'd0),			//ç‰¹æ•ˆæ¨¡å¼,0:æ­£å¸¸;1:å†·è‰²;2:æš–è‰²;3:é»‘ç™½;4:åé»„;5:åè‰²;6:åç»¿;
+			.EXPOSURE_MODE(3'd3)				//æ›å…‰è¡¥å¿æ¨¡å¼,0~6å¯¹åº”-3~3
 	)OV5640_Config_Inst(
 		.i_clk(i_clk),
 		.i_rstn(i_rstn),
 		
-		//-------------Íâ²¿¿ØÖÆĞÅºÅ-------------//
-		//ÅäÖÃÄ£Ê½ĞÅºÅ
-		.o_mbus_rwslave_addr_mode(iic_mbus_rwslave_addr_mode),	//ÅäÖÃIIC´Ó»úµØÖ·Ä£Ê½,1'b0´ú±íÔ­Ê¼µØÖ·,ĞèÒª×óÒÆ7Î»,µÍÎ»²¹Áã;1'b1´ú±íÒÆÎ»Ö®ºóµØÖ·,²»ĞèÒªÔÙÒÆÎ»
-		.o_mbus_rwaddr_mode(iic_mbus_rwaddr_mode),				//ÅäÖÃIIC¶ÁĞ´µØÖ·Ä£Ê½,1'b1´ú±íË«µØÖ·Î»;1'b0´ú±íµ¥µØÖ·Î»,´ËÊ±µÍÎ»µØÖ·ÓĞĞ§
-		.o_mbus_rack(iic_mbus_rack),			            	//ÅäÖÃIIC¶ÁÓ¦´ğĞÅºÅ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-		.o_mbus_wack_enable(iic_mbus_wack_enable),				//ÅäÖÃIICĞ´Ó¦´ğ¼ì²âĞ£ÑéÊ¹ÄÜ
-		.o_mbus_wack(iic_mbus_wack),			        		//ÅäÖÃIICĞ´Ó¦´ğĞÅºÅĞ£ÑéÖµ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-		.o_mbus_rwmode(iic_mbus_rwmode),						//ÅäÖÃIIC¶ÁĞ´Êı¾İÄ£Ê½,1'b1´ú±íµ¥×Ö½Ú¶ÁĞ´;1'b0´ú±íÁ¬Ğø¶ÁĞ´
+		//-------------å¤–éƒ¨æ§åˆ¶ä¿¡å·-------------//
+		//é…ç½®æ¨¡å¼ä¿¡å·
+		.o_mbus_rwslave_addr_mode(iic_mbus_rwslave_addr_mode),	//é…ç½®IICä»æœºåœ°å€æ¨¡å¼,1'b0ä»£è¡¨åŸå§‹åœ°å€,éœ€è¦å·¦ç§»7ä½,ä½ä½è¡¥é›¶;1'b1ä»£è¡¨ç§»ä½ä¹‹ååœ°å€,ä¸éœ€è¦å†ç§»ä½
+		.o_mbus_rwaddr_mode(iic_mbus_rwaddr_mode),				//é…ç½®IICè¯»å†™åœ°å€æ¨¡å¼,1'b1ä»£è¡¨åŒåœ°å€ä½;1'b0ä»£è¡¨å•åœ°å€ä½,æ­¤æ—¶ä½ä½åœ°å€æœ‰æ•ˆ
+		.o_mbus_rack(iic_mbus_rack),			            	//é…ç½®IICè¯»åº”ç­”ä¿¡å·,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+		.o_mbus_wack_enable(iic_mbus_wack_enable),				//é…ç½®IICå†™åº”ç­”æ£€æµ‹æ ¡éªŒä½¿èƒ½
+		.o_mbus_wack(iic_mbus_wack),			        		//é…ç½®IICå†™åº”ç­”ä¿¡å·æ ¡éªŒå€¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+		.o_mbus_rwmode(iic_mbus_rwmode),						//é…ç½®IICè¯»å†™æ•°æ®æ¨¡å¼,1'b1ä»£è¡¨å•å­—èŠ‚è¯»å†™;1'b0ä»£è¡¨è¿ç»­è¯»å†™
 		
-		//ÅäÖÃÊı¾İĞÅºÅ
-		.o_mbus_rwslave_addr(iic_mbus_rwslave_addr),			//ÅäÖÃIIC¶ÁĞ´´Ó»úµØÖ·
-		.o_mbus_rwaddr_h(iic_mbus_rwaddr_h),					//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,¸ß8Î»
-		.o_mbus_rwaddr_l(iic_mbus_rwaddr_l),					//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,µÍ8Î»
+		//é…ç½®æ•°æ®ä¿¡å·
+		.o_mbus_rwslave_addr(iic_mbus_rwslave_addr),			//é…ç½®IICè¯»å†™ä»æœºåœ°å€
+		.o_mbus_rwaddr_h(iic_mbus_rwaddr_h),					//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,é«˜8ä½
+		.o_mbus_rwaddr_l(iic_mbus_rwaddr_l),					//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,ä½8ä½
 		
-		//Ğ´Í¨µÀ
-		.o_mbus_wrq(iic_mbus_wrq),								//Ğ´ÇëÇó,¸ßµçÆ½ÓĞĞ§
-		.o_mbus_wdata(iic_mbus_wdata),							//Ğ´Êı¾İ
-		.o_mbus_wvalid(iic_mbus_wvalid),						//Ğ´Êı¾İÓĞĞ§ĞÅºÅ
-		.o_mbus_wlast(iic_mbus_wlast),							//Ğ´×îºóÒ»¸ö
-		.i_mbus_wready(iic_mbus_wready),						//Ğ´×¼±¸ºÃĞÅºÅ*
+		//å†™é€šé“
+		.o_mbus_wrq(iic_mbus_wrq),								//å†™è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+		.o_mbus_wdata(iic_mbus_wdata),							//å†™æ•°æ®
+		.o_mbus_wvalid(iic_mbus_wvalid),						//å†™æ•°æ®æœ‰æ•ˆä¿¡å·
+		.o_mbus_wlast(iic_mbus_wlast),							//å†™æœ€åä¸€ä¸ª
+		.i_mbus_wready(iic_mbus_wready),						//å†™å‡†å¤‡å¥½ä¿¡å·*
 		
-		//¶ÁÍ¨µÀ
-		.o_mbus_rrq(iic_mbus_rrq),								//¶ÁÇëÇó,¸ßµçÆ½ÓĞĞ§
-		.o_mbus_rready(iic_mbus_rready),						//¶Á×¼±¸ºÃ
-		.o_mbus_rlast(iic_mbus_rlast),							//¶Á×îºóÒ»¸ö
-		.i_mbus_rdata(iic_mbus_rdata),							//¶ÁÊı¾İ
-		.i_mbus_rvalid(iic_mbus_rvalid),						//¶ÁÊı¾İÓĞĞ§ĞÅºÅ
+		//è¯»é€šé“
+		.o_mbus_rrq(iic_mbus_rrq),								//è¯»è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+		.o_mbus_rready(iic_mbus_rready),						//è¯»å‡†å¤‡å¥½
+		.o_mbus_rlast(iic_mbus_rlast),							//è¯»æœ€åä¸€ä¸ª
+		.i_mbus_rdata(iic_mbus_rdata),							//è¯»æ•°æ®
+		.i_mbus_rvalid(iic_mbus_rvalid),						//è¯»æ•°æ®æœ‰æ•ˆä¿¡å·
 		
-		//Ã¦Í¨µÀ
-		.i_mbus_rwbusy(iic_mbus_rwbusy),						//¶ÁĞ´Ã¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ,µÍµçÆ½´ú±í¿ÕÏĞ
-		.i_mbus_rwack_err(iic_mbus_rwack_err)					//Ó¦´ğ´íÎó*
+		//å¿™é€šé“
+		.i_mbus_rwbusy(iic_mbus_rwbusy),						//è¯»å†™å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ,ä½ç”µå¹³ä»£è¡¨ç©ºé—²
+		.i_mbus_rwack_err(iic_mbus_rwack_err)					//åº”ç­”é”™è¯¯*
 	);
 
-	//IIC½Ó¿ÚÊµÀı»¯
+	//IICæ¥å£å®ä¾‹åŒ–
 	IIC_Interface #(.CLOCK_FREQ_MHZ(CLOCK_FREQ_MHZ),.IIC_Clock_KHz(IIC_Clock_KHz))IIC_Interface_Inst(
         .i_clk(i_clk),
         .i_rstn(i_rstn),
         
-        //-------------Íâ²¿¿ØÖÆĞÅºÅ-------------//
-        //ÅäÖÃÄ£Ê½ĞÅºÅ
-        .i_mbus_rwslave_addr_mode(iic_mbus_rwslave_addr_mode),	//ÅäÖÃIIC´Ó»úµØÖ·Ä£Ê½,1'b0´ú±íÔ­Ê¼µØÖ·,ĞèÒª×óÒÆ7Î»,µÍÎ»²¹Áã;1'b1´ú±íÒÆÎ»Ö®ºóµØÖ·,²»ĞèÒªÔÙÒÆÎ»
-        .i_mbus_rwaddr_mode(iic_mbus_rwaddr_mode),				//ÅäÖÃIIC¶ÁĞ´µØÖ·Ä£Ê½,1'b1´ú±íË«µØÖ·Î»;1'b0´ú±íµ¥µØÖ·Î»,´ËÊ±µÍÎ»µØÖ·ÓĞĞ§
-        .i_mbus_rack(iic_mbus_rack),							//ÅäÖÃIIC¶ÁÓ¦´ğĞÅºÅ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-        .i_mbus_wack_enable(iic_mbus_wack_enable),				//ÅäÖÃIICĞ´Ó¦´ğ¼ì²âĞ£ÑéÊ¹ÄÜ
-        .i_mbus_wack(iic_mbus_wack),							//ÅäÖÃIICĞ´Ó¦´ğĞÅºÅĞ£ÑéÖµ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-        .i_mbus_rwmode(iic_mbus_rwmode),						//ÅäÖÃIIC¶ÁĞ´Êı¾İÄ£Ê½,1'b1´ú±íµ¥×Ö½Ú¶ÁĞ´;1'b0´ú±íÁ¬Ğø¶ÁĞ´
+        //-------------å¤–éƒ¨æ§åˆ¶ä¿¡å·-------------//
+        //é…ç½®æ¨¡å¼ä¿¡å·
+        .i_mbus_rwslave_addr_mode(iic_mbus_rwslave_addr_mode),	//é…ç½®IICä»æœºåœ°å€æ¨¡å¼,1'b0ä»£è¡¨åŸå§‹åœ°å€,éœ€è¦å·¦ç§»7ä½,ä½ä½è¡¥é›¶;1'b1ä»£è¡¨ç§»ä½ä¹‹ååœ°å€,ä¸éœ€è¦å†ç§»ä½
+        .i_mbus_rwaddr_mode(iic_mbus_rwaddr_mode),				//é…ç½®IICè¯»å†™åœ°å€æ¨¡å¼,1'b1ä»£è¡¨åŒåœ°å€ä½;1'b0ä»£è¡¨å•åœ°å€ä½,æ­¤æ—¶ä½ä½åœ°å€æœ‰æ•ˆ
+        .i_mbus_rack(iic_mbus_rack),							//é…ç½®IICè¯»åº”ç­”ä¿¡å·,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+        .i_mbus_wack_enable(iic_mbus_wack_enable),				//é…ç½®IICå†™åº”ç­”æ£€æµ‹æ ¡éªŒä½¿èƒ½
+        .i_mbus_wack(iic_mbus_wack),							//é…ç½®IICå†™åº”ç­”ä¿¡å·æ ¡éªŒå€¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+        .i_mbus_rwmode(iic_mbus_rwmode),						//é…ç½®IICè¯»å†™æ•°æ®æ¨¡å¼,1'b1ä»£è¡¨å•å­—èŠ‚è¯»å†™;1'b0ä»£è¡¨è¿ç»­è¯»å†™
         
-        //ÅäÖÃÊı¾İĞÅºÅ
-        .i_mbus_rwslave_addr(iic_mbus_rwslave_addr),			//ÅäÖÃIIC¶ÁĞ´´Ó»úµØÖ·
-        .i_mbus_rwaddr_h(iic_mbus_rwaddr_h),					//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,¸ß8Î»
-        .i_mbus_rwaddr_l(iic_mbus_rwaddr_l),					//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,µÍ8Î»
+        //é…ç½®æ•°æ®ä¿¡å·
+        .i_mbus_rwslave_addr(iic_mbus_rwslave_addr),			//é…ç½®IICè¯»å†™ä»æœºåœ°å€
+        .i_mbus_rwaddr_h(iic_mbus_rwaddr_h),					//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,é«˜8ä½
+        .i_mbus_rwaddr_l(iic_mbus_rwaddr_l),					//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,ä½8ä½
         
-        //Ğ´Í¨µÀ
-        .i_mbus_wrq(iic_mbus_wrq),								//Ğ´ÇëÇó,¸ßµçÆ½ÓĞĞ§
-        .i_mbus_wdata(iic_mbus_wdata),							//Ğ´Êı¾İ
-        .i_mbus_wvalid(iic_mbus_wvalid),						//Ğ´Êı¾İÓĞĞ§ĞÅºÅ
-        .i_mbus_wlast(iic_mbus_wlast),							//Ğ´×îºóÒ»¸ö
-        .o_mbus_wready(iic_mbus_wready),						//Ğ´×¼±¸ºÃĞÅºÅ
+        //å†™é€šé“
+        .i_mbus_wrq(iic_mbus_wrq),								//å†™è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+        .i_mbus_wdata(iic_mbus_wdata),							//å†™æ•°æ®
+        .i_mbus_wvalid(iic_mbus_wvalid),						//å†™æ•°æ®æœ‰æ•ˆä¿¡å·
+        .i_mbus_wlast(iic_mbus_wlast),							//å†™æœ€åä¸€ä¸ª
+        .o_mbus_wready(iic_mbus_wready),						//å†™å‡†å¤‡å¥½ä¿¡å·
         
-        //¶ÁÍ¨µÀ
-        .i_mbus_rrq(iic_mbus_rrq),								//¶ÁÇëÇó,¸ßµçÆ½ÓĞĞ§
-        .i_mbus_rready(iic_mbus_rready),						//¶Á×¼±¸ºÃ
-        .i_mbus_rlast(iic_mbus_rlast),							//¶Á×îºóÒ»¸ö
-        .o_mbus_rdata(iic_mbus_rdata),							//¶ÁÊı¾İ
-        .o_mbus_rvalid(iic_mbus_rvalid),						//¶ÁÊı¾İÓĞĞ§ĞÅºÅ
+        //è¯»é€šé“
+        .i_mbus_rrq(iic_mbus_rrq),								//è¯»è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+        .i_mbus_rready(iic_mbus_rready),						//è¯»å‡†å¤‡å¥½
+        .i_mbus_rlast(iic_mbus_rlast),							//è¯»æœ€åä¸€ä¸ª
+        .o_mbus_rdata(iic_mbus_rdata),							//è¯»æ•°æ®
+        .o_mbus_rvalid(iic_mbus_rvalid),						//è¯»æ•°æ®æœ‰æ•ˆä¿¡å·
         
-        //Ã¦Í¨µÀ
-        .o_mbus_rwbusy(iic_mbus_rwbusy),						//¶ÁĞ´Ã¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ,µÍµçÆ½´ú±í¿ÕÏĞ
-        .o_mbus_rwack_err(iic_mbus_rwack_err),					//Ó¦´ğ´íÎó
+        //å¿™é€šé“
+        .o_mbus_rwbusy(iic_mbus_rwbusy),						//è¯»å†™å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ,ä½ç”µå¹³ä»£è¡¨ç©ºé—²
+        .o_mbus_rwack_err(iic_mbus_rwack_err),					//åº”ç­”é”™è¯¯
 		
-        //--------------IIC¹Ü½ÅĞÅºÅ-------------//
-        .i_iic_sda(i_iic_sda),                        			//IICÊäÈëSDAÊı¾İĞÅºÅ
-        .o_iic_scl(o_iic_scl),                        			//IICÊä³öSCLÊ±ÖÓĞÅºÅ
-        .o_iic_sda(o_iic_sda),                        			//IICÊä³öSDAÊı¾İĞÅºÅ
-        .o_iic_sda_dir(o_iic_sda_dir)                 			//IICÊä³öSDAĞÅºÅ·½Ïò
+        //--------------IICç®¡è„šä¿¡å·-------------//
+        .i_iic_sda(i_iic_sda),                        			//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+        .o_iic_scl(o_iic_scl),                        			//IICè¾“å‡ºSCLæ—¶é’Ÿä¿¡å·
+        .o_iic_sda(o_iic_sda),                        			//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+        .o_iic_sda_dir(o_iic_sda_dir)                 			//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
     );
 	
 endmodule
 
-//OV5640ÅäÖÃÄ£¿é
+//OV5640é…ç½®æ¨¡å—
 module OV5640_Config
 #(
 	parameter CLOCK_FREQ_MHZ 		= 13'd100,
-	parameter WAIT_TIME_MS 			= 500,				//ÉÏµçºóµÈ´ıÊ±¼ä
-	parameter COLD_TIME_MS 			= 5000,				//×Ô¶¯¶Ô½¹ÀäÈ´Ê±¼ä
-	parameter DEVICE_ADDRESS 		= 8'h78,			//OV5640Éè±¸µØÖ·
-	parameter IMAGE_MODE			= 1'd0,				//Êä³öÍ¼ÏñÄ£Ê½,0:RGB565¸ñÊ½;1:JPEG¸ñÊ½;
-	parameter IMAGE_SIZE_H			= 16'd1024,			//ĞĞÏñËØ,RGB565Ä£Ê½²»µÃ³¬¹ı1280;JPEGÄ£Ê½²»µÃ³¬¹ı2592
-	parameter IMAGE_SIZE_V			= 16'd768,			//³¡ÏñËØ,RGB565Ä£Ê½²»µÃ³¬¹ı800;JPEGÄ£Ê½²»µÃ³¬¹ı1944
-	parameter IMAGE_OFFEST_H		= 16'd0,			//ĞĞ¿ª´°Æ«ÒÆÖµ
-	parameter IMAGE_OFFEST_V		= 16'd0,			//³¡¿ª´°Æ«ÒÆÖµ
-	parameter AUTO_FOCUS_MODE		= 1'd0,				//×Ô¶¯¾Û½¹Ä£Ê½,0:¹Ø±Õ×Ô¶¯¾Û½¹Ä£Ê½;1:¿ªÆô×Ô¶¯¾Û½¹Ä£Ê½,ĞèÒªºÄ·Ñ´óÁ¿´æ´¢×ÊÔ´À´½øĞĞ¾Û½¹ÅäÖÃ
-	parameter AUTO_FOCUS_CONFIG_NUM = 16'd4085,			//¾Û½¹ÅäÖÃÊı
-	parameter WHITE_BALANCE_MODE	= 3'd0,				//°×Æ½ºâÄ£Ê½,0:×Ô¶¯;1:ÈÕ¹â;2:°ì¹«ÊÒ;3:ÒõÌì;4:¼ÒÀï;
-	parameter SATURATION_MODE		= 3'd3,				//±¥ºÍ¶ÈÄ£Ê½,0~6¶ÔÓ¦-3~3
-	parameter BRIGHTNESS_MODE		= 4'd4,				//ÁÁ¶ÈÄ£Ê½,0~8¶ÔÓ¦-4~4
-	parameter CONTRAST_MODE			= 3'd3,				//¶Ô±È¶ÈÄ£Ê½,0~6¶ÔÓ¦-3~3
-	parameter SHARPNESS_MODE		= 8'd33,			//Èñ¶ÈÄ£Ê½,0~32ÎªÈË¹¤ÅäÖÃÄ£Ê½;33~?Îª×Ô¶¯Èñ¶ÈÄ£Ê½
-	parameter SPECIAL_EFECTS_MODE	= 3'd0,				//ÌØĞ§Ä£Ê½,0:Õı³£;1:ÀäÉ«;2:Å¯É«;3:ºÚ°×;4:Æ«»Æ;5:·´É«;6:Æ«ÂÌ;
-	parameter EXPOSURE_MODE			= 3'd3				//ÆØ¹â²¹³¥Ä£Ê½,0~6¶ÔÓ¦-3~3
+	parameter WAIT_TIME_MS 			= 500,				//ä¸Šç”µåç­‰å¾…æ—¶é—´
+	parameter COLD_TIME_MS 			= 5000,				//è‡ªåŠ¨å¯¹ç„¦å†·å´æ—¶é—´
+	parameter DEVICE_ADDRESS 		= 8'h78,			//OV5640è®¾å¤‡åœ°å€
+	parameter IMAGE_MODE			= 1'd0,				//è¾“å‡ºå›¾åƒæ¨¡å¼,0:RGB565æ ¼å¼;1:JPEGæ ¼å¼;
+	parameter IMAGE_SIZE_H			= 16'd1024,			//è¡Œåƒç´ ,RGB565æ¨¡å¼ä¸å¾—è¶…è¿‡1280;JPEGæ¨¡å¼ä¸å¾—è¶…è¿‡2592
+	parameter IMAGE_SIZE_V			= 16'd768,			//åœºåƒç´ ,RGB565æ¨¡å¼ä¸å¾—è¶…è¿‡800;JPEGæ¨¡å¼ä¸å¾—è¶…è¿‡1944
+	parameter IMAGE_OFFEST_H		= 16'd0,			//è¡Œå¼€çª—åç§»å€¼
+	parameter IMAGE_OFFEST_V		= 16'd0,			//åœºå¼€çª—åç§»å€¼
+	parameter AUTO_FOCUS_MODE		= 1'd0,				//è‡ªåŠ¨èšç„¦æ¨¡å¼,0:å…³é—­è‡ªåŠ¨èšç„¦æ¨¡å¼;1:å¼€å¯è‡ªåŠ¨èšç„¦æ¨¡å¼,éœ€è¦è€—è´¹å¤§é‡å­˜å‚¨èµ„æºæ¥è¿›è¡Œèšç„¦é…ç½®
+	parameter AUTO_FOCUS_CONFIG_NUM = 16'd4085,			//èšç„¦é…ç½®æ•°
+	parameter WHITE_BALANCE_MODE	= 3'd0,				//ç™½å¹³è¡¡æ¨¡å¼,0:è‡ªåŠ¨;1:æ—¥å…‰;2:åŠå…¬å®¤;3:é˜´å¤©;4:å®¶é‡Œ;
+	parameter SATURATION_MODE		= 3'd3,				//é¥±å’Œåº¦æ¨¡å¼,0~6å¯¹åº”-3~3
+	parameter BRIGHTNESS_MODE		= 4'd4,				//äº®åº¦æ¨¡å¼,0~8å¯¹åº”-4~4
+	parameter CONTRAST_MODE			= 3'd3,				//å¯¹æ¯”åº¦æ¨¡å¼,0~6å¯¹åº”-3~3
+	parameter SHARPNESS_MODE		= 8'd33,			//é”åº¦æ¨¡å¼,0~32ä¸ºäººå·¥é…ç½®æ¨¡å¼;33~?ä¸ºè‡ªåŠ¨é”åº¦æ¨¡å¼
+	parameter SPECIAL_EFECTS_MODE	= 3'd0,				//ç‰¹æ•ˆæ¨¡å¼,0:æ­£å¸¸;1:å†·è‰²;2:æš–è‰²;3:é»‘ç™½;4:åé»„;5:åè‰²;6:åç»¿;
+	parameter EXPOSURE_MODE			= 3'd3				//æ›å…‰è¡¥å¿æ¨¡å¼,0~6å¯¹åº”-3~3
 )
 (
 	input i_clk,
     input i_rstn,
 	
-	//-------------Íâ²¿¿ØÖÆĞÅºÅ-------------//
-	//ÅäÖÃÄ£Ê½ĞÅºÅ
-	output o_mbus_rwslave_addr_mode,		//ÅäÖÃIIC´Ó»úµØÖ·Ä£Ê½,1'b0´ú±íÔ­Ê¼µØÖ·,ĞèÒª×óÒÆ7Î»,µÍÎ»²¹Áã;1'b1´ú±íÒÆÎ»Ö®ºóµØÖ·,²»ĞèÒªÔÙÒÆÎ»
-	output o_mbus_rwaddr_mode,				//ÅäÖÃIIC¶ÁĞ´µØÖ·Ä£Ê½,1'b1´ú±íË«µØÖ·Î»;1'b0´ú±íµ¥µØÖ·Î»,´ËÊ±µÍÎ»µØÖ·ÓĞĞ§
-	output o_mbus_rack,			            //ÅäÖÃIIC¶ÁÓ¦´ğĞÅºÅ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-	output o_mbus_wack_enable,				//ÅäÖÃIICĞ´Ó¦´ğ¼ì²âĞ£ÑéÊ¹ÄÜ
-	output o_mbus_wack,			        	//ÅäÖÃIICĞ´Ó¦´ğĞÅºÅĞ£ÑéÖµ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-	output o_mbus_rwmode,					//ÅäÖÃIIC¶ÁĞ´Êı¾İÄ£Ê½,1'b1´ú±íµ¥×Ö½Ú¶ÁĞ´;1'b0´ú±íÁ¬Ğø¶ÁĞ´
+	//-------------å¤–éƒ¨æ§åˆ¶ä¿¡å·-------------//
+	//é…ç½®æ¨¡å¼ä¿¡å·
+	output o_mbus_rwslave_addr_mode,		//é…ç½®IICä»æœºåœ°å€æ¨¡å¼,1'b0ä»£è¡¨åŸå§‹åœ°å€,éœ€è¦å·¦ç§»7ä½,ä½ä½è¡¥é›¶;1'b1ä»£è¡¨ç§»ä½ä¹‹ååœ°å€,ä¸éœ€è¦å†ç§»ä½
+	output o_mbus_rwaddr_mode,				//é…ç½®IICè¯»å†™åœ°å€æ¨¡å¼,1'b1ä»£è¡¨åŒåœ°å€ä½;1'b0ä»£è¡¨å•åœ°å€ä½,æ­¤æ—¶ä½ä½åœ°å€æœ‰æ•ˆ
+	output o_mbus_rack,			            //é…ç½®IICè¯»åº”ç­”ä¿¡å·,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+	output o_mbus_wack_enable,				//é…ç½®IICå†™åº”ç­”æ£€æµ‹æ ¡éªŒä½¿èƒ½
+	output o_mbus_wack,			        	//é…ç½®IICå†™åº”ç­”ä¿¡å·æ ¡éªŒå€¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+	output o_mbus_rwmode,					//é…ç½®IICè¯»å†™æ•°æ®æ¨¡å¼,1'b1ä»£è¡¨å•å­—èŠ‚è¯»å†™;1'b0ä»£è¡¨è¿ç»­è¯»å†™
 	
-	//ÅäÖÃÊı¾İĞÅºÅ
-	output [7:0]o_mbus_rwslave_addr,		//ÅäÖÃIIC¶ÁĞ´´Ó»úµØÖ·
-	output [7:0]o_mbus_rwaddr_h,			//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,¸ß8Î»
-	output [7:0]o_mbus_rwaddr_l,			//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,µÍ8Î»
+	//é…ç½®æ•°æ®ä¿¡å·
+	output [7:0]o_mbus_rwslave_addr,		//é…ç½®IICè¯»å†™ä»æœºåœ°å€
+	output [7:0]o_mbus_rwaddr_h,			//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,é«˜8ä½
+	output [7:0]o_mbus_rwaddr_l,			//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,ä½8ä½
 	
-	//Ğ´Í¨µÀ
-	output o_mbus_wrq,						//Ğ´ÇëÇó,¸ßµçÆ½ÓĞĞ§
-	output [7:0]o_mbus_wdata,				//Ğ´Êı¾İ
-	output o_mbus_wvalid,					//Ğ´Êı¾İÓĞĞ§ĞÅºÅ
-	output o_mbus_wlast,					//Ğ´×îºóÒ»¸ö
-	input i_mbus_wready,					//Ğ´×¼±¸ºÃĞÅºÅ*
+	//å†™é€šé“
+	output o_mbus_wrq,						//å†™è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+	output [7:0]o_mbus_wdata,				//å†™æ•°æ®
+	output o_mbus_wvalid,					//å†™æ•°æ®æœ‰æ•ˆä¿¡å·
+	output o_mbus_wlast,					//å†™æœ€åä¸€ä¸ª
+	input i_mbus_wready,					//å†™å‡†å¤‡å¥½ä¿¡å·*
 	
-	//¶ÁÍ¨µÀ
-	output o_mbus_rrq,						//¶ÁÇëÇó,¸ßµçÆ½ÓĞĞ§
-	output o_mbus_rready,					//¶Á×¼±¸ºÃ
-	output o_mbus_rlast,					//¶Á×îºóÒ»¸ö
-	input [7:0]i_mbus_rdata,				//¶ÁÊı¾İ
-	input i_mbus_rvalid,					//¶ÁÊı¾İÓĞĞ§ĞÅºÅ
+	//è¯»é€šé“
+	output o_mbus_rrq,						//è¯»è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+	output o_mbus_rready,					//è¯»å‡†å¤‡å¥½
+	output o_mbus_rlast,					//è¯»æœ€åä¸€ä¸ª
+	input [7:0]i_mbus_rdata,				//è¯»æ•°æ®
+	input i_mbus_rvalid,					//è¯»æ•°æ®æœ‰æ•ˆä¿¡å·
 	
-	//Ã¦Í¨µÀ
-	input i_mbus_rwbusy,					//¶ÁĞ´Ã¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ,µÍµçÆ½´ú±í¿ÕÏĞ
-	input i_mbus_rwack_err					//Ó¦´ğ´íÎó*
+	//å¿™é€šé“
+	input i_mbus_rwbusy,					//è¯»å†™å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ,ä½ç”µå¹³ä»£è¡¨ç©ºé—²
+	input i_mbus_rwack_err					//åº”ç­”é”™è¯¯*
 );
-	//------------------ÆäËû²ÎÊı----------------//
-	//Ê±¼ä¼ÆÊı
+	//------------------å…¶ä»–å‚æ•°----------------//
+	//æ—¶é—´è®¡æ•°
 	localparam WAIT_NUM  = CLOCK_FREQ_MHZ * WAIT_TIME_MS * 1000;
 	localparam COLD_NUM  = CLOCK_FREQ_MHZ * COLD_TIME_MS * 1000;
 	
-	//³¤¶ÈÅäÖÃ
+	//é•¿åº¦é…ç½®
 	localparam IMAGE_H_END = IMAGE_OFFEST_H + IMAGE_SIZE_H - 1;
 	localparam IMAGE_V_END = IMAGE_OFFEST_V + IMAGE_SIZE_V - 1;
 	
-	//ÅäÖÃ³¤¶È
+	//é…ç½®é•¿åº¦
 	localparam CONFIG_INIT_NUM = 16'd330 - IMAGE_MODE * 4;
 
-	//------------------×´Ì¬²ÎÊı----------------//
+	//------------------çŠ¶æ€å‚æ•°----------------//
 	localparam ST_WR_IDLE = 3'd0;
 	localparam ST_WR_WAIT = 3'd1;
     localparam ST_WR_START = 3'd2;
@@ -280,7 +280,7 @@ module OV5640_Config
 	localparam ST_WR_EXPOSURE = 3'd4;
     localparam ST_WR_END = 3'd5;
 	
-	//ROMÊı¾İ
+	//ROMæ•°æ®
 	wire [55:0]rom_lut_data_white_balance;
 	wire [47:0]rom_lut_data_saturation;
 	wire [15:0]rom_lut_data_brightness;
@@ -289,63 +289,63 @@ module OV5640_Config
 	wire [47:0]rom_lut_data_exposure;
 	wire [23:0]rom_lut_data_auto_focus;
 	
-	//¼ÆÊı
-	reg [31:0]wait_cnt = 0;		//³õÊ¼»¯µÈ´ı¼ÆÊı
-	reg [15:0]send_cnt = 0;		//·¢ËÍ¼ÆÊı
-	reg [15:0]af_cnt = 0;		//×Ô¶¯¶Ô½¹ÅäÖÃ¼ÆÊı
-	reg [31:0]cold_cnt = 0;		//ÀäÈ´¼ÆÊı
+	//è®¡æ•°
+	reg [31:0]wait_cnt = 0;		//åˆå§‹åŒ–ç­‰å¾…è®¡æ•°
+	reg [15:0]send_cnt = 0;		//å‘é€è®¡æ•°
+	reg [15:0]af_cnt = 0;		//è‡ªåŠ¨å¯¹ç„¦é…ç½®è®¡æ•°
+	reg [31:0]cold_cnt = 0;		//å†·å´è®¡æ•°
 	
-	//LUTÊı¾İ
+	//LUTæ•°æ®
 	reg [23:0]LUT_Data = 0;
 	
-	//×´Ì¬»ú
+	//çŠ¶æ€æœº
 	reg [2:0]state_current = 0;
     reg [2:0]state_next = 0;
 	
-	//----------------ÊäÈë»º´æĞÅºÅ--------------//
-	//Ğ´Í¨µÀ
+	//----------------è¾“å…¥ç¼“å­˜ä¿¡å·--------------//
+	//å†™é€šé“
 	reg [1:0]mbus_wready_i = 0;
 	
-	//Ã¦Í¨µÀ
+	//å¿™é€šé“
 	reg [1:0]mbus_rwbusy_i = 0;
 	reg mbus_rwack_err_i = 0;
 	
-	//------------------Êä³öĞÅºÅ---------------//
-	//ÅäÖÃÊı¾İĞÅºÅ
+	//------------------è¾“å‡ºä¿¡å·---------------//
+	//é…ç½®æ•°æ®ä¿¡å·
 	reg [7:0]mbus_rwaddr_h_o = 0;
 	reg [7:0]mbus_rwaddr_l_o = 0;
 	
-	//Ğ´Í¨µÀ
+	//å†™é€šé“
 	reg mbus_wrq_o = 0;
 	reg [7:0]mbus_wdata_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
-	//ÅäÖÃÄ£Ê½ĞÅºÅ
-	assign o_mbus_rwslave_addr_mode = 1'b1;				//ÒÆÎ»Ö®ºóµØÖ·,²»ĞèÒªÔÙÒÆÎ»
-	assign o_mbus_rwaddr_mode = 1'b1;					//Ë«µØÖ·Î»
-	assign o_mbus_rack = 1'b0;			    			//0ÎªÓ¦´ğACK
-	assign o_mbus_wack_enable = 1'b0;					//Ğ´Ó¦´ğ¼ì²âĞ£ÑéÊ¹ÄÜ¹Ø±Õ
-	assign o_mbus_wack = 1'b0;			    			//0ÎªÓ¦´ğACK
-	assign o_mbus_rwmode = 1'b1;						//µ¥×Ö½Ú¶ÁĞ´
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
+	//é…ç½®æ¨¡å¼ä¿¡å·
+	assign o_mbus_rwslave_addr_mode = 1'b1;				//ç§»ä½ä¹‹ååœ°å€,ä¸éœ€è¦å†ç§»ä½
+	assign o_mbus_rwaddr_mode = 1'b1;					//åŒåœ°å€ä½
+	assign o_mbus_rack = 1'b0;			    			//0ä¸ºåº”ç­”ACK
+	assign o_mbus_wack_enable = 1'b0;					//å†™åº”ç­”æ£€æµ‹æ ¡éªŒä½¿èƒ½å…³é—­
+	assign o_mbus_wack = 1'b0;			    			//0ä¸ºåº”ç­”ACK
+	assign o_mbus_rwmode = 1'b1;						//å•å­—èŠ‚è¯»å†™
 	
-	//Êı¾İĞÅºÅ
-	assign o_mbus_rwslave_addr = DEVICE_ADDRESS;		//IIC¶ÁĞ´´Ó»úµØÖ·ÎªÄ¬ÈÏÆ÷¼şµØÖ·
-	assign o_mbus_rwaddr_h = mbus_rwaddr_h_o;			//¼Ä´æÆ÷µØÖ·,¸ß8Î»
-	assign o_mbus_rwaddr_l = mbus_rwaddr_l_o;			//¼Ä´æÆ÷µØÖ·,µÍ8Î»
+	//æ•°æ®ä¿¡å·
+	assign o_mbus_rwslave_addr = DEVICE_ADDRESS;		//IICè¯»å†™ä»æœºåœ°å€ä¸ºé»˜è®¤å™¨ä»¶åœ°å€
+	assign o_mbus_rwaddr_h = mbus_rwaddr_h_o;			//å¯„å­˜å™¨åœ°å€,é«˜8ä½
+	assign o_mbus_rwaddr_l = mbus_rwaddr_l_o;			//å¯„å­˜å™¨åœ°å€,ä½8ä½
 	
-	//Ğ´Í¨µÀ
-	assign o_mbus_wrq = mbus_wrq_o;						//Ğ´ÇëÇó,¸ßµçÆ½ÓĞĞ§
-	assign o_mbus_wdata = mbus_wdata_o;					//Ğ´Êı¾İ
-	assign o_mbus_wvalid = 1'b1;						//Ğ´Êı¾İÓĞĞ§ĞÅºÅ
-	assign o_mbus_wlast = 1'b1;							//Ğ´×îºóÒ»¸ö,Ã¿´ÎÖ»Ğ´1¸ö
+	//å†™é€šé“
+	assign o_mbus_wrq = mbus_wrq_o;						//å†™è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+	assign o_mbus_wdata = mbus_wdata_o;					//å†™æ•°æ®
+	assign o_mbus_wvalid = 1'b1;						//å†™æ•°æ®æœ‰æ•ˆä¿¡å·
+	assign o_mbus_wlast = 1'b1;							//å†™æœ€åä¸€ä¸ª,æ¯æ¬¡åªå†™1ä¸ª
 	
-	//¶ÁÍ¨µÀ
-	assign o_mbus_rrq = 1'b0;							//¶ÁÇëÇó,¸ßµçÆ½ÓĞĞ§,Ä¬ÈÏÎŞ¶Á²Ù×÷
-	assign o_mbus_rready = 1'b0;						//¶Á×¼±¸ºÃ,Ä¬ÈÏÎŞ¶Á²Ù×÷
-	assign o_mbus_rlast = 1'b0;							//Ã¿´ÎÖ»¶Á1¸ö,Ä¬ÈÏÎŞ¶Á²Ù×÷
+	//è¯»é€šé“
+	assign o_mbus_rrq = 1'b0;							//è¯»è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ,é»˜è®¤æ— è¯»æ“ä½œ
+	assign o_mbus_rready = 1'b0;						//è¯»å‡†å¤‡å¥½,é»˜è®¤æ— è¯»æ“ä½œ
+	assign o_mbus_rlast = 1'b0;							//æ¯æ¬¡åªè¯»1ä¸ª,é»˜è®¤æ— è¯»æ“ä½œ
 	
-	//------------------ĞÅºÅÊä³ö---------------//
-	//Êı¾İĞÅºÅ--¼Ä´æÆ÷µØÖ·-¸ß8Î»
+	//------------------ä¿¡å·è¾“å‡º---------------//
+	//æ•°æ®ä¿¡å·--å¯„å­˜å™¨åœ°å€-é«˜8ä½
 	always@(posedge i_clk or negedge i_rstn)begin
         if(i_rstn == 1'b0)mbus_rwaddr_h_o <= 8'd0;
         else if(state_current == ST_WR_WAIT)mbus_rwaddr_h_o <= LUT_Data[23:16];
@@ -354,7 +354,7 @@ module OV5640_Config
 		else mbus_rwaddr_h_o <= mbus_rwaddr_h_o;
     end
 	
-	//Êı¾İĞÅºÅ--¼Ä´æÆ÷µØÖ·-µÍ8Î»
+	//æ•°æ®ä¿¡å·--å¯„å­˜å™¨åœ°å€-ä½8ä½
 	always@(posedge i_clk or negedge i_rstn)begin
         if(i_rstn == 1'b0)mbus_rwaddr_l_o <= 8'd0;
         else if(state_current == ST_WR_WAIT)mbus_rwaddr_l_o <= LUT_Data[15:8];
@@ -363,17 +363,17 @@ module OV5640_Config
 		else mbus_rwaddr_l_o <= mbus_rwaddr_l_o;
     end
 	
-	//Ğ´Í¨µÀ--Ğ´ÇëÇóĞÅºÅ
+	//å†™é€šé“--å†™è¯·æ±‚ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
         if(i_rstn == 1'b0)mbus_wrq_o <= 1'd0;
         else if(state_current == ST_WR_WAIT)mbus_wrq_o <= 1'd1;
 		else if(state_current == ST_WR_EXPOSURE_WAIT)mbus_wrq_o <= 1'd1;
 		else if(AUTO_FOCUS_MODE == 1'b0)mbus_wrq_o <= 1'd0;
-		else if(state_current == ST_WR_END && cold_cnt == COLD_NUM)mbus_wrq_o <= 1'd1;		//Ö´ĞĞ×Ô¶¯¾Û½¹Ö¸Áî
+		else if(state_current == ST_WR_END && cold_cnt == COLD_NUM)mbus_wrq_o <= 1'd1;		//æ‰§è¡Œè‡ªåŠ¨èšç„¦æŒ‡ä»¤
 		else mbus_wrq_o <= 1'd0;
     end
 	
-	//Ğ´Í¨µÀ--Ğ´Êı¾İĞÅºÅ
+	//å†™é€šé“--å†™æ•°æ®ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
         if(i_rstn == 1'b0)mbus_wdata_o <= 8'd0;
         else if(state_current == ST_WR_WAIT)mbus_wdata_o <= LUT_Data[7:0];
@@ -382,8 +382,8 @@ module OV5640_Config
 		else mbus_wdata_o <= mbus_wdata_o;
     end
 	
-	//-------------------×´Ì¬»ú----------------//
-	//Ö÷×´Ì¬»ú
+	//-------------------çŠ¶æ€æœº----------------//
+	//ä¸»çŠ¶æ€æœº
 	always@(*)begin
 		case(state_current)
 			ST_WR_IDLE:begin
@@ -408,7 +408,7 @@ module OV5640_Config
 		endcase
 	end
 	
-	//×´Ì¬×ª»»
+	//çŠ¶æ€è½¬æ¢
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			state_current <= ST_WR_IDLE;
@@ -417,15 +417,15 @@ module OV5640_Config
 		end
 	end
 	
-	//----------------×´Ì¬ÈÎÎñ´¦Àí-------------//
-	//µÈ´ı¼ÆÊı
+	//----------------çŠ¶æ€ä»»åŠ¡å¤„ç†-------------//
+	//ç­‰å¾…è®¡æ•°
 	always@(posedge i_clk or negedge i_rstn)begin
         if(i_rstn == 1'b0)wait_cnt <= 32'd0;
 		else if(state_current == ST_WR_IDLE)wait_cnt <= wait_cnt + 32'd1;
         else wait_cnt <= 32'd0;
     end
 	
-	//·¢ËÍ¼ÆÊı
+	//å‘é€è®¡æ•°
 	always@(posedge i_clk or negedge i_rstn)begin
         if(i_rstn == 1'b0)send_cnt <= 16'd0;
 		else if(state_current == ST_WR_IDLE)send_cnt <= 16'd0;
@@ -433,7 +433,7 @@ module OV5640_Config
         else send_cnt <= send_cnt;
     end
 	
-	//ÆØ¹â¼ÆÊı
+	//æ›å…‰è®¡æ•°
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)af_cnt <= 16'd0;
 		else if(state_current == ST_WR_IDLE)af_cnt <= 16'd0;
@@ -441,7 +441,7 @@ module OV5640_Config
         else af_cnt <= af_cnt;
 	end
 	
-	//×Ô¶¯¶Ô½¹¼ÆÊı
+	//è‡ªåŠ¨å¯¹ç„¦è®¡æ•°
 	always@(posedge i_clk or negedge i_rstn)begin
         if(i_rstn == 1'b0)cold_cnt <= 32'd0;
 		else if(state_current == ST_WR_END)cold_cnt <= cold_cnt + 32'd1;
@@ -449,49 +449,49 @@ module OV5640_Config
         else cold_cnt <= 32'd0;
     end
 	
-	//°×Æ½ºâ´æ´¢ROMÄ£¿éÊµÀı»¯
+	//ç™½å¹³è¡¡å­˜å‚¨ROMæ¨¡å—å®ä¾‹åŒ–
 	ROM_OV5640_White_Balance ROM_OV5640_White_Balance_Inst(
 		.i_index(WHITE_BALANCE_MODE),
 		.o_lut_data(rom_lut_data_white_balance)
 	);
 	
-	//±¥ºÍ¶È´æ´¢ROMÄ£¿éÊµÀı»¯
+	//é¥±å’Œåº¦å­˜å‚¨ROMæ¨¡å—å®ä¾‹åŒ–
 	ROM_OV5640_Saturation ROM_OV5640_Saturation_Inst(
 		.i_index(SATURATION_MODE),
 		.o_lut_data(rom_lut_data_saturation)
 	);
 	
-	//ÁÁ¶È´æ´¢ROMÄ£¿éÊµÀı»¯
+	//äº®åº¦å­˜å‚¨ROMæ¨¡å—å®ä¾‹åŒ–
 	ROM_OV5640_Brightness ROM_OV5640_Brightness_Inst(
 		.i_bright(BRIGHTNESS_MODE),
 		.o_lut_data(rom_lut_data_brightness)
 	);
 	
-	//¶Ô±È¶È´æ´¢ROMÄ£¿éÊµÀı»¯
+	//å¯¹æ¯”åº¦å­˜å‚¨ROMæ¨¡å—å®ä¾‹åŒ–
 	ROM_OV5640_Contrast ROM_OV5640_Contrast_Inst(
 		.i_contrast(CONTRAST_MODE),
 		.o_lut_data(rom_lut_data_contrast)
 	);
 	
-	//ÌØĞ§´æ´¢ROMÄ£¿éÊµÀı»¯
+	//ç‰¹æ•ˆå­˜å‚¨ROMæ¨¡å—å®ä¾‹åŒ–
 	ROM_OV5640_Special_Effects ROM_OV5640_Special_Effects_Inst(
 		.i_index(SPECIAL_EFECTS_MODE),
 		.o_lut_data(rom_lut_data_special_effects)
 	);
 	
-	//ÆØ¹â²¹³¥´æ´¢ROMÄ£¿éÊµÀı»¯
+	//æ›å…‰è¡¥å¿å­˜å‚¨ROMæ¨¡å—å®ä¾‹åŒ–
 	ROM_OV5640_Exposure ROM_OV5640_Exposure_Inst(
 		.i_index(EXPOSURE_MODE),
 		.o_lut_data(rom_lut_data_exposure)
 	);
 
-	//×Ô¶¯¶Ô½¹´æ´¢ROMÄ£¿éÊµÀı»¯
+	//è‡ªåŠ¨å¯¹ç„¦å­˜å‚¨ROMæ¨¡å—å®ä¾‹åŒ–
 	ROM_OV5640_Auto_Focus ROM_OV5640_Auto_Focus_Inst(
 		.i_index(af_cnt),
 		.o_lut_data(rom_lut_data_auto_focus)
 	);
 
-	//----------------ÊäÈëĞÅºÅ»º´æ-------------//
+	//----------------è¾“å…¥ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			mbus_wready_i <= 2'd0;
@@ -504,13 +504,13 @@ module OV5640_Config
 		end
 	end
 	
-	//------------------LUT²éÕÒ±í--------------//
-	//RGB565Ä£Ê½
+	//------------------LUTæŸ¥æ‰¾è¡¨--------------//
+	//RGB565æ¨¡å¼
 	generate if(IMAGE_MODE == 1'b0)begin:gen_RGB565_CONFIG
 		always@(*)begin
 			case(send_cnt)
 				16'd0:LUT_Data <= {8'h31,8'h03,8'h11};	// system clock from pad, bit[1]
-				16'd1:LUT_Data <= {8'h30,8'h08,8'h82};	// Èí¸´Î»
+				16'd1:LUT_Data <= {8'h30,8'h08,8'h82};	// è½¯å¤ä½
 
 				// 24MHz input clock, 24MHz PCLK
 				16'd2:LUT_Data <= {8'h30,8'h08,8'h42};	// software power down, bit[6]
@@ -551,7 +551,7 @@ module OV5640_Config
 				16'd35:LUT_Data <= {8'h36,8'h34,8'h40};
 				16'd36:LUT_Data <= {8'h36,8'h22,8'h01};
 
-				// 50/60Hz detection 50/60Hz µÆ¹âÌõÎÆ¹ıÂË
+				// 50/60Hz detection 50/60Hz ç¯å…‰æ¡çº¹è¿‡æ»¤
 				16'd37:LUT_Data <= {8'h3c,8'h01,8'h34};	// Band auto, bit[7]
 				16'd38:LUT_Data <= {8'h3c,8'h04,8'h28};	// threshold low sum
 				16'd39:LUT_Data <= {8'h3c,8'h05,8'h98};	// threshold high sum
@@ -576,7 +576,7 @@ module OV5640_Config
 				16'd58:LUT_Data <= {8'h44,8'h0e,8'h00};
 				16'd59:LUT_Data <= {8'h50,8'h00,8'ha7};	// Lenc on, raw gamma on, BPC on, WPC on, CIP on
 
-				// AEC target ×Ô¶¯ÆØ¹â¿ØÖÆ
+				// AEC target è‡ªåŠ¨æ›å…‰æ§åˆ¶
 				16'd60:LUT_Data <= {8'h3a,8'h0f,8'h30};	// stable range in high
 				16'd61:LUT_Data <= {8'h3a,8'h10,8'h28};	// stable range in low
 				16'd62:LUT_Data <= {8'h3a,8'h1b,8'h30};	// stable range out high
@@ -584,7 +584,7 @@ module OV5640_Config
 				16'd64:LUT_Data <= {8'h3a,8'h11,8'h60};	// fast zone high
 				16'd65:LUT_Data <= {8'h3a,8'h1f,8'h14};	// fast zone low
 
-				// Lens correction for ? ¾µÍ·²¹³¥
+				// Lens correction for ? é•œå¤´è¡¥å¿
 				16'd66:LUT_Data <= {8'h58,8'h00,8'h23};
 				16'd67:LUT_Data <= {8'h58,8'h01,8'h14};
 				16'd68:LUT_Data <= {8'h58,8'h02,8'h0f};
@@ -648,7 +648,7 @@ module OV5640_Config
 				16'd126:LUT_Data <= {8'h58,8'h3c,8'h42};
 				16'd127:LUT_Data <= {8'h58,8'h3d,8'hce};	// lenc BR offset
 
-				// AWB ×Ô¶¯°×Æ½ºâ
+				// AWB è‡ªåŠ¨ç™½å¹³è¡¡
 				16'd128:LUT_Data <= {8'h51,8'h80,8'hff};	// AWB B block
 				16'd129:LUT_Data <= {8'h51,8'h81,8'hf2};	// AWB control
 				16'd130:LUT_Data <= {8'h51,8'h82,8'h00};	// [7:4] max local counter, [3:0] max fast counter
@@ -681,7 +681,7 @@ module OV5640_Config
 				16'd157:LUT_Data <= {8'h51,8'h9d,8'h82};
 				16'd158:LUT_Data <= {8'h51,8'h9e,8'h38};	// AWB control
 
-				// Gamma Ù¤ÂêÇúÏß
+				// Gamma ä¼½ç›æ›²çº¿
 				16'd159:LUT_Data <= {8'h54,8'h80,8'h01};	// Gamma bias plus on, bit[0]
 				16'd160:LUT_Data <= {8'h54,8'h81,8'h08};
 				16'd161:LUT_Data <= {8'h54,8'h82,8'h14};
@@ -700,7 +700,7 @@ module OV5640_Config
 				16'd174:LUT_Data <= {8'h54,8'h8f,8'hea};
 				16'd175:LUT_Data <= {8'h54,8'h90,8'h1d};
 
-				// color matrix É«²Ê¾ØÕó	
+				// color matrix è‰²å½©çŸ©é˜µ	
 				16'd176:LUT_Data <= {8'h53,8'h81,8'h1e};	// CMX1 for Y
 				16'd177:LUT_Data <= {8'h53,8'h82,8'h5b};	// CMX2 for Y
 				16'd178:LUT_Data <= {8'h53,8'h83,8'h08};	// CMX3 for Y
@@ -713,7 +713,7 @@ module OV5640_Config
 				16'd185:LUT_Data <= {8'h53,8'h8a,8'h01};	// sign[9]
 				16'd186:LUT_Data <= {8'h53,8'h8b,8'h98};	// sign[8:1]
 
-				// UV adjust UV É«²Ê±¥ºÍ¶Èµ÷Õû
+				// UV adjust UV è‰²å½©é¥±å’Œåº¦è°ƒæ•´
 				16'd187:LUT_Data <= {8'h55,8'h80,8'h06};	// saturation on, bit[1]
 				16'd188:LUT_Data <= {8'h55,8'h83,8'h40};
 				16'd189:LUT_Data <= {8'h55,8'h84,8'h10};
@@ -722,7 +722,7 @@ module OV5640_Config
 				16'd192:LUT_Data <= {8'h55,8'h8b,8'hf8};
 				16'd193:LUT_Data <= {8'h50,8'h1d,8'h40};	// enable manual offset of contrast
 
-				// CIP Èñ»¯ºÍ½µÔë
+				// CIP é”åŒ–å’Œé™å™ª
 				16'd194:LUT_Data <= {8'h53,8'h00,8'h08};	// CIP sharpen MT threshold 1
 				16'd195:LUT_Data <= {8'h53,8'h01,8'h30};	// CIP sharpen MT threshold 2
 				16'd196:LUT_Data <= {8'h53,8'h02,8'h10};	// CIP sharpen MT offset 1
@@ -738,10 +738,10 @@ module OV5640_Config
 				16'd206:LUT_Data <= {8'h50,8'h25,8'h00};
 				16'd207:LUT_Data <= {8'h30,8'h08,8'h02};	// wake up from standby, bit[6]
 
-				//×ÔĞĞÌí¼ÓµÄÉèÖÃ
-				16'd208:LUT_Data <= {8'h47,8'h40,8'h21};	// PCLKÏÂ½µÑØ¸üĞÂ,bit[5];VSYNC¸ßÓĞĞ§,bit[0];HSYNCµÍÓĞĞ§bit[1]
+				//è‡ªè¡Œæ·»åŠ çš„è®¾ç½®
+				16'd208:LUT_Data <= {8'h47,8'h40,8'h21};	// PCLKä¸‹é™æ²¿æ›´æ–°,bit[5];VSYNCé«˜æœ‰æ•ˆ,bit[0];HSYNCä½æœ‰æ•ˆbit[1]
 
-				//----------------------RGB565Êı¾İÄ£Ê½-------------------------//
+				//----------------------RGB565æ•°æ®æ¨¡å¼-------------------------//
 				16'd209:LUT_Data <= {8'h43,8'h00,8'h60};	//RGB565, B5G6R5
 				16'd210:LUT_Data <= {8'h50,8'h1F,8'h01};
 
@@ -792,7 +792,7 @@ module OV5640_Config
 				16'd252:LUT_Data <= {8'h50,8'h01,8'hA3};	// SDE on, scale on, UV average off, color matrix on, AWB on
 				16'd253:LUT_Data <= {8'h35,8'h03,8'h00};	// AEC/AGC on
 
-				//-------------------------°×Æ½ºâÄ£Ê½-------------------------//
+				//-------------------------ç™½å¹³è¡¡æ¨¡å¼-------------------------//
 				16'd254:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd255:LUT_Data <= {8'h34,8'h00,rom_lut_data_white_balance[7:0]};
 				16'd256:LUT_Data <= {8'h34,8'h01,rom_lut_data_white_balance[15:8]};
@@ -804,7 +804,7 @@ module OV5640_Config
 				16'd262:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd263:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//-------------------------±¥ºÍ¶ÈÉèÖÃ-------------------------//
+				//-------------------------é¥±å’Œåº¦è®¾ç½®-------------------------//
 				16'd264:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd265:LUT_Data <= {8'h53,8'h81,8'h1c};
 				16'd266:LUT_Data <= {8'h53,8'h82,8'h5a};
@@ -820,21 +820,21 @@ module OV5640_Config
 				16'd276:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd277:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//--------------------------ÁÁ¶ÈÉèÖÃ--------------------------//
+				//--------------------------äº®åº¦è®¾ç½®--------------------------//
 				16'd278:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd279:LUT_Data <= {8'h55,8'h87,rom_lut_data_brightness[7:0]};
 				16'd280:LUT_Data <= {8'h55,8'h88,rom_lut_data_brightness[15:8]};
 				16'd281:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd282:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//-------------------------¶Ô±È¶ÈÉèÖÃ-------------------------//
+				//-------------------------å¯¹æ¯”åº¦è®¾ç½®-------------------------//
 				16'd283:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd284:LUT_Data <= {8'h55,8'h85,rom_lut_data_contrast[7:0]};
 				16'd285:LUT_Data <= {8'h55,8'h86,rom_lut_data_contrast[15:8]};
 				16'd286:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd287:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//------------------------×Ô¶¯Èñ¶ÈÉèÖÃ------------------------//
+				//------------------------è‡ªåŠ¨é”åº¦è®¾ç½®------------------------//
 				16'd288:LUT_Data <= {8'h53,8'h08,8'h25};
 				16'd289:LUT_Data <= {8'h53,8'h00,8'h08};
 				16'd290:LUT_Data <= {8'h53,8'h00,8'h30};
@@ -845,7 +845,7 @@ module OV5640_Config
 				16'd295:LUT_Data <= {8'h53,8'h00,8'h04};
 				16'd296:LUT_Data <= {8'h53,8'h00,8'h06};
 
-				//--------------------------ÌØĞ§ÉèÖÃ--------------------------//
+				//--------------------------ç‰¹æ•ˆè®¾ç½®--------------------------//
 				16'd297:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd298:LUT_Data <= {8'h55,8'h80,rom_lut_data_special_effects[7:0]};
 				16'd299:LUT_Data <= {8'h55,8'h83,rom_lut_data_special_effects[15:8]};
@@ -854,7 +854,7 @@ module OV5640_Config
 				16'd302:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd303:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//------------------------ÆØ¹â²¹³¥ÉèÖÃ------------------------//
+				//------------------------æ›å…‰è¡¥å¿è®¾ç½®------------------------//
 				16'd304:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd305:LUT_Data <= {8'h3a,8'h0f,rom_lut_data_exposure[7:0]};
 				16'd306:LUT_Data <= {8'h3a,8'h10,rom_lut_data_exposure[15:8]};
@@ -865,7 +865,7 @@ module OV5640_Config
 				16'd311:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd312:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//----------------------Í¼ÏñÊä³ö¿ª´°ÉèÖÃ----------------------//
+				//----------------------å›¾åƒè¾“å‡ºå¼€çª—è®¾ç½®----------------------//
 				16'd313:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd314:LUT_Data <= {8'h38,8'h00,IMAGE_OFFEST_H[15:8]};
 				16'd315:LUT_Data <= {8'h38,8'h01,IMAGE_OFFEST_H[7:0]};
@@ -889,12 +889,12 @@ module OV5640_Config
 			endcase
 		end
 	end
-	//JPEGÄ£Ê½
+	//JPEGæ¨¡å¼
 	else begin
 		always@(*)begin
 			case(send_cnt)
 				16'd0:LUT_Data <= {8'h31,8'h03,8'h11};	// system clock from pad, bit[1]
-				16'd1:LUT_Data <= {8'h30,8'h08,8'h82};	// Èí¸´Î»
+				16'd1:LUT_Data <= {8'h30,8'h08,8'h82};	// è½¯å¤ä½
 
 				// 24MHz input clock, 24MHz PCLK
 				16'd2:LUT_Data <= {8'h30,8'h08,8'h42};	// software power down, bit[6]
@@ -935,7 +935,7 @@ module OV5640_Config
 				16'd35:LUT_Data <= {8'h36,8'h34,8'h40};
 				16'd36:LUT_Data <= {8'h36,8'h22,8'h01};
 
-				// 50/60Hz detection 50/60Hz µÆ¹âÌõÎÆ¹ıÂË
+				// 50/60Hz detection 50/60Hz ç¯å…‰æ¡çº¹è¿‡æ»¤
 				16'd37:LUT_Data <= {8'h3c,8'h01,8'h34};	// Band auto, bit[7]
 				16'd38:LUT_Data <= {8'h3c,8'h04,8'h28};	// threshold low sum
 				16'd39:LUT_Data <= {8'h3c,8'h05,8'h98};	// threshold high sum
@@ -960,7 +960,7 @@ module OV5640_Config
 				16'd58:LUT_Data <= {8'h44,8'h0e,8'h00};
 				16'd59:LUT_Data <= {8'h50,8'h00,8'ha7};	// Lenc on, raw gamma on, BPC on, WPC on, CIP on
 
-				// AEC target ×Ô¶¯ÆØ¹â¿ØÖÆ
+				// AEC target è‡ªåŠ¨æ›å…‰æ§åˆ¶
 				16'd60:LUT_Data <= {8'h3a,8'h0f,8'h30};	// stable range in high
 				16'd61:LUT_Data <= {8'h3a,8'h10,8'h28};	// stable range in low
 				16'd62:LUT_Data <= {8'h3a,8'h1b,8'h30};	// stable range out high
@@ -968,7 +968,7 @@ module OV5640_Config
 				16'd64:LUT_Data <= {8'h3a,8'h11,8'h60};	// fast zone high
 				16'd65:LUT_Data <= {8'h3a,8'h1f,8'h14};	// fast zone low
 
-				// Lens correction for ? ¾µÍ·²¹³¥
+				// Lens correction for ? é•œå¤´è¡¥å¿
 				16'd66:LUT_Data <= {8'h58,8'h00,8'h23};
 				16'd67:LUT_Data <= {8'h58,8'h01,8'h14};
 				16'd68:LUT_Data <= {8'h58,8'h02,8'h0f};
@@ -1032,7 +1032,7 @@ module OV5640_Config
 				16'd126:LUT_Data <= {8'h58,8'h3c,8'h42};
 				16'd127:LUT_Data <= {8'h58,8'h3d,8'hce};	// lenc BR offset
 
-				// AWB ×Ô¶¯°×Æ½ºâ
+				// AWB è‡ªåŠ¨ç™½å¹³è¡¡
 				16'd128:LUT_Data <= {8'h51,8'h80,8'hff};	// AWB B block
 				16'd129:LUT_Data <= {8'h51,8'h81,8'hf2};	// AWB control
 				16'd130:LUT_Data <= {8'h51,8'h82,8'h00};	// [7:4] max local counter, [3:0] max fast counter
@@ -1065,7 +1065,7 @@ module OV5640_Config
 				16'd157:LUT_Data <= {8'h51,8'h9d,8'h82};
 				16'd158:LUT_Data <= {8'h51,8'h9e,8'h38};	// AWB control
 
-				// Gamma Ù¤ÂêÇúÏß
+				// Gamma ä¼½ç›æ›²çº¿
 				16'd159:LUT_Data <= {8'h54,8'h80,8'h01};	// Gamma bias plus on, bit[0]
 				16'd160:LUT_Data <= {8'h54,8'h81,8'h08};
 				16'd161:LUT_Data <= {8'h54,8'h82,8'h14};
@@ -1084,7 +1084,7 @@ module OV5640_Config
 				16'd174:LUT_Data <= {8'h54,8'h8f,8'hea};
 				16'd175:LUT_Data <= {8'h54,8'h90,8'h1d};
 
-				// color matrix É«²Ê¾ØÕó	
+				// color matrix è‰²å½©çŸ©é˜µ	
 				16'd176:LUT_Data <= {8'h53,8'h81,8'h1e};	// CMX1 for Y
 				16'd177:LUT_Data <= {8'h53,8'h82,8'h5b};	// CMX2 for Y
 				16'd178:LUT_Data <= {8'h53,8'h83,8'h08};	// CMX3 for Y
@@ -1097,7 +1097,7 @@ module OV5640_Config
 				16'd185:LUT_Data <= {8'h53,8'h8a,8'h01};	// sign[9]
 				16'd186:LUT_Data <= {8'h53,8'h8b,8'h98};	// sign[8:1]
 
-				// UV adjust UV É«²Ê±¥ºÍ¶Èµ÷Õû
+				// UV adjust UV è‰²å½©é¥±å’Œåº¦è°ƒæ•´
 				16'd187:LUT_Data <= {8'h55,8'h80,8'h06};	// saturation on, bit[1]
 				16'd188:LUT_Data <= {8'h55,8'h83,8'h40};
 				16'd189:LUT_Data <= {8'h55,8'h84,8'h10};
@@ -1106,7 +1106,7 @@ module OV5640_Config
 				16'd192:LUT_Data <= {8'h55,8'h8b,8'hf8};
 				16'd193:LUT_Data <= {8'h50,8'h1d,8'h40};	// enable manual offset of contrast
 
-				// CIP Èñ»¯ºÍ½µÔë
+				// CIP é”åŒ–å’Œé™å™ª
 				16'd194:LUT_Data <= {8'h53,8'h00,8'h08};	// CIP sharpen MT threshold 1
 				16'd195:LUT_Data <= {8'h53,8'h01,8'h30};	// CIP sharpen MT threshold 2
 				16'd196:LUT_Data <= {8'h53,8'h02,8'h10};	// CIP sharpen MT offset 1
@@ -1122,10 +1122,10 @@ module OV5640_Config
 				16'd206:LUT_Data <= {8'h50,8'h25,8'h00};
 				16'd207:LUT_Data <= {8'h30,8'h08,8'h02};	// wake up from standby, bit[6]
 
-				//×ÔĞĞÌí¼ÓµÄÉèÖÃ
-				16'd208:LUT_Data <= {8'h47,8'h40,8'h21};	// PCLKÏÂ½µÑØ¸üĞÂ,bit[5];VSYNC¸ßÓĞĞ§,bit[0];HSYNCµÍÓĞĞ§bit[1]
+				//è‡ªè¡Œæ·»åŠ çš„è®¾ç½®
+				16'd208:LUT_Data <= {8'h47,8'h40,8'h21};	// PCLKä¸‹é™æ²¿æ›´æ–°,bit[5];VSYNCé«˜æœ‰æ•ˆ,bit[0];HSYNCä½æœ‰æ•ˆbit[1]
 
-				//------------------------JPEGÊı¾İÄ£Ê½------------------------//
+				//------------------------JPEGæ•°æ®æ¨¡å¼------------------------//
 				16'd209:LUT_Data <= {8'h43,8'h00,8'h30};	// YUV 422, YUYV
 				16'd210:LUT_Data <= {8'h50,8'h1f,8'h00};	// YUV 422
 				// 2592x1944, 7.5fps
@@ -1173,7 +1173,7 @@ module OV5640_Config
 				16'd248:LUT_Data <= {8'h50,8'h01,8'hA3};	// SDE on, Scaling on, CMX on, AWB on 
 				16'd249:LUT_Data <= {8'h35,8'h03,8'h00};	// AEC/AGC on	
 
-				//-------------------------°×Æ½ºâÄ£Ê½-------------------------//
+				//-------------------------ç™½å¹³è¡¡æ¨¡å¼-------------------------//
 				16'd250:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd251:LUT_Data <= {8'h34,8'h00,rom_lut_data_white_balance[7:0]};
 				16'd252:LUT_Data <= {8'h34,8'h01,rom_lut_data_white_balance[15:8]};
@@ -1185,7 +1185,7 @@ module OV5640_Config
 				16'd258:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd259:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//-------------------------±¥ºÍ¶ÈÉèÖÃ-------------------------//
+				//-------------------------é¥±å’Œåº¦è®¾ç½®-------------------------//
 				16'd260:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd261:LUT_Data <= {8'h53,8'h81,8'h1c};
 				16'd262:LUT_Data <= {8'h53,8'h82,8'h5a};
@@ -1201,21 +1201,21 @@ module OV5640_Config
 				16'd272:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd273:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//--------------------------ÁÁ¶ÈÉèÖÃ--------------------------//
+				//--------------------------äº®åº¦è®¾ç½®--------------------------//
 				16'd274:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd275:LUT_Data <= {8'h55,8'h87,rom_lut_data_brightness[7:0]};
 				16'd276:LUT_Data <= {8'h55,8'h88,rom_lut_data_brightness[15:8]};
 				16'd277:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd278:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//-------------------------¶Ô±È¶ÈÉèÖÃ-------------------------//
+				//-------------------------å¯¹æ¯”åº¦è®¾ç½®-------------------------//
 				16'd279:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd280:LUT_Data <= {8'h55,8'h85,rom_lut_data_contrast[7:0]};
 				16'd281:LUT_Data <= {8'h55,8'h86,rom_lut_data_contrast[15:8]};
 				16'd282:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd283:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//------------------------×Ô¶¯Èñ¶ÈÉèÖÃ------------------------//
+				//------------------------è‡ªåŠ¨é”åº¦è®¾ç½®------------------------//
 				16'd284:LUT_Data <= {8'h53,8'h08,8'h25};
 				16'd285:LUT_Data <= {8'h53,8'h00,8'h08};
 				16'd286:LUT_Data <= {8'h53,8'h00,8'h30};
@@ -1226,7 +1226,7 @@ module OV5640_Config
 				16'd291:LUT_Data <= {8'h53,8'h00,8'h04};
 				16'd292:LUT_Data <= {8'h53,8'h00,8'h06};
 
-				//--------------------------ÌØĞ§ÉèÖÃ--------------------------//
+				//--------------------------ç‰¹æ•ˆè®¾ç½®--------------------------//
 				16'd293:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd294:LUT_Data <= {8'h55,8'h80,rom_lut_data_special_effects[7:0]};
 				16'd295:LUT_Data <= {8'h55,8'h83,rom_lut_data_special_effects[15:8]};
@@ -1235,7 +1235,7 @@ module OV5640_Config
 				16'd298:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd299:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//------------------------ÆØ¹â²¹³¥ÉèÖÃ------------------------//
+				//------------------------æ›å…‰è¡¥å¿è®¾ç½®------------------------//
 				16'd300:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd301:LUT_Data <= {8'h3a,8'h0f,rom_lut_data_exposure[7:0]};
 				16'd302:LUT_Data <= {8'h3a,8'h10,rom_lut_data_exposure[15:8]};
@@ -1246,7 +1246,7 @@ module OV5640_Config
 				16'd307:LUT_Data <= {8'h32,8'h12,8'h13};
 				16'd308:LUT_Data <= {8'h32,8'h12,8'ha3};
 
-				//----------------------Í¼ÏñÊä³ö¿ª´°ÉèÖÃ----------------------//
+				//----------------------å›¾åƒè¾“å‡ºå¼€çª—è®¾ç½®----------------------//
 				16'd309:LUT_Data <= {8'h32,8'h12,8'h03};
 				16'd310:LUT_Data <= {8'h38,8'h00,IMAGE_OFFEST_H[15:8]};
 				16'd311:LUT_Data <= {8'h38,8'h01,IMAGE_OFFEST_H[7:0]};
@@ -1273,45 +1273,45 @@ module OV5640_Config
 	end endgenerate
 endmodule
 
-//°×Æ½ºâ´æ´¢ROM
+//ç™½å¹³è¡¡å­˜å‚¨ROM
 module ROM_OV5640_White_Balance
 (
 	input [2:0]i_index,
 	output [55:0]o_lut_data
 );
-	//------------------Êä³öĞÅºÅ---------------//
+	//------------------è¾“å‡ºä¿¡å·---------------//
 	reg [39:0]lut_data_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
 	assign o_lut_data = {lut_data_o[39:16],8'h00,8'h04,lut_data_o[15:0]};
 	
-	//-----------------³õÊ¼»¯ROM---------------//
+	//-----------------åˆå§‹åŒ–ROM---------------//
 	always@(*)begin
 		case(i_index)
-			3'd0:lut_data_o <= {8'h00,8'h00,8'h04,8'h00,8'h04};		//0:×Ô¶¯;
-			3'd1:lut_data_o <= {8'h01,8'hf3,8'h04,8'h1c,8'h06};		//1:ÈÕ¹â;
-			3'd2:lut_data_o <= {8'h01,8'hcf,8'h07,8'h48,8'h05};		//2:°ì¹«ÊÒ;
-			3'd3:lut_data_o <= {8'h01,8'hd3,8'h04,8'h48,8'h06};		//3:ÒõÌì;
-			3'd4:lut_data_o <= {8'h01,8'h40,8'h08,8'h10,8'h04};		//4:¼ÒÀï;
-			default:lut_data_o <= {8'h00,8'h00,8'h04,8'h00,8'h04};	//Ä¬ÈÏÎª×Ô¶¯°×Æ½ºâ
+			3'd0:lut_data_o <= {8'h00,8'h00,8'h04,8'h00,8'h04};		//0:è‡ªåŠ¨;
+			3'd1:lut_data_o <= {8'h01,8'hf3,8'h04,8'h1c,8'h06};		//1:æ—¥å…‰;
+			3'd2:lut_data_o <= {8'h01,8'hcf,8'h07,8'h48,8'h05};		//2:åŠå…¬å®¤;
+			3'd3:lut_data_o <= {8'h01,8'hd3,8'h04,8'h48,8'h06};		//3:é˜´å¤©;
+			3'd4:lut_data_o <= {8'h01,8'h40,8'h08,8'h10,8'h04};		//4:å®¶é‡Œ;
+			default:lut_data_o <= {8'h00,8'h00,8'h04,8'h00,8'h04};	//é»˜è®¤ä¸ºè‡ªåŠ¨ç™½å¹³è¡¡
 		endcase
 	end
 	
 endmodule
 
-//±¥ºÍ¶È´æ´¢ROM:-3~3
+//é¥±å’Œåº¦å­˜å‚¨ROM:-3~3
 module ROM_OV5640_Saturation
 (
 	input [2:0]i_index,
 	output [47:0]o_lut_data
 );
-	//------------------Êä³öĞÅºÅ---------------//
+	//------------------è¾“å‡ºä¿¡å·---------------//
 	reg [47:0]lut_data_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
 	assign o_lut_data = lut_data_o;
 	
-	//-----------------³õÊ¼»¯ROM---------------//
+	//-----------------åˆå§‹åŒ–ROM---------------//
 	always@(*)begin
 		case(i_index)
 			3'd0:lut_data_o <= {8'h01,8'h3d,8'h3e,8'h3d,8'h30,8'h0c};		//-3
@@ -1320,25 +1320,25 @@ module ROM_OV5640_Saturation
 			3'd4:lut_data_o <= {8'h02,8'h9a,8'h9c,8'h9a,8'h7a,8'h1f};		//+1
 			3'd5:lut_data_o <= {8'h03,8'hb3,8'hb6,8'hb3,8'h8f,8'h24};		//+2
 			3'd6:lut_data_o <= {8'h04,8'hd6,8'hda,8'hda,8'hab,8'h2b};		//+3
-			default:lut_data_o <= {8'h02,8'h80,8'h82,8'h80,8'h66,8'h1a};	//+0,Ä¬ÈÏ±¥ºÍ¶ÈÎª0
+			default:lut_data_o <= {8'h02,8'h80,8'h82,8'h80,8'h66,8'h1a};	//+0,é»˜è®¤é¥±å’Œåº¦ä¸º0
 		endcase
 	end
 	
 endmodule
 
-//ÁÁ¶È´æ´¢ROM:-4~4
+//äº®åº¦å­˜å‚¨ROM:-4~4
 module ROM_OV5640_Brightness
 (
 	input [3:0]i_bright,
 	output [15:0]o_lut_data
 );
-	//------------------Êä³öĞÅºÅ---------------//
+	//------------------è¾“å‡ºä¿¡å·---------------//
 	reg [11:0]lut_data_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
 	assign o_lut_data = {lut_data_o,4'd0};
 	
-	//-----------------³õÊ¼»¯ROM---------------//
+	//-----------------åˆå§‹åŒ–ROM---------------//
 	always@(*)begin
 		case(i_bright)
 			4'd0:lut_data_o <= {8'h09,4'd4};		//-4
@@ -1349,25 +1349,25 @@ module ROM_OV5640_Brightness
 			4'd6:lut_data_o <= {8'h01,4'd2};		//+2
 			4'd7:lut_data_o <= {8'h01,4'd3};		//+3
 			4'd8:lut_data_o <= {8'h01,4'd4};		//+4
-			default:lut_data_o <= {8'h01,4'd0};		//+0,Ä¬ÈÏÁÁ¶ÈÎª0
+			default:lut_data_o <= {8'h01,4'd0};		//+0,é»˜è®¤äº®åº¦ä¸º0
 		endcase
 	end
 	
 endmodule
 
-//¶Ô±È¶È´æ´¢ROM:-3~3
+//å¯¹æ¯”åº¦å­˜å‚¨ROM:-3~3
 module ROM_OV5640_Contrast
 (
 	input [2:0]i_contrast,
 	output [15:0]o_lut_data
 );
-	//------------------Êä³öĞÅºÅ---------------//
+	//------------------è¾“å‡ºä¿¡å·---------------//
 	reg [15:0]lut_data_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
 	assign o_lut_data = lut_data_o;
 	
-	//-----------------³õÊ¼»¯ROM---------------//
+	//-----------------åˆå§‹åŒ–ROM---------------//
 	always@(*)begin
 		case(i_contrast)
 			3'd0:lut_data_o <= {8'h14,8'h14};		//-3
@@ -1376,52 +1376,52 @@ module ROM_OV5640_Contrast
 			3'd4:lut_data_o <= {8'h24,8'h10};		//+1
 			3'd5:lut_data_o <= {8'h28,8'h18};		//+2
 			3'd6:lut_data_o <= {8'h2c,8'h1c};		//+3
-			default:lut_data_o <= {8'h20,8'h00};	//+0,Ä¬ÈÏ¶Ô±È¶È
+			default:lut_data_o <= {8'h20,8'h00};	//+0,é»˜è®¤å¯¹æ¯”åº¦
 		endcase
 	end
 	
 endmodule
 
-//ÌØĞ§´æ´¢ROM:0~6
+//ç‰¹æ•ˆå­˜å‚¨ROM:0~6
 module ROM_OV5640_Special_Effects
 (
 	input [2:0]i_index,
 	output [23:0]o_lut_data
 );
-	//------------------Êä³öĞÅºÅ---------------//
+	//------------------è¾“å‡ºä¿¡å·---------------//
 	reg [23:0]lut_data_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
 	assign o_lut_data = lut_data_o;
 	
-	//-----------------³õÊ¼»¯ROM---------------//
+	//-----------------åˆå§‹åŒ–ROM---------------//
 	always@(*)begin
 		case(i_index)
-			3'd1:lut_data_o <= {8'h40,8'ha0,8'h1e};		//1:ÀäÉ«
-			3'd2:lut_data_o <= {8'hc0,8'h80,8'h1e};		//2:Å¯É«
-			3'd3:lut_data_o <= {8'h80,8'h80,8'h1e};		//3:ºÚ°×
-			3'd4:lut_data_o <= {8'ha0,8'h40,8'h1e};		//4:·º»Æ
-			3'd5:lut_data_o <= {8'h10,8'h40,8'h40};		//5:·´É«
-			3'd6:lut_data_o <= {8'h60,8'h60,8'h1e};		//6:Æ«ÂÌ
-			default:lut_data_o <= {8'h10,8'h40,8'h06};	//0:Ä¬ÈÏÕı³£
+			3'd1:lut_data_o <= {8'h40,8'ha0,8'h1e};		//1:å†·è‰²
+			3'd2:lut_data_o <= {8'hc0,8'h80,8'h1e};		//2:æš–è‰²
+			3'd3:lut_data_o <= {8'h80,8'h80,8'h1e};		//3:é»‘ç™½
+			3'd4:lut_data_o <= {8'ha0,8'h40,8'h1e};		//4:æ³›é»„
+			3'd5:lut_data_o <= {8'h10,8'h40,8'h40};		//5:åè‰²
+			3'd6:lut_data_o <= {8'h60,8'h60,8'h1e};		//6:åç»¿
+			default:lut_data_o <= {8'h10,8'h40,8'h06};	//0:é»˜è®¤æ­£å¸¸
 		endcase
 	end
 	
 endmodule
 
-//ÆØ¹â²¹³¥´æ´¢ROM:-3~3
+//æ›å…‰è¡¥å¿å­˜å‚¨ROM:-3~3
 module ROM_OV5640_Exposure
 (
 	input [2:0]i_index,
 	output [47:0]o_lut_data
 );
-	//------------------Êä³öĞÅºÅ---------------//
+	//------------------è¾“å‡ºä¿¡å·---------------//
 	reg [47:0]lut_data_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
 	assign o_lut_data = lut_data_o;
 	
-	//-----------------³õÊ¼»¯ROM---------------//
+	//-----------------åˆå§‹åŒ–ROM---------------//
 	always@(*)begin
 		case(i_index)
 			3'd0:lut_data_o <= {8'h10,8'h20,8'h08,8'h10,8'h08,8'h10};		//-3
@@ -1430,25 +1430,25 @@ module ROM_OV5640_Exposure
 			3'd4:lut_data_o <= {8'h10,8'h38,8'h40,8'h71,8'h38,8'h40};		//+1
 			3'd5:lut_data_o <= {8'h20,8'h48,8'h50,8'h90,8'h48,8'h50};		//+2
 			3'd6:lut_data_o <= {8'h20,8'h58,8'h60,8'ha0,8'h58,8'h60};		//+3
-			default:lut_data_o <= {8'h10,8'h30,8'h38,8'h61,8'h30,8'h38};	//+0,Ä¬ÈÏÆØ¹â²¹³¥Îª0
+			default:lut_data_o <= {8'h10,8'h30,8'h38,8'h61,8'h30,8'h38};	//+0,é»˜è®¤æ›å…‰è¡¥å¿ä¸º0
 		endcase
 	end
 	
 endmodule
 
-//¾Û½¹ÅäÖÃ
+//èšç„¦é…ç½®
 module ROM_OV5640_Auto_Focus
 (
 	input [15:0]i_index,
 	output [23:0]o_lut_data
 );
-	//------------------Êä³öĞÅºÅ---------------//
+	//------------------è¾“å‡ºä¿¡å·---------------//
 	reg [23:0]lut_data_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
 	assign o_lut_data = lut_data_o;
 	
-	//-----------------³õÊ¼»¯ROM---------------//
+	//-----------------åˆå§‹åŒ–ROM---------------//
 	always@(*)begin
 		case(i_index)
 			16'd0:lut_data_o <= {16'h3000,8'h20};

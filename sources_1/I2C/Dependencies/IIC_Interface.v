@@ -27,33 +27,33 @@
 // 2020/08/02			V1.5		 Erie		Add read response signal optional, 1 is non-response NACK, 0 is response ACK.
 // 2021/10/16			V2.0		 Erie		Renamed to IIC_Interface, adding support for write response verification/continuous writing/continuous reading.
 ///////////////////////////////////Chinese////////////////////////////////////////
-// °æÈ¨¹éÊô:		¶«ÄÏ´óÑ§ÏÔÊ¾ÖĞĞÄ301ÊµÑéÊÒ
-// ¿ª·¢ÈËÔ±:		Erie
+// ç‰ˆæƒå½’å±:		ä¸œå—å¤§å­¦æ˜¾ç¤ºä¸­å¿ƒ301å®éªŒå®¤
+// å¼€å‘äººå‘˜:		Erie
 // 
-// ´´½¨ÈÕÆÚ: 		2019Äê10ÔÂ07ÈÕ
-// Éè¼ÆÃû³Æ: 		IIC Driver
-// Ä£¿éÃû³Æ: 		IIC_Interface
-// Ïà¹ØÃû³Æ: 		None
+// åˆ›å»ºæ—¥æœŸ: 		2019å¹´10æœˆ07æ—¥
+// è®¾è®¡åç§°: 		IIC Driver
+// æ¨¡å—åç§°: 		IIC_Interface
+// ç›¸å…³åç§°: 		None
 // 
-// ÒÀÀµ×ÊÁÏ: 		None
+// ä¾èµ–èµ„æ–™: 		None
 //
-// ÒÀÀµÄ£¿é:
-// 	  Ä£¿éÃû³Æ						 °æ±¾
+// ä¾èµ–æ¨¡å—:
+// 	  æ¨¡å—åç§°						 ç‰ˆæœ¬
 // Clock_Interface					 V2.3
 //
-// µ±Ç°°æ±¾:		V2.0
-// ĞŞ¶©ÈÕÆÚ:		2021Äê10ÔÂ16ÈÕ
-// ĞŞ¶©ÀúÊ·:
-//		Ê±¼ä			°æ±¾		ĞŞ¶©ÈË				ĞŞ¶©ÄÚÈİ	
-// 2019Äê10ÔÂ07ÈÕ		V1.0		 Erie		´´½¨ÎÄ¼ş,±àĞ´IICÇı¶¯Ä£¿é(Driver_IIC)
-// 2019Äê10ÔÂ08ÈÕ		V1.1		 Erie		±àĞ´IICÇı¶¯,Ö§³Öµ¥µØÖ·¶ÁĞ´
-// 2019Äê10ÔÂ16ÈÕ		V1.2		 Erie		ĞŞ¸´¶ÁĞ´ÇëÇóĞÅºÅ³åÍ»ÎÊÌâ
-// 2020Äê04ÔÂ24ÈÕ		V1.3		 Erie		ÓÅ»¯Ê±Ğò,Ôö¼ÓË«µØÖ·¶ÁĞ´Ä£Ê½
-// 2020Äê07ÔÂ18ÈÕ		V1.4		 Erie		¸üÃûÎªDriver_Master_IIC,Ôö¼ÓIICÆµÂÊµ÷½Ú²ÎÊı
-// 2020Äê08ÔÂ02ÈÕ		V1.5		 Erie		Ôö¼Ó¶ÁÓ¦´ğĞÅºÅ¿ÉÑ¡,1Îª·ÇÓ¦´ğNACK,0ÎªÓ¦´ğACK
-// 2021Äê10ÔÂ16ÈÕ		V2.0		 Erie		¸üÃûÎªIIC_Interface,Ôö¼Ó¶ÔĞ´Ó¦´ğĞ£Ñé/Á¬ĞøĞ´/Á¬Ğø¶ÁµÄ¹¦ÄÜÖ§³Ö
+// å½“å‰ç‰ˆæœ¬:		V2.0
+// ä¿®è®¢æ—¥æœŸ:		2021å¹´10æœˆ16æ—¥
+// ä¿®è®¢å†å²:
+//		æ—¶é—´			ç‰ˆæœ¬		ä¿®è®¢äºº				ä¿®è®¢å†…å®¹	
+// 2019å¹´10æœˆ07æ—¥		V1.0		 Erie		åˆ›å»ºæ–‡ä»¶,ç¼–å†™IICé©±åŠ¨æ¨¡å—(Driver_IIC)
+// 2019å¹´10æœˆ08æ—¥		V1.1		 Erie		ç¼–å†™IICé©±åŠ¨,æ”¯æŒå•åœ°å€è¯»å†™
+// 2019å¹´10æœˆ16æ—¥		V1.2		 Erie		ä¿®å¤è¯»å†™è¯·æ±‚ä¿¡å·å†²çªé—®é¢˜
+// 2020å¹´04æœˆ24æ—¥		V1.3		 Erie		ä¼˜åŒ–æ—¶åº,å¢åŠ åŒåœ°å€è¯»å†™æ¨¡å¼
+// 2020å¹´07æœˆ18æ—¥		V1.4		 Erie		æ›´åä¸ºDriver_Master_IIC,å¢åŠ IICé¢‘ç‡è°ƒèŠ‚å‚æ•°
+// 2020å¹´08æœˆ02æ—¥		V1.5		 Erie		å¢åŠ è¯»åº”ç­”ä¿¡å·å¯é€‰,1ä¸ºéåº”ç­”NACK,0ä¸ºåº”ç­”ACK
+// 2021å¹´10æœˆ16æ—¥		V2.0		 Erie		æ›´åä¸ºIIC_Interface,å¢åŠ å¯¹å†™åº”ç­”æ ¡éªŒ/è¿ç»­å†™/è¿ç»­è¯»çš„åŠŸèƒ½æ”¯æŒ
 
-//IIC½Ó¿Ú
+//IICæ¥å£
 module IIC_Interface
 #(
 	parameter CLOCK_FREQ_MHZ 	= 13'd100,                                                                                                                       
@@ -63,53 +63,53 @@ module IIC_Interface
 	input i_clk,
 	input i_rstn,
 	
-	//-------------Íâ²¿¿ØÖÆĞÅºÅ-------------//
-	//ÅäÖÃÄ£Ê½ĞÅºÅ
-	input i_mbus_rwslave_addr_mode,			//ÅäÖÃIIC´Ó»úµØÖ·Ä£Ê½,1'b0´ú±íÔ­Ê¼µØÖ·,ĞèÒª×óÒÆ7Î»,µÍÎ»²¹Áã;1'b1´ú±íÒÆÎ»Ö®ºóµØÖ·,²»ĞèÒªÔÙÒÆÎ»
-	input i_mbus_rwaddr_mode,				//ÅäÖÃIIC¶ÁĞ´µØÖ·Ä£Ê½,1'b1´ú±íË«µØÖ·Î»;1'b0´ú±íµ¥µØÖ·Î»,´ËÊ±µÍÎ»µØÖ·ÓĞĞ§
-	input i_mbus_rack,			            //ÅäÖÃIIC¶ÁÓ¦´ğĞÅºÅ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-	input i_mbus_wack_enable,				//ÅäÖÃIICĞ´Ó¦´ğ¼ì²âĞ£ÑéÊ¹ÄÜ
-	input i_mbus_wack,			        	//ÅäÖÃIICĞ´Ó¦´ğĞÅºÅĞ£ÑéÖµ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-	input i_mbus_rwmode,					//ÅäÖÃIIC¶ÁĞ´Êı¾İÄ£Ê½,1'b1´ú±íµ¥×Ö½Ú¶ÁĞ´;1'b0´ú±íÁ¬Ğø¶ÁĞ´
+	//-------------å¤–éƒ¨æ§åˆ¶ä¿¡å·-------------//
+	//é…ç½®æ¨¡å¼ä¿¡å·
+	input i_mbus_rwslave_addr_mode,			//é…ç½®IICä»æœºåœ°å€æ¨¡å¼,1'b0ä»£è¡¨åŸå§‹åœ°å€,éœ€è¦å·¦ç§»7ä½,ä½ä½è¡¥é›¶;1'b1ä»£è¡¨ç§»ä½ä¹‹ååœ°å€,ä¸éœ€è¦å†ç§»ä½
+	input i_mbus_rwaddr_mode,				//é…ç½®IICè¯»å†™åœ°å€æ¨¡å¼,1'b1ä»£è¡¨åŒåœ°å€ä½;1'b0ä»£è¡¨å•åœ°å€ä½,æ­¤æ—¶ä½ä½åœ°å€æœ‰æ•ˆ
+	input i_mbus_rack,			            //é…ç½®IICè¯»åº”ç­”ä¿¡å·,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+	input i_mbus_wack_enable,				//é…ç½®IICå†™åº”ç­”æ£€æµ‹æ ¡éªŒä½¿èƒ½
+	input i_mbus_wack,			        	//é…ç½®IICå†™åº”ç­”ä¿¡å·æ ¡éªŒå€¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+	input i_mbus_rwmode,					//é…ç½®IICè¯»å†™æ•°æ®æ¨¡å¼,1'b1ä»£è¡¨å•å­—èŠ‚è¯»å†™;1'b0ä»£è¡¨è¿ç»­è¯»å†™
 	
-	//ÅäÖÃÊı¾İĞÅºÅ
-	input [7:0]i_mbus_rwslave_addr,			//ÅäÖÃIIC¶ÁĞ´´Ó»úµØÖ·
-	input [7:0]i_mbus_rwaddr_h,				//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,¸ß8Î»
-	input [7:0]i_mbus_rwaddr_l,				//ÅäÖÃIIC¶ÁĞ´¼Ä´æÆ÷µØÖ·,µÍ8Î»
+	//é…ç½®æ•°æ®ä¿¡å·
+	input [7:0]i_mbus_rwslave_addr,			//é…ç½®IICè¯»å†™ä»æœºåœ°å€
+	input [7:0]i_mbus_rwaddr_h,				//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,é«˜8ä½
+	input [7:0]i_mbus_rwaddr_l,				//é…ç½®IICè¯»å†™å¯„å­˜å™¨åœ°å€,ä½8ä½
 	
-	//Ğ´Í¨µÀ
-	input i_mbus_wrq,						//Ğ´ÇëÇó,¸ßµçÆ½ÓĞĞ§
-	input [7:0]i_mbus_wdata,				//Ğ´Êı¾İ
-	input i_mbus_wvalid,					//Ğ´Êı¾İÓĞĞ§ĞÅºÅ
-	input i_mbus_wlast,						//Ğ´×îºóÒ»¸ö
-	output o_mbus_wready,					//Ğ´×¼±¸ºÃĞÅºÅ
+	//å†™é€šé“
+	input i_mbus_wrq,						//å†™è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+	input [7:0]i_mbus_wdata,				//å†™æ•°æ®
+	input i_mbus_wvalid,					//å†™æ•°æ®æœ‰æ•ˆä¿¡å·
+	input i_mbus_wlast,						//å†™æœ€åä¸€ä¸ª
+	output o_mbus_wready,					//å†™å‡†å¤‡å¥½ä¿¡å·
 	
-	//¶ÁÍ¨µÀ
-	input i_mbus_rrq,						//¶ÁÇëÇó,¸ßµçÆ½ÓĞĞ§
-	input i_mbus_rready,					//¶Á×¼±¸ºÃ
-	input i_mbus_rlast,						//¶Á×îºóÒ»¸ö
-	output [7:0]o_mbus_rdata,				//¶ÁÊı¾İ
-	output o_mbus_rvalid,					//¶ÁÊı¾İÓĞĞ§ĞÅºÅ
+	//è¯»é€šé“
+	input i_mbus_rrq,						//è¯»è¯·æ±‚,é«˜ç”µå¹³æœ‰æ•ˆ
+	input i_mbus_rready,					//è¯»å‡†å¤‡å¥½
+	input i_mbus_rlast,						//è¯»æœ€åä¸€ä¸ª
+	output [7:0]o_mbus_rdata,				//è¯»æ•°æ®
+	output o_mbus_rvalid,					//è¯»æ•°æ®æœ‰æ•ˆä¿¡å·
 	
-	//Ã¦Í¨µÀ
-	output o_mbus_rwbusy,					//¶ÁĞ´Ã¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ,µÍµçÆ½´ú±í¿ÕÏĞ
-	output o_mbus_rwack_err,				//Ó¦´ğ´íÎó
+	//å¿™é€šé“
+	output o_mbus_rwbusy,					//è¯»å†™å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ,ä½ç”µå¹³ä»£è¡¨ç©ºé—²
+	output o_mbus_rwack_err,				//åº”ç­”é”™è¯¯
 	
-	//--------------IIC¹Ü½ÅĞÅºÅ-------------//
-	input i_iic_sda,						//IICÊäÈëSDAÊı¾İĞÅºÅ
-	output o_iic_scl,						//IICÊä³öSCLÊ±ÖÓĞÅºÅ
-	output o_iic_sda,						//IICÊä³öSDAÊı¾İĞÅºÅ
-	output o_iic_sda_dir					//IICÊä³öSDAĞÅºÅ·½Ïò
+	//--------------IICç®¡è„šä¿¡å·-------------//
+	input i_iic_sda,						//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+	output o_iic_scl,						//IICè¾“å‡ºSCLæ—¶é’Ÿä¿¡å·
+	output o_iic_sda,						//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+	output o_iic_sda_dir					//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 );
 
-	//----------------IICÊ±ÖÓ²ÎÊı---------------//
-	localparam CLOCK_FACTOR = (CLOCK_FREQ_MHZ * 500) / (IIC_Clock_KHz);			//Ê±ÖÓ·ÖÆµÏµÊı,½µÆµÒ»°ë
+	//----------------IICæ—¶é’Ÿå‚æ•°---------------//
+	localparam CLOCK_FACTOR = (CLOCK_FREQ_MHZ * 500) / (IIC_Clock_KHz);			//æ—¶é’Ÿåˆ†é¢‘ç³»æ•°,é™é¢‘ä¸€åŠ
 	localparam FACTOR_BIT = 5'd16;
-	localparam CLOCK_MODE = 1'b1;												//Ê±ÖÓ·ÖÆµÄ£Ê½,0ÎªÂö³åÊ±ÖÓ;1Îª·½²¨Ê±ÖÓ
-	localparam NEGEDGE_ENABLE = 1'b0;											//Ö÷Ê±ÖÓÏÂ½µÑØ·´×ª¼ì²âÊ¹ÄÜ,0Îª²»¿ªÆô¼ì²â(ÆæÊı·ÖÆµ·½²¨Ê±ÖÓ»á´æÔÚÒ»¸öÖ÷Ê±ÖÓÆ«²î);1Îª¿ªÆô¼ì²â(50%Õ¼¿Õ±È·½²¨Ê±ÖÓ)
-	localparam DIVIDER_MODE = {1'b0,~CLOCK_FACTOR[0],CLOCK_FACTOR[0],1'b0};		//·ÖÆµÄ£Ê½,4'bxxx1´ú±íÕûÊı·ÖÆµ;4'bxx10´ú±íÆæÊı·ÖÆµ;4'bx100´ú±íÅ¼Êı·ÖÆµ;4'b1000´ú±íĞ¡Êı·ÖÆµ
+	localparam CLOCK_MODE = 1'b1;												//æ—¶é’Ÿåˆ†é¢‘æ¨¡å¼,0ä¸ºè„‰å†²æ—¶é’Ÿ;1ä¸ºæ–¹æ³¢æ—¶é’Ÿ
+	localparam NEGEDGE_ENABLE = 1'b0;											//ä¸»æ—¶é’Ÿä¸‹é™æ²¿åè½¬æ£€æµ‹ä½¿èƒ½,0ä¸ºä¸å¼€å¯æ£€æµ‹(å¥‡æ•°åˆ†é¢‘æ–¹æ³¢æ—¶é’Ÿä¼šå­˜åœ¨ä¸€ä¸ªä¸»æ—¶é’Ÿåå·®);1ä¸ºå¼€å¯æ£€æµ‹(50%å ç©ºæ¯”æ–¹æ³¢æ—¶é’Ÿ)
+	localparam DIVIDER_MODE = {1'b0,~CLOCK_FACTOR[0],CLOCK_FACTOR[0],1'b0};		//åˆ†é¢‘æ¨¡å¼,4'bxxx1ä»£è¡¨æ•´æ•°åˆ†é¢‘;4'bxx10ä»£è¡¨å¥‡æ•°åˆ†é¢‘;4'bx100ä»£è¡¨å¶æ•°åˆ†é¢‘;4'b1000ä»£è¡¨å°æ•°åˆ†é¢‘
 	
-	//------------------×´Ì¬²ÎÊı----------------//
+	//------------------çŠ¶æ€å‚æ•°----------------//
 	localparam ST_IDLE = 0;
 	localparam ST_WR_WAIT = 1;
 	localparam ST_RD_ADDR = 2;
@@ -118,38 +118,38 @@ module IIC_Interface
 	localparam ST_RD_WAIT = 5;
 	localparam ST_END = 6;
 	
-	//------------ÊµÀı»¯Ä£¿é½Ó¿ÚĞÅºÅ------------//
-	//·¢ËÍ¿ØÖÆÄ£¿é
+	//------------å®ä¾‹åŒ–æ¨¡å—æ¥å£ä¿¡å·------------//
+	//å‘é€æ§åˆ¶æ¨¡å—
 	reg [1:0]wr_mbus_wslave_addr_mode = 0;
 	reg [3:0]wr_mbus_wmode = 0;
 	reg wr_mbus_wrq = 0;
 	wire wr_mbus_werr;
 	wire wr_mbus_wbusy;
 		
-	//½ÓÊÕÊı¾İÄ£¿é--ÅäÖÃÍ¨µÀ
+	//æ¥æ”¶æ•°æ®æ¨¡å—--é…ç½®é€šé“
 	reg rd_dbus_rstop = 0;
 	
-	//½ÓÊÕÊı¾İÄ£¿é--¶ÁÍ¨µÀ
+	//æ¥æ”¶æ•°æ®æ¨¡å—--è¯»é€šé“
 	reg rd_dbus_rrq = 0;
 	reg rd_dbus_rlast = 0;
 	wire [7:0]rd_dbus_rdata;
 	wire rd_dbus_rvalid;
 	wire rd_dbus_rbusy;
 	
-	//½ÓÊÕÊı¾İÄ£¿é--¹Ü½ÅĞÅºÅ
+	//æ¥æ”¶æ•°æ®æ¨¡å—--ç®¡è„šä¿¡å·
 	wire rd_dbus_iic_sda;
 	wire rd_dbus_iic_sda_dir;
 
-	//·¢ËÍÊı¾İÄ£¿é--ÅäÖÃÍ¨µÀ
+	//å‘é€æ•°æ®æ¨¡å—--é…ç½®é€šé“
 	wire wr_dbus_wstart;
 	wire wr_dbus_wstop_is;
 	wire wr_dbus_wchange;
 	
-	//·¢ËÍÊı¾İÄ£¿é--Ğ´Ó¦´ğ
+	//å‘é€æ•°æ®æ¨¡å—--å†™åº”ç­”
 	wire wr_dbus_wack_sel;
 	wire wr_dbus_wack;
 	
-	//·¢ËÍÊı¾İÄ£¿é--Ğ´Í¨µÀ
+	//å‘é€æ•°æ®æ¨¡å—--å†™é€šé“
 	wire wr_dbus_wrq;
 	wire [7:0]wr_dbus_wdata;
 	wire wr_dbus_wvalid;
@@ -158,68 +158,68 @@ module IIC_Interface
 	wire wr_dbus_wstop;
 	wire wr_dbus_wbusy;
 	
-	//·¢ËÍÊı¾İÄ£¿é--¹Ü½ÅĞÅºÅ
+	//å‘é€æ•°æ®æ¨¡å—--ç®¡è„šä¿¡å·
 	wire wr_dbus_iic_sda;
 	wire wr_dbus_iic_sda_dir;
 	
-	//------------------Ê±ÖÓĞÅºÅ----------------//
-	//IICÊ±ÖÓĞÅºÅ
+	//------------------æ—¶é’Ÿä¿¡å·----------------//
+	//IICæ—¶é’Ÿä¿¡å·
 	wire clk_IIC;
 	reg [1:0]clk_IIC_buffer = 0;
 	
-	//------------------±êÖ¾ĞÅºÅ----------------//
-	wire flag_scl_hs;							//SCL¸ßÆğÊ¼±êÖ¾,Î´ÓÃµ½
-	wire flag_scl_hc;							//SCL¸ßÖĞĞÄ±êÖ¾
-	wire flag_scl_ls;							//SCLµÍÆğÊ¼±êÖ¾,Î´ÓÃµ½
-	wire flag_scl_lc;							//SCLµÍÖĞĞÄ±êÖ¾
+	//------------------æ ‡å¿—ä¿¡å·----------------//
+	wire flag_scl_hs;							//SCLé«˜èµ·å§‹æ ‡å¿—,æœªç”¨åˆ°
+	wire flag_scl_hc;							//SCLé«˜ä¸­å¿ƒæ ‡å¿—
+	wire flag_scl_ls;							//SCLä½èµ·å§‹æ ‡å¿—,æœªç”¨åˆ°
+	wire flag_scl_lc;							//SCLä½ä¸­å¿ƒæ ‡å¿—
 	
-	//×´Ì¬»ú
+	//çŠ¶æ€æœº
 	reg [2:0]state_current = 0;
 	reg [2:0]state_next = 0;
 	
-	//----------------ÆäËû»º´æĞÅºÅ--------------//
+	//----------------å…¶ä»–ç¼“å­˜ä¿¡å·--------------//
 	reg [1:0]wr_mbus_wbusy_buff = 0;
 	reg [1:0]rd_dbus_rbusy_buff = 0;
 	
-	//----------------ÊäÈë»º´æĞÅºÅ--------------//
-	//ÅäÖÃÄ£¿éĞÅºÅ
+	//----------------è¾“å…¥ç¼“å­˜ä¿¡å·--------------//
+	//é…ç½®æ¨¡å—ä¿¡å·
 	reg mbus_rwmode_i = 0;
 	
-	//Íâ²¿¿ØÖÆĞÅºÅ--¶ÁÍ¨µÀ
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--è¯»é€šé“
 	reg mbus_rready_i = 0;
 	reg mbus_rlast_i = 0;
 	
-	//------------------Êä³öĞÅºÅ----------------//
-	//Íâ²¿¿ØÖÆĞÅºÅ--Ã¦Í¨µÀ
+	//------------------è¾“å‡ºä¿¡å·----------------//
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--å¿™é€šé“
 	reg mbus_rwbusy_o = 0;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	reg iic_scl_o = 1'b1;
 	reg iic_sda_o = 1'b1;
 	reg iic_sda_dir_o = 0;
 	
-	//----------------±êÖ¾ĞÅºÅÁ¬Ïß--------------//
-	assign flag_scl_hs = (clk_IIC_buffer == 2'b01) && (iic_scl_o == 1'b0);		//SCL¸ßÆğÊ¼±êÖ¾,Î´ÓÃµ½
-	assign flag_scl_hc = (clk_IIC_buffer == 2'b10) && (iic_scl_o == 1'b1);		//SCL¸ßÖĞĞÄ±êÖ¾
-	assign flag_scl_ls = (clk_IIC_buffer == 2'b01) && (iic_scl_o == 1'b1);		//SCLµÍÆğÊ¼±êÖ¾,Î´ÓÃµ½
-	assign flag_scl_lc = (clk_IIC_buffer == 2'b10) && (iic_scl_o == 1'b0);		//SCLµÍÖĞĞÄ±êÖ¾
+	//----------------æ ‡å¿—ä¿¡å·è¿çº¿--------------//
+	assign flag_scl_hs = (clk_IIC_buffer == 2'b01) && (iic_scl_o == 1'b0);		//SCLé«˜èµ·å§‹æ ‡å¿—,æœªç”¨åˆ°
+	assign flag_scl_hc = (clk_IIC_buffer == 2'b10) && (iic_scl_o == 1'b1);		//SCLé«˜ä¸­å¿ƒæ ‡å¿—
+	assign flag_scl_ls = (clk_IIC_buffer == 2'b01) && (iic_scl_o == 1'b1);		//SCLä½èµ·å§‹æ ‡å¿—,æœªç”¨åˆ°
+	assign flag_scl_lc = (clk_IIC_buffer == 2'b10) && (iic_scl_o == 1'b0);		//SCLä½ä¸­å¿ƒæ ‡å¿—
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß--------------//
-	//Íâ²¿¿ØÖÆĞÅºÅ--¶ÁÍ¨µÀ
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿--------------//
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--è¯»é€šé“
 	assign o_mbus_rdata = rd_dbus_rdata;
 	assign o_mbus_rvalid = rd_dbus_rvalid;
 
-	//Íâ²¿¿ØÖÆĞÅºÅ--Ã¦Í¨µÀ
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--å¿™é€šé“
 	assign o_mbus_rwbusy = mbus_rwbusy_o;
 	assign o_mbus_rwack_err = wr_mbus_werr;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	assign o_iic_scl = iic_scl_o;
 	assign o_iic_sda = iic_sda_o;
 	assign o_iic_sda_dir = iic_sda_dir_o;
 	
-	//----------------ĞÅºÅÊä³öÇøÓò--------------//
-	//Íâ²¿¿ØÖÆĞÅºÅ--Ã¦Í¨µÀ
+	//----------------ä¿¡å·è¾“å‡ºåŒºåŸŸ--------------//
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--å¿™é€šé“
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_rwbusy_o <= 1'b0;
 		else if(state_current == ST_IDLE)mbus_rwbusy_o <= i_mbus_wrq | i_mbus_rrq;
@@ -227,14 +227,14 @@ module IIC_Interface
 		else mbus_rwbusy_o <= mbus_rwbusy_o;
 	end
 	
-	//IICÊ±ÖÓÊä³ö
+	//IICæ—¶é’Ÿè¾“å‡º
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)iic_scl_o <= 1'b1;
 		else if(clk_IIC_buffer == 2'b01)iic_scl_o <= ~iic_scl_o;
 		else iic_scl_o <= iic_scl_o;
 	end
 	
-	//IICÊı¾İÏßÊä³ö
+	//IICæ•°æ®çº¿è¾“å‡º
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			iic_sda_o <= 1'b1;
@@ -245,14 +245,14 @@ module IIC_Interface
 		end
 	end
 	
-	//-------------------×´Ì¬»ú----------------//
-	//Ö÷×´Ì¬»ú
+	//-------------------çŠ¶æ€æœº----------------//
+	//ä¸»çŠ¶æ€æœº
 	always@(*)begin
 		case(state_current)
 			ST_IDLE:begin
 				if(i_mbus_wrq == 1'b1)state_next <= ST_WR_WAIT;
-				else if(i_mbus_rrq == 1'b1 && mbus_rwmode_i == 1'b1)state_next <= ST_RD_ADDR;	//µ¥×Ö½Ú¶ÁÈ¡,Random Read
-				else if(i_mbus_rrq == 1'b1)state_next <= ST_RD_START;							//Á¬Ğø¶ÁÈ¡,Ò²¿É¶ÁÈ¡µ±Ç°µØÖ·1×Ö½Ú
+				else if(i_mbus_rrq == 1'b1 && mbus_rwmode_i == 1'b1)state_next <= ST_RD_ADDR;	//å•å­—èŠ‚è¯»å–,Random Read
+				else if(i_mbus_rrq == 1'b1)state_next <= ST_RD_START;							//è¿ç»­è¯»å–,ä¹Ÿå¯è¯»å–å½“å‰åœ°å€1å­—èŠ‚
 				else state_next <= ST_IDLE;
 			end
 			ST_WR_WAIT:begin
@@ -272,7 +272,7 @@ module IIC_Interface
 				else state_next <= ST_RD_DATA;
 			end
 			ST_RD_WAIT:begin
-				if(rd_dbus_rbusy_buff == 2'b10)state_next <= ST_END;			//¶ÁÊı¾İ½áÊø
+				if(rd_dbus_rbusy_buff == 2'b10)state_next <= ST_END;			//è¯»æ•°æ®ç»“æŸ
 				else state_next <= ST_RD_WAIT;
 			end
 			ST_END:state_next <= ST_IDLE;
@@ -280,7 +280,7 @@ module IIC_Interface
 		endcase
 	end
 	
-	//×´Ì¬×ª»»
+	//çŠ¶æ€è½¬æ¢
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			state_current <= ST_IDLE;
@@ -289,15 +289,15 @@ module IIC_Interface
 		end
 	end
 	
-	//----------------×´Ì¬ÈÎÎñ´¦Àí-------------//
-	//IICĞ´¿ØÖÆ--ÅäÖÃ´Ó»úµØÖ·Ä£Ê½
+	//----------------çŠ¶æ€ä»»åŠ¡å¤„ç†-------------//
+	//IICå†™æ§åˆ¶--é…ç½®ä»æœºåœ°å€æ¨¡å¼
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)wr_mbus_wslave_addr_mode <= 2'd0;
 		else if(state_current == ST_RD_START)wr_mbus_wslave_addr_mode <= {1'b1,i_mbus_rwslave_addr_mode};
 		else wr_mbus_wslave_addr_mode <= {1'b0,i_mbus_rwslave_addr_mode};
 	end
 	
-	//IICĞ´¿ØÖÆ--ÅäÖÃĞ´Êı¾İÄ£Ê½
+	//IICå†™æ§åˆ¶--é…ç½®å†™æ•°æ®æ¨¡å¼
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)wr_mbus_wmode <= 4'd0;
 		else if(state_current == ST_RD_ADDR)wr_mbus_wmode <= 4'b1000;
@@ -305,7 +305,7 @@ module IIC_Interface
 		else wr_mbus_wmode <= {2'd0,~mbus_rwmode_i,mbus_rwmode_i};
 	end
 	
-	//IICĞ´¿ØÖÆ--Ğ´ÇëÇóĞÅºÅ
+	//IICå†™æ§åˆ¶--å†™è¯·æ±‚ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)wr_mbus_wrq <= 1'b0;
 		else if(wr_mbus_wbusy_buff[0] == 1'b1 || wr_mbus_wbusy_buff[1] == 1'b1)wr_mbus_wrq <= 1'b0;
@@ -315,156 +315,156 @@ module IIC_Interface
 		else wr_mbus_wrq <= 1'b0;
 	end
 	
-	//¶ÁÊı¾İ--Í£Ö¹ĞÅºÅ
+	//è¯»æ•°æ®--åœæ­¢ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)rd_dbus_rstop <= 1'b0;
 		else if(state_current == ST_RD_WAIT)rd_dbus_rstop <= 1'b1;
 		else rd_dbus_rstop <= 1'b0;
 	end
 	
-	//¶ÁÊı¾İ--¶ÁÇëÇóĞÅºÅ
+	//è¯»æ•°æ®--è¯»è¯·æ±‚ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)rd_dbus_rrq <= 1'b0;
 		else if(state_current == ST_RD_DATA)rd_dbus_rrq <= 1'b1;
 		else rd_dbus_rrq <= 1'b0;
 	end
 	
-	//¶ÁÊı¾İ--¶Á×îºóÒ»¸öÊı¾İĞÅºÅ
+	//è¯»æ•°æ®--è¯»æœ€åä¸€ä¸ªæ•°æ®ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)rd_dbus_rlast <= 1'b0;
 		else if(state_current == ST_RD_WAIT)rd_dbus_rlast <= 1'b1;
 		else rd_dbus_rlast <= 1'b0;
 	end
 		
-	//IICĞ´¿ØÖÆÆ÷ÊµÀı»¯
+	//IICå†™æ§åˆ¶å™¨å®ä¾‹åŒ–
 	IIC_Write_Ctrl IIC_Write_Ctrl_Inst(
 		.i_clk(i_clk),
 		.i_rstn(i_rstn),
 
-		//------------Íâ²¿¿ØÖÆĞÅºÅ----------//
-		//ÅäÖÃÄ£Ê½ĞÅºÅ
-		.i_mbus_wslave_addr_mode(wr_mbus_wslave_addr_mode),	//ÅäÖÃIIC´Ó»úµØÖ·Ä£Ê½,2'bx0´ú±íÔ­Ê¼µØÖ·,ĞèÒª×óÒÆ7Î»,µÍÎ»²¹Áã;2'bx1´ú±íÒÆÎ»Ö®ºóµØÖ·,²»ĞèÒªÔÙÒÆÎ»;2'b1x´ú±íµØÖ·×îµÍÎ»ĞèÒª»ò1
-		.i_mbus_waddr_mode(i_mbus_rwaddr_mode),				//ÅäÖÃIICĞ´µØÖ·Ä£Ê½,1'b1´ú±íË«µØÖ·Î»;1'b0´ú±íµ¥µØÖ·Î»,´ËÊ±µÍÎ»µØÖ·ÓĞĞ§
-		.i_mbus_wack_enable(i_mbus_wack_enable),			//ÅäÖÃIICĞ´Ó¦´ğ¼ì²âĞ£ÑéÊ¹ÄÜ
-		.i_mbus_wack(i_mbus_wack),			        		//ÅäÖÃIICĞ´Ó¦´ğĞÅºÅĞ£ÑéÖµ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-		.i_mbus_wmode(wr_mbus_wmode),						//ÅäÖÃIICĞ´Êı¾İÄ£Ê½,4'bxxx1´ú±íµ¥×Ö½ÚĞ´;4'bxx10´ú±íÁ¬ĞøĞ´;4'bx100´ú±íÖ»Ğ´Æ÷¼şµØÖ·;4'b1000´ú±íĞ´ÈëÆ÷¼şµØÖ·ºÍ¼Ä´æÆ÷µØÖ·
+		//------------å¤–éƒ¨æ§åˆ¶ä¿¡å·----------//
+		//é…ç½®æ¨¡å¼ä¿¡å·
+		.i_mbus_wslave_addr_mode(wr_mbus_wslave_addr_mode),	//é…ç½®IICä»æœºåœ°å€æ¨¡å¼,2'bx0ä»£è¡¨åŸå§‹åœ°å€,éœ€è¦å·¦ç§»7ä½,ä½ä½è¡¥é›¶;2'bx1ä»£è¡¨ç§»ä½ä¹‹ååœ°å€,ä¸éœ€è¦å†ç§»ä½;2'b1xä»£è¡¨åœ°å€æœ€ä½ä½éœ€è¦æˆ–1
+		.i_mbus_waddr_mode(i_mbus_rwaddr_mode),				//é…ç½®IICå†™åœ°å€æ¨¡å¼,1'b1ä»£è¡¨åŒåœ°å€ä½;1'b0ä»£è¡¨å•åœ°å€ä½,æ­¤æ—¶ä½ä½åœ°å€æœ‰æ•ˆ
+		.i_mbus_wack_enable(i_mbus_wack_enable),			//é…ç½®IICå†™åº”ç­”æ£€æµ‹æ ¡éªŒä½¿èƒ½
+		.i_mbus_wack(i_mbus_wack),			        		//é…ç½®IICå†™åº”ç­”ä¿¡å·æ ¡éªŒå€¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+		.i_mbus_wmode(wr_mbus_wmode),						//é…ç½®IICå†™æ•°æ®æ¨¡å¼,4'bxxx1ä»£è¡¨å•å­—èŠ‚å†™;4'bxx10ä»£è¡¨è¿ç»­å†™;4'bx100ä»£è¡¨åªå†™å™¨ä»¶åœ°å€;4'b1000ä»£è¡¨å†™å…¥å™¨ä»¶åœ°å€å’Œå¯„å­˜å™¨åœ°å€
 
-		//ÅäÖÃÊı¾İĞÅºÅ
-		.i_mbus_wslave_addr(i_mbus_rwslave_addr),			//ÅäÖÃIICĞ´´Ó»úµØÖ·
-		.i_mbus_waddr_h(i_mbus_rwaddr_h),					//ÅäÖÃIICĞ´¼Ä´æÆ÷µØÖ·,¸ß8Î»
-		.i_mbus_waddr_l(i_mbus_rwaddr_l),					//ÅäÖÃIICĞ´¼Ä´æÆ÷µØÖ·,µÍ8Î»
+		//é…ç½®æ•°æ®ä¿¡å·
+		.i_mbus_wslave_addr(i_mbus_rwslave_addr),			//é…ç½®IICå†™ä»æœºåœ°å€
+		.i_mbus_waddr_h(i_mbus_rwaddr_h),					//é…ç½®IICå†™å¯„å­˜å™¨åœ°å€,é«˜8ä½
+		.i_mbus_waddr_l(i_mbus_rwaddr_l),					//é…ç½®IICå†™å¯„å­˜å™¨åœ°å€,ä½8ä½
 		
-		//Ğ´Í¨µÀ
-		.i_mbus_wrq(wr_mbus_wrq),							//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-		.i_mbus_wdata(i_mbus_wdata),						//Ğ´Êı¾İĞÅºÅ
-		.i_mbus_wvalid(i_mbus_wvalid),						//Ğ´Êı¾İÓĞĞ§ĞÅºÅ
-		.i_mbus_wlast(i_mbus_wlast),						//Ğ´Êı¾İ×îºóÒ»¸ö
-		.o_mbus_wready(o_mbus_wready),						//Ğ´×¼±¸ºÃ
-		.o_mbus_werr(wr_mbus_werr),							//Ğ´³ö´í,Ã»ÓĞÏìÓ¦Í£Ö¹ĞÅºÅ,À­¸ßÓĞĞ§,ÔÚÏÂÒ»´ÎÇëÇóÊ±×Ô¶¯¸´Î»µÍµçÆ½
-		.o_mbus_wbusy(wr_mbus_wbusy),						//Ğ´Ã¦Âµ
+		//å†™é€šé“
+		.i_mbus_wrq(wr_mbus_wrq),							//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+		.i_mbus_wdata(i_mbus_wdata),						//å†™æ•°æ®ä¿¡å·
+		.i_mbus_wvalid(i_mbus_wvalid),						//å†™æ•°æ®æœ‰æ•ˆä¿¡å·
+		.i_mbus_wlast(i_mbus_wlast),						//å†™æ•°æ®æœ€åä¸€ä¸ª
+		.o_mbus_wready(o_mbus_wready),						//å†™å‡†å¤‡å¥½
+		.o_mbus_werr(wr_mbus_werr),							//å†™å‡ºé”™,æ²¡æœ‰å“åº”åœæ­¢ä¿¡å·,æ‹‰é«˜æœ‰æ•ˆ,åœ¨ä¸‹ä¸€æ¬¡è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½ä½ç”µå¹³
+		.o_mbus_wbusy(wr_mbus_wbusy),						//å†™å¿™ç¢Œ
 		
-		//------------ÍâÉè¿ØÖÆĞÅºÅ----------//
-		//ÅäÖÃÍ¨µÀ
-		.o_dbus_wstart(wr_dbus_wstart),						//ÓĞÎŞÆğÊ¼ĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.o_dbus_wstop(wr_dbus_wstop_is),					//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.o_dbus_wchange(wr_dbus_wchange),					//ÇĞ»»
+		//------------å¤–è®¾æ§åˆ¶ä¿¡å·----------//
+		//é…ç½®é€šé“
+		.o_dbus_wstart(wr_dbus_wstart),						//æœ‰æ— èµ·å§‹ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.o_dbus_wstop(wr_dbus_wstop_is),					//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.o_dbus_wchange(wr_dbus_wchange),					//åˆ‡æ¢
 		
-		//Ğ´Ó¦´ğ
-		.o_dbus_wack_sel(wr_dbus_wack_sel),					//ÓĞÎŞÓ¦´ğĞÅºÅÅĞ¶Ï,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÎŞ
-		.o_dbus_wack(wr_dbus_wack),							//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+		//å†™åº”ç­”
+		.o_dbus_wack_sel(wr_dbus_wack_sel),					//æœ‰æ— åº”ç­”ä¿¡å·åˆ¤æ–­,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ— 
+		.o_dbus_wack(wr_dbus_wack),							//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 		
-		//Ğ´Í¨µÀ
-		.o_dbus_wrq(wr_dbus_wrq),							//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-		.o_dbus_wdata(wr_dbus_wdata),						//Ğ´Êı¾İ
-		.o_dbus_wvalid(wr_dbus_wvalid),						//Ğ´Êı¾İÓĞĞ§
-		.o_dbus_wlast(wr_dbus_wlast),						//Ğ´Êı¾İ×îºóÒ»¸ö
-		.i_dbus_wready(wr_dbus_wready),						//Ğ´×¼±¸ºÃ
-		.i_dbus_wstop(wr_dbus_wstop),						//Ã»ÓĞÏìÓ¦Í£Ö¹ĞÅºÅ,À­¸ßÓĞĞ§,ÔÚÏÂÒ»´ÎÇëÇóÊ±×Ô¶¯¸´Î»µÍµçÆ½
-		.i_dbus_wbusy(wr_dbus_wbusy)						//Ğ´Ã¦Âµ
+		//å†™é€šé“
+		.o_dbus_wrq(wr_dbus_wrq),							//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+		.o_dbus_wdata(wr_dbus_wdata),						//å†™æ•°æ®
+		.o_dbus_wvalid(wr_dbus_wvalid),						//å†™æ•°æ®æœ‰æ•ˆ
+		.o_dbus_wlast(wr_dbus_wlast),						//å†™æ•°æ®æœ€åä¸€ä¸ª
+		.i_dbus_wready(wr_dbus_wready),						//å†™å‡†å¤‡å¥½
+		.i_dbus_wstop(wr_dbus_wstop),						//æ²¡æœ‰å“åº”åœæ­¢ä¿¡å·,æ‹‰é«˜æœ‰æ•ˆ,åœ¨ä¸‹ä¸€æ¬¡è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½ä½ç”µå¹³
+		.i_dbus_wbusy(wr_dbus_wbusy)						//å†™å¿™ç¢Œ
 	);
 
-	//IICĞ´Êı¾İÊµÀı»¯
+	//IICå†™æ•°æ®å®ä¾‹åŒ–
 	IIC_Write_Data IIC_Write_Data_Inst(
 		.i_clk(i_clk),
 		.i_rstn(i_rstn),
 		
-		//--------------¿ØÖÆĞÅºÅ------------//
-		//ÅäÖÃÍ¨µÀ
-		.i_mbus_wstart(wr_dbus_wstart),						//ÓĞÎŞÆğÊ¼ĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.i_mbus_wstop(wr_dbus_wstop_is),					//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.i_mbus_wchange(wr_dbus_wchange),					//ÇĞ»»
-		.i_mbus_whc(flag_scl_hc),							//Ğ´Ê±ÖÓ¸ßµçÆ½ÖĞĞÄ
-		.i_mbus_wlc(flag_scl_lc),							//Ğ´Ê±ÖÓµÍµçÆ½ÖĞĞÄ
+		//--------------æ§åˆ¶ä¿¡å·------------//
+		//é…ç½®é€šé“
+		.i_mbus_wstart(wr_dbus_wstart),						//æœ‰æ— èµ·å§‹ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.i_mbus_wstop(wr_dbus_wstop_is),					//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.i_mbus_wchange(wr_dbus_wchange),					//åˆ‡æ¢
+		.i_mbus_whc(flag_scl_hc),							//å†™æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+		.i_mbus_wlc(flag_scl_lc),							//å†™æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 		
-		//Ğ´Ó¦´ğ
-		.i_mbus_wack_sel(wr_dbus_wack_sel),					//ÓĞÎŞÓ¦´ğĞÅºÅÅĞ¶Ï,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÎŞ
-		.i_mbus_wack(wr_dbus_wack),							//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+		//å†™åº”ç­”
+		.i_mbus_wack_sel(wr_dbus_wack_sel),					//æœ‰æ— åº”ç­”ä¿¡å·åˆ¤æ–­,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ— 
+		.i_mbus_wack(wr_dbus_wack),							//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 		
-		//Ğ´Í¨µÀ
-		.i_mbus_wrq(wr_dbus_wrq),							//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-		.i_mbus_wdata(wr_dbus_wdata),						//Ğ´Êı¾İ
-		.i_mbus_wvalid(wr_dbus_wvalid),						//Ğ´Êı¾İÓĞĞ§
-		.i_mbus_wlast(wr_dbus_wlast),						//Ğ´Êı¾İ×îºóÒ»¸ö
-		.o_mbus_wready(wr_dbus_wready),						//Ğ´×¼±¸ºÃ
-		.o_mbus_wstop(wr_dbus_wstop),						//Ã»ÓĞÏìÓ¦Í£Ö¹ĞÅºÅ,À­¸ßÓĞĞ§,ÔÚÏÂÒ»´ÎÇëÇóÊ±×Ô¶¯¸´Î»µÍµçÆ½
-		.o_mbus_wbusy(wr_dbus_wbusy),						//Ğ´Ã¦Âµ
+		//å†™é€šé“
+		.i_mbus_wrq(wr_dbus_wrq),							//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+		.i_mbus_wdata(wr_dbus_wdata),						//å†™æ•°æ®
+		.i_mbus_wvalid(wr_dbus_wvalid),						//å†™æ•°æ®æœ‰æ•ˆ
+		.i_mbus_wlast(wr_dbus_wlast),						//å†™æ•°æ®æœ€åä¸€ä¸ª
+		.o_mbus_wready(wr_dbus_wready),						//å†™å‡†å¤‡å¥½
+		.o_mbus_wstop(wr_dbus_wstop),						//æ²¡æœ‰å“åº”åœæ­¢ä¿¡å·,æ‹‰é«˜æœ‰æ•ˆ,åœ¨ä¸‹ä¸€æ¬¡è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½ä½ç”µå¹³
+		.o_mbus_wbusy(wr_dbus_wbusy),						//å†™å¿™ç¢Œ
 		
-		//--------------¹Ü½ÅĞÅºÅ------------//
-		.i_iic_sda(i_iic_sda),								//IICÊäÈëSDAÊı¾İĞÅºÅ
-		.o_iic_sda(wr_dbus_iic_sda),						//IICÊä³öSDAÊı¾İĞÅºÅ
-		.o_iic_sda_dir(wr_dbus_iic_sda_dir)					//IICÊä³öSDAĞÅºÅ·½Ïò
+		//--------------ç®¡è„šä¿¡å·------------//
+		.i_iic_sda(i_iic_sda),								//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+		.o_iic_sda(wr_dbus_iic_sda),						//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+		.o_iic_sda_dir(wr_dbus_iic_sda_dir)					//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 	);
 
-	//IIC¶ÁÊı¾İÄ£¿éÊµÀı»¯
+	//IICè¯»æ•°æ®æ¨¡å—å®ä¾‹åŒ–
 	IIC_Read_Data IIC_Read_Data_Inst(
 		.i_clk(i_clk),
 		.i_rstn(i_rstn),
 		
-		//--------------¿ØÖÆĞÅºÅ------------//
-		//ÅäÖÃÍ¨µÀ
-		.i_mbus_rstop(rd_dbus_rstop),						//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.i_mbus_rhc(flag_scl_hc),							//¶ÁÊ±ÖÓ¸ßµçÆ½ÖĞĞÄ
-		.i_mbus_rlc(flag_scl_lc),							//¶ÁÊ±ÖÓµÍµçÆ½ÖĞĞÄ
+		//--------------æ§åˆ¶ä¿¡å·------------//
+		//é…ç½®é€šé“
+		.i_mbus_rstop(rd_dbus_rstop),						//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.i_mbus_rhc(flag_scl_hc),							//è¯»æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+		.i_mbus_rlc(flag_scl_lc),							//è¯»æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 		
-		//¶ÁÓ¦´ğ
-		.i_mbus_rack(i_mbus_rack),							//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+		//è¯»åº”ç­”
+		.i_mbus_rack(i_mbus_rack),							//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 		
-		//¶ÁÍ¨µÀ
-		.i_mbus_rrq(rd_dbus_rrq),							//¶ÁÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-		.i_mbus_rlast(rd_dbus_rlast),						//¶ÁÊı¾İ×îºóÒ»¸ö
-		.i_mbus_rready(i_mbus_rready),						//¶Á×¼±¸ºÃ
-		.o_mbus_rdata(rd_dbus_rdata),						//¶ÁÊı¾İ
-		.o_mbus_rvalid(rd_dbus_rvalid),						//¶ÁÊı¾İÓĞĞ§
-		.o_mbus_rbusy(rd_dbus_rbusy),						//¶ÁÃ¦Âµ
+		//è¯»é€šé“
+		.i_mbus_rrq(rd_dbus_rrq),							//è¯»è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+		.i_mbus_rlast(rd_dbus_rlast),						//è¯»æ•°æ®æœ€åä¸€ä¸ª
+		.i_mbus_rready(i_mbus_rready),						//è¯»å‡†å¤‡å¥½
+		.o_mbus_rdata(rd_dbus_rdata),						//è¯»æ•°æ®
+		.o_mbus_rvalid(rd_dbus_rvalid),						//è¯»æ•°æ®æœ‰æ•ˆ
+		.o_mbus_rbusy(rd_dbus_rbusy),						//è¯»å¿™ç¢Œ
 		
-		//--------------¹Ü½ÅĞÅºÅ------------//
-		.i_iic_sda(i_iic_sda),								//IICÊäÈëSDAÊı¾İĞÅºÅ
-		.o_iic_sda(rd_dbus_iic_sda),						//IICÊä³öSDAÊı¾İĞÅºÅ
-		.o_iic_sda_dir(rd_dbus_iic_sda_dir)					//IICÊä³öSDAĞÅºÅ·½Ïò
+		//--------------ç®¡è„šä¿¡å·------------//
+		.i_iic_sda(i_iic_sda),								//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+		.o_iic_sda(rd_dbus_iic_sda),						//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+		.o_iic_sda_dir(rd_dbus_iic_sda_dir)					//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 	);
 
-	//IICÊ±ÖÓ²úÉú
+	//IICæ—¶é’Ÿäº§ç”Ÿ
 	Clock_Interface	#(	.FACTOR_BIT(FACTOR_BIT),.CLOCK_MODE(CLOCK_MODE),
 						.NEGEDGE_ENABLE(NEGEDGE_ENABLE),.DIVIDER_MODE(DIVIDER_MODE))Clock_Interface_Inst(
 		.i_clk(i_clk),
 		.i_rstn(i_rstn),
 		
-		//------------Ê±ÖÓÊä³öÍ¨µÀ----------//
+		//------------æ—¶é’Ÿè¾“å‡ºé€šé“----------//
 		.o_clk_out(clk_IIC),
-		.o_clk_ls(),						//Õı³£Ê±ÖÓµÄµÍµçÆ½ÆğÊ¼Î»ÖÃ,Ò»¸ö»ù×¼clockÂö³å
-		.o_clk_lc(),						//Õı³£Ê±ÖÓµÄµÍµçÆ½ÖĞĞÄÎ»ÖÃ,Ò»¸ö»ù×¼clockÂö³å
-		.o_clk_hs(),						//Õı³£Ê±ÖÓµÄ¸ßµçÆ½ÆğÊ¼Î»ÖÃ,Ò»¸ö»ù×¼clockÂö³å
-		.o_clk_hc(),						//Õı³£Ê±ÖÓµÄ¸ßµçÆ½ÖĞĞÄÎ»ÖÃ,Ò»¸ö»ù×¼clockÂö³å
+		.o_clk_ls(),						//æ­£å¸¸æ—¶é’Ÿçš„ä½ç”µå¹³èµ·å§‹ä½ç½®,ä¸€ä¸ªåŸºå‡†clockè„‰å†²
+		.o_clk_lc(),						//æ­£å¸¸æ—¶é’Ÿçš„ä½ç”µå¹³ä¸­å¿ƒä½ç½®,ä¸€ä¸ªåŸºå‡†clockè„‰å†²
+		.o_clk_hs(),						//æ­£å¸¸æ—¶é’Ÿçš„é«˜ç”µå¹³èµ·å§‹ä½ç½®,ä¸€ä¸ªåŸºå‡†clockè„‰å†²
+		.o_clk_hc(),						//æ­£å¸¸æ—¶é’Ÿçš„é«˜ç”µå¹³ä¸­å¿ƒä½ç½®,ä¸€ä¸ªåŸºå‡†clockè„‰å†²
 	
-		//------------·ÖÆµ²ÎÊıÍ¨µÀ----------//
-		.i_clk_dividend(CLOCK_FACTOR),		//ÕûÊı/ÆæÊı/Å¼Êı·ÖÆµÄ£Ê½ÏÂ×÷Îª·ÖÆµÏµÊı;Ğ¡Êı·ÖÆµÄ£Ê½ÏÂ×÷Îª±»³ıÊı
-		.i_clk_divisor(0),					//ÕûÊı/ÆæÊı/Å¼Êı·ÖÆµÄ£Ê½ÏÂ²»Ê¹ÓÃ;Ğ¡Êı·ÖÆµÄ£Ê½ÏÂ×÷Îª³ıÊı
-		.i_clk_quotient(0),					//ÕûÊı/ÆæÊı/Å¼Êı·ÖÆµÄ£Ê½ÏÂ²»Ê¹ÓÃ;Ğ¡Êı·ÖÆµÄ£Ê½ÏÂ×÷ÎªÉÌ
-		.i_clk_remainder(0)					//ÕûÊı/ÆæÊı/Å¼Êı·ÖÆµÄ£Ê½ÏÂ²»Ê¹ÓÃ;Ğ¡Êı·ÖÆµÄ£Ê½ÏÂ×÷ÎªÓàÊı
+		//------------åˆ†é¢‘å‚æ•°é€šé“----------//
+		.i_clk_dividend(CLOCK_FACTOR),		//æ•´æ•°/å¥‡æ•°/å¶æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä½œä¸ºåˆ†é¢‘ç³»æ•°;å°æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä½œä¸ºè¢«é™¤æ•°
+		.i_clk_divisor(0),					//æ•´æ•°/å¥‡æ•°/å¶æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä¸ä½¿ç”¨;å°æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä½œä¸ºé™¤æ•°
+		.i_clk_quotient(0),					//æ•´æ•°/å¥‡æ•°/å¶æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä¸ä½¿ç”¨;å°æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä½œä¸ºå•†
+		.i_clk_remainder(0)					//æ•´æ•°/å¥‡æ•°/å¶æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä¸ä½¿ç”¨;å°æ•°åˆ†é¢‘æ¨¡å¼ä¸‹ä½œä¸ºä½™æ•°
 	);
 	
-	//----------------ÆäËûĞÅºÅ»º´æ-------------//
-	//IICÊ±ÖÓĞÅºÅ
+	//----------------å…¶ä»–ä¿¡å·ç¼“å­˜-------------//
+	//IICæ—¶é’Ÿä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			clk_IIC_buffer <= 2'd0;
@@ -473,7 +473,7 @@ module IIC_Interface
 		end
 	end
 	
-	//Ã¦ĞÅºÅ
+	//å¿™ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			wr_mbus_wbusy_buff <= 2'd0;
@@ -484,7 +484,7 @@ module IIC_Interface
 		end
 	end
 
-	//----------------ÊäÈëĞÅºÅ»º´æ-------------//
+	//----------------è¾“å…¥ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			mbus_rwmode_i <= 1'b0;
@@ -499,54 +499,54 @@ module IIC_Interface
 
 endmodule
 
-//IICĞ´¿ØÖÆ
+//IICå†™æ§åˆ¶
 module IIC_Write_Ctrl
 (
 	input i_clk,
 	input i_rstn,
 	
-	//------------Íâ²¿¿ØÖÆĞÅºÅ----------//
-	//ÅäÖÃÄ£Ê½ĞÅºÅ
-	input [1:0]i_mbus_wslave_addr_mode,	//ÅäÖÃIIC´Ó»úµØÖ·Ä£Ê½,2'bx0´ú±íÔ­Ê¼µØÖ·,ĞèÒª×óÒÆ7Î»,µÍÎ»²¹Áã;2'bx1´ú±íÒÆÎ»Ö®ºóµØÖ·,²»ĞèÒªÔÙÒÆÎ»;2'b1x´ú±íµØÖ·×îµÍÎ»ĞèÒª»ò1
-	input i_mbus_waddr_mode,			//ÅäÖÃIICĞ´µØÖ·Ä£Ê½,1'b1´ú±íË«µØÖ·Î»;1'b0´ú±íµ¥µØÖ·Î»,´ËÊ±µÍÎ»µØÖ·ÓĞĞ§
-	input i_mbus_wack_enable,			//ÅäÖÃIICĞ´Ó¦´ğ¼ì²âĞ£ÑéÊ¹ÄÜ
-	input i_mbus_wack,			        //ÅäÖÃIICĞ´Ó¦´ğĞÅºÅĞ£ÑéÖµ,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
-	input [3:0]i_mbus_wmode,			//ÅäÖÃIICĞ´Êı¾İÄ£Ê½,4'bxxx1´ú±íµ¥×Ö½ÚĞ´;4'bxx10´ú±íÁ¬ĞøĞ´;4'bx100´ú±íÖ»Ğ´Æ÷¼şµØÖ·;4'b1000´ú±íĞ´ÈëÆ÷¼şµØÖ·ºÍ¼Ä´æÆ÷µØÖ·;
+	//------------å¤–éƒ¨æ§åˆ¶ä¿¡å·----------//
+	//é…ç½®æ¨¡å¼ä¿¡å·
+	input [1:0]i_mbus_wslave_addr_mode,	//é…ç½®IICä»æœºåœ°å€æ¨¡å¼,2'bx0ä»£è¡¨åŸå§‹åœ°å€,éœ€è¦å·¦ç§»7ä½,ä½ä½è¡¥é›¶;2'bx1ä»£è¡¨ç§»ä½ä¹‹ååœ°å€,ä¸éœ€è¦å†ç§»ä½;2'b1xä»£è¡¨åœ°å€æœ€ä½ä½éœ€è¦æˆ–1
+	input i_mbus_waddr_mode,			//é…ç½®IICå†™åœ°å€æ¨¡å¼,1'b1ä»£è¡¨åŒåœ°å€ä½;1'b0ä»£è¡¨å•åœ°å€ä½,æ­¤æ—¶ä½ä½åœ°å€æœ‰æ•ˆ
+	input i_mbus_wack_enable,			//é…ç½®IICå†™åº”ç­”æ£€æµ‹æ ¡éªŒä½¿èƒ½
+	input i_mbus_wack,			        //é…ç½®IICå†™åº”ç­”ä¿¡å·æ ¡éªŒå€¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
+	input [3:0]i_mbus_wmode,			//é…ç½®IICå†™æ•°æ®æ¨¡å¼,4'bxxx1ä»£è¡¨å•å­—èŠ‚å†™;4'bxx10ä»£è¡¨è¿ç»­å†™;4'bx100ä»£è¡¨åªå†™å™¨ä»¶åœ°å€;4'b1000ä»£è¡¨å†™å…¥å™¨ä»¶åœ°å€å’Œå¯„å­˜å™¨åœ°å€;
 	
-	//ÅäÖÃÊı¾İĞÅºÅ
-	input [7:0]i_mbus_wslave_addr,		//ÅäÖÃIICĞ´´Ó»úµØÖ·
-	input [7:0]i_mbus_waddr_h,			//ÅäÖÃIICĞ´¼Ä´æÆ÷µØÖ·,¸ß8Î»
-	input [7:0]i_mbus_waddr_l,			//ÅäÖÃIICĞ´¼Ä´æÆ÷µØÖ·,µÍ8Î»
+	//é…ç½®æ•°æ®ä¿¡å·
+	input [7:0]i_mbus_wslave_addr,		//é…ç½®IICå†™ä»æœºåœ°å€
+	input [7:0]i_mbus_waddr_h,			//é…ç½®IICå†™å¯„å­˜å™¨åœ°å€,é«˜8ä½
+	input [7:0]i_mbus_waddr_l,			//é…ç½®IICå†™å¯„å­˜å™¨åœ°å€,ä½8ä½
 	
-	//Ğ´Í¨µÀ
-	input i_mbus_wrq,					//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-	input [7:0]i_mbus_wdata,			//Ğ´Êı¾İĞÅºÅ
-	input i_mbus_wvalid,				//Ğ´Êı¾İÓĞĞ§ĞÅºÅ
-	input i_mbus_wlast,					//Ğ´Êı¾İ×îºóÒ»¸ö
-	output o_mbus_wready,				//Ğ´×¼±¸ºÃ
-	output o_mbus_werr,					//Ğ´³ö´í,Ã»ÓĞÏìÓ¦Í£Ö¹ĞÅºÅ,À­¸ßÓĞĞ§,ÔÚÏÂÒ»´ÎÇëÇóÊ±×Ô¶¯¸´Î»µÍµçÆ½
-	output o_mbus_wbusy,				//Ğ´Ã¦Âµ
+	//å†™é€šé“
+	input i_mbus_wrq,					//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+	input [7:0]i_mbus_wdata,			//å†™æ•°æ®ä¿¡å·
+	input i_mbus_wvalid,				//å†™æ•°æ®æœ‰æ•ˆä¿¡å·
+	input i_mbus_wlast,					//å†™æ•°æ®æœ€åä¸€ä¸ª
+	output o_mbus_wready,				//å†™å‡†å¤‡å¥½
+	output o_mbus_werr,					//å†™å‡ºé”™,æ²¡æœ‰å“åº”åœæ­¢ä¿¡å·,æ‹‰é«˜æœ‰æ•ˆ,åœ¨ä¸‹ä¸€æ¬¡è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½ä½ç”µå¹³
+	output o_mbus_wbusy,				//å†™å¿™ç¢Œ
 	
-	//------------ÍâÉè¿ØÖÆĞÅºÅ----------//
-	//ÅäÖÃÍ¨µÀ
-	output o_dbus_wstart,				//ÓĞÎŞÆğÊ¼ĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	output o_dbus_wstop,				//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	output o_dbus_wchange,				//ÇĞ»»
+	//------------å¤–è®¾æ§åˆ¶ä¿¡å·----------//
+	//é…ç½®é€šé“
+	output o_dbus_wstart,				//æœ‰æ— èµ·å§‹ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	output o_dbus_wstop,				//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	output o_dbus_wchange,				//åˆ‡æ¢
 	
-	//Ğ´Ó¦´ğ
-	output o_dbus_wack_sel,				//ÓĞÎŞÓ¦´ğĞÅºÅÅĞ¶Ï,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÎŞ
-	output o_dbus_wack,					//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+	//å†™åº”ç­”
+	output o_dbus_wack_sel,				//æœ‰æ— åº”ç­”ä¿¡å·åˆ¤æ–­,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ— 
+	output o_dbus_wack,					//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 	
-	//Ğ´Í¨µÀ
-	output o_dbus_wrq,					//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-	output [7:0]o_dbus_wdata,			//Ğ´Êı¾İ
-	output o_dbus_wvalid,				//Ğ´Êı¾İÓĞĞ§
-	output o_dbus_wlast,				//Ğ´Êı¾İ×îºóÒ»¸ö
-	input i_dbus_wready,				//Ğ´×¼±¸ºÃ
-	input i_dbus_wstop,					//Ã»ÓĞÏìÓ¦Í£Ö¹ĞÅºÅ,À­¸ßÓĞĞ§,ÔÚÏÂÒ»´ÎÇëÇóÊ±×Ô¶¯¸´Î»µÍµçÆ½
-	input i_dbus_wbusy					//Ğ´Ã¦Âµ
+	//å†™é€šé“
+	output o_dbus_wrq,					//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+	output [7:0]o_dbus_wdata,			//å†™æ•°æ®
+	output o_dbus_wvalid,				//å†™æ•°æ®æœ‰æ•ˆ
+	output o_dbus_wlast,				//å†™æ•°æ®æœ€åä¸€ä¸ª
+	input i_dbus_wready,				//å†™å‡†å¤‡å¥½
+	input i_dbus_wstop,					//æ²¡æœ‰å“åº”åœæ­¢ä¿¡å·,æ‹‰é«˜æœ‰æ•ˆ,åœ¨ä¸‹ä¸€æ¬¡è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½ä½ç”µå¹³
+	input i_dbus_wbusy					//å†™å¿™ç¢Œ
 );
-	//------------------×´Ì¬²ÎÊı----------------//
+	//------------------çŠ¶æ€å‚æ•°----------------//
 	localparam ST_WR_IDLE = 7'b0000001;
 	localparam ST_WR_SADDR = 7'b0000010;
 	localparam ST_WR_ADDR_H = 7'b0000100;
@@ -555,77 +555,77 @@ module IIC_Write_Ctrl
 	localparam ST_WR_WAIT = 7'b0100000;
 	localparam ST_WR_END = 7'b1000000;
 	
-	//×´Ì¬»ú
+	//çŠ¶æ€æœº
 	reg [6:0]state_current = ST_WR_IDLE;
 	reg [6:0]state_next = ST_WR_IDLE;
 	
-	//----------------ÊäÈë»º´æĞÅºÅ--------------//
-	//Íâ²¿¿ØÖÆĞÅºÅ--ÅäÖÃÄ£Ê½ĞÅºÅ
+	//----------------è¾“å…¥ç¼“å­˜ä¿¡å·--------------//
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--é…ç½®æ¨¡å¼ä¿¡å·
 	reg mbus_waddr_mode_i = 0;
 	reg [3:0]mbus_wmode_i = 0;
 	
-	//Íâ²¿¿ØÖÆĞÅºÅ--ÅäÖÃÊı¾İĞÅºÅ
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--é…ç½®æ•°æ®ä¿¡å·
 	reg [7:0]mbus_wslave_addr_i = 0;
 	reg [7:0]mbus_waddr_h_i = 0;
 	reg [7:0]mbus_waddr_l_i = 0;
 	
-	//Íâ²¿¿ØÖÆĞÅºÅ--Ğ´Í¨µÀ
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--å†™é€šé“
 	reg [7:0]mbus_wdata_i = 0;
 	reg mbus_wvalid_i = 0;
 	reg mbus_wlast_i = 0;
 	
-	//ÍâÉè¿ØÖÆĞÅºÅ--Ğ´Í¨µÀ
+	//å¤–è®¾æ§åˆ¶ä¿¡å·--å†™é€šé“
 	reg [1:0]dbus_wready_i = 0;
 	reg dbus_wstop_i = 0;
 	reg [1:0]dbus_wbusy_i = 0;
 	
-	//------------------Êä³öĞÅºÅ---------------//
-	//Íâ²¿¿ØÖÆĞÅºÅ--Ğ´Í¨µÀ
+	//------------------è¾“å‡ºä¿¡å·---------------//
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--å†™é€šé“
 	reg mbus_wready_o = 0;
 	reg mbus_werr_o = 0;
 	reg mbus_wbusy_o = 0;
 	
-	//ÍâÉè¿ØÖÆĞÅºÅ--ÅäÖÃÍ¨µÀ
+	//å¤–è®¾æ§åˆ¶ä¿¡å·--é…ç½®é€šé“
 	reg dbus_wstart_o = 0;
 	reg dbus_wstop_o = 0;
 	reg dbus_wchange_o = 0;
 	
-	//ÍâÉè¿ØÖÆĞÅºÅ--Ğ´Í¨µÀ
+	//å¤–è®¾æ§åˆ¶ä¿¡å·--å†™é€šé“
 	reg dbus_wrq_o = 0;
 	reg [7:0]dbus_wdata_o = 0;
 	reg dbus_wvalid_o = 0;
 	reg dbus_wlast_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
-	//Íâ²¿¿ØÖÆĞÅºÅ--Ğ´Í¨µÀ
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--å†™é€šé“
 	assign o_mbus_wready = mbus_wready_o;
 	assign o_mbus_werr = mbus_werr_o;
 	assign o_mbus_wbusy = mbus_wbusy_o;
 	
-	//ÍâÉè¿ØÖÆĞÅºÅ--ÅäÖÃÍ¨µÀ
+	//å¤–è®¾æ§åˆ¶ä¿¡å·--é…ç½®é€šé“
 	assign o_dbus_wstart = dbus_wstart_o;
 	assign o_dbus_wstop = dbus_wstop_o;
 	assign o_dbus_wchange = dbus_wchange_o;
 	
-	//ÍâÉè¿ØÖÆĞÅºÅ--Ğ´Ó¦´ğ
+	//å¤–è®¾æ§åˆ¶ä¿¡å·--å†™åº”ç­”
 	assign o_dbus_wack_sel = i_mbus_wack_enable;
 	assign o_dbus_wack = i_mbus_wack;
 	
-	//ÍâÉè¿ØÖÆĞÅºÅ--Ğ´Í¨µÀ
+	//å¤–è®¾æ§åˆ¶ä¿¡å·--å†™é€šé“
 	assign o_dbus_wrq = dbus_wrq_o;
 	assign o_dbus_wdata = dbus_wdata_o;
 	assign o_dbus_wvalid = dbus_wvalid_o;
 	assign o_dbus_wlast = dbus_wlast_o;
 	
-	//------------------ĞÅºÅÊä³ö---------------//
-	//Ğ´×¼±¸ºÃĞÅºÅ
+	//------------------ä¿¡å·è¾“å‡º---------------//
+	//å†™å‡†å¤‡å¥½ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_wready_o <= 1'b0;
 		else if(state_current == ST_WR_DATA)mbus_wready_o <=  dbus_wready_i[0] | dbus_wready_i[1];
 		else mbus_wready_o <= 1'b0;
 	end
 	
-	//Ğ´ÎŞÏìÓ¦Í£Ö¹ĞÅºÅ
+	//å†™æ— å“åº”åœæ­¢ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_werr_o <= 1'b0;
 		else if(dbus_wbusy_i == 2'b10 && dbus_wstop_i == 1'b1)mbus_werr_o <= 1'b1;
@@ -633,7 +633,7 @@ module IIC_Write_Ctrl
 		else mbus_werr_o <= mbus_werr_o;
 	end
 	
-	//Ğ´Ã¦ĞÅºÅ
+	//å†™å¿™ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_wbusy_o <= 1'b0;
 		else if(state_current == ST_WR_END)mbus_wbusy_o <= 1'b0;
@@ -641,8 +641,8 @@ module IIC_Write_Ctrl
 		else mbus_wbusy_o <= mbus_wbusy_o;
 	end
 	
-	//-------------------×´Ì¬»ú----------------//
-	//Ö÷×´Ì¬»ú
+	//-------------------çŠ¶æ€æœº----------------//
+	//ä¸»çŠ¶æ€æœº
 	always@(*)begin
 		case(state_current)
 			ST_WR_IDLE:begin
@@ -650,9 +650,9 @@ module IIC_Write_Ctrl
 				else state_next <= ST_WR_IDLE;
 			end
 			ST_WR_SADDR:begin
-				if(mbus_wmode_i[2] == 1'b1 && dbus_wready_i == 2'b10)state_next <= ST_WR_WAIT;			//Ö»Ğ´ÈëÆ÷¼şµØÖ·
-				else if(mbus_waddr_mode_i == 1'b1 && dbus_wready_i == 2'b10)state_next <= ST_WR_ADDR_H;	//Ë«µØÖ·Î»
-				else if(dbus_wready_i == 2'b10)state_next <= ST_WR_ADDR_L;								//µ¥µØÖ·Î»
+				if(mbus_wmode_i[2] == 1'b1 && dbus_wready_i == 2'b10)state_next <= ST_WR_WAIT;			//åªå†™å…¥å™¨ä»¶åœ°å€
+				else if(mbus_waddr_mode_i == 1'b1 && dbus_wready_i == 2'b10)state_next <= ST_WR_ADDR_H;	//åŒåœ°å€ä½
+				else if(dbus_wready_i == 2'b10)state_next <= ST_WR_ADDR_L;								//å•åœ°å€ä½
 				else state_next <= ST_WR_SADDR;
 			end
 			ST_WR_ADDR_H:begin
@@ -660,16 +660,16 @@ module IIC_Write_Ctrl
 				else state_next <= ST_WR_ADDR_H;
 			end
 			ST_WR_ADDR_L:begin
-				if(mbus_wmode_i[3] == 1'b1 && dbus_wready_i == 2'b10)state_next <= ST_WR_WAIT;		//Ö»Ğ´ÈëÆ÷¼şµØÖ·ºÍ¼Ä´æÆ÷µØÖ·
+				if(mbus_wmode_i[3] == 1'b1 && dbus_wready_i == 2'b10)state_next <= ST_WR_WAIT;		//åªå†™å…¥å™¨ä»¶åœ°å€å’Œå¯„å­˜å™¨åœ°å€
 				else if(dbus_wready_i == 2'b10)state_next <= ST_WR_DATA;
 				else state_next <= ST_WR_ADDR_L;
 			end
 			ST_WR_DATA:begin
-				if(dbus_wready_i == 2'b01 && mbus_wlast_i == 1'b1)state_next <= ST_WR_WAIT;		//×îºóÒ»¸öÊı¾İ
+				if(dbus_wready_i == 2'b01 && mbus_wlast_i == 1'b1)state_next <= ST_WR_WAIT;		//æœ€åä¸€ä¸ªæ•°æ®
 				else state_next <= ST_WR_DATA;
 			end
 			ST_WR_WAIT:begin
-				if(dbus_wbusy_i == 2'b10)state_next <= ST_WR_END;		//µÈ´ı½áÊø
+				if(dbus_wbusy_i == 2'b10)state_next <= ST_WR_END;		//ç­‰å¾…ç»“æŸ
 				else state_next <= ST_WR_WAIT;
 			end
 			ST_WR_END:state_next <= ST_WR_IDLE;
@@ -677,7 +677,7 @@ module IIC_Write_Ctrl
 		endcase
 	end
 	
-	//×´Ì¬×ª»»
+	//çŠ¶æ€è½¬æ¢
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			state_current <= ST_WR_IDLE;
@@ -686,8 +686,8 @@ module IIC_Write_Ctrl
 		end
 	end
 	
-	//----------------×´Ì¬ÈÎÎñ´¦Àí-------------//
-	//ÍâÉèĞÅºÅÊä³ö--ÆğÊ¼ĞÅºÅ
+	//----------------çŠ¶æ€ä»»åŠ¡å¤„ç†-------------//
+	//å¤–è®¾ä¿¡å·è¾“å‡º--èµ·å§‹ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wstart_o <= 1'b0;
 		else if(state_current == ST_WR_SADDR)dbus_wstart_o <= 1'b1;
@@ -695,28 +695,28 @@ module IIC_Write_Ctrl
 		else dbus_wstart_o <= dbus_wstart_o;
 	end
 	
-	//ÍâÉèĞÅºÅÊä³ö--½áÊøĞÅºÅ
+	//å¤–è®¾ä¿¡å·è¾“å‡º--ç»“æŸä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wstop_o <= 1'b0;
 		else if(state_current == ST_WR_WAIT)dbus_wstop_o <= mbus_wmode_i[0] | mbus_wmode_i[1];
 		else dbus_wstop_o <= 1'b0;
 	end
 	
-	//ÍâÉèĞÅºÅÊä³ö--ÇĞ»»ĞÅºÅ
+	//å¤–è®¾ä¿¡å·è¾“å‡º--åˆ‡æ¢ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wchange_o <= 1'b0;
 		else if(state_current == ST_WR_WAIT)dbus_wchange_o <= mbus_wmode_i[0] | mbus_wmode_i[1] | mbus_wmode_i[2] | mbus_wmode_i[3];
 		else dbus_wchange_o <= 1'b0;
 	end
 	
-	//ÍâÉèĞÅºÅÊä³ö--Ğ´ÇëÇóĞÅºÅ
+	//å¤–è®¾ä¿¡å·è¾“å‡º--å†™è¯·æ±‚ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wrq_o <= 1'b0;
 		else if(state_current == ST_WR_SADDR)dbus_wrq_o <= 1'b1;
 		else dbus_wrq_o <= 1'b0;
 	end
 
-	//ÍâÉèĞÅºÅÊä³ö--Ğ´Êı¾İĞÅºÅ
+	//å¤–è®¾ä¿¡å·è¾“å‡º--å†™æ•°æ®ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wdata_o <= 8'd0;
 		else if(state_current == ST_WR_SADDR)dbus_wdata_o <= mbus_wslave_addr_i;
@@ -726,7 +726,7 @@ module IIC_Write_Ctrl
 		else dbus_wdata_o <= dbus_wdata_o;
 	end
 	
-	//ÍâÉèĞÅºÅÊä³ö--Ğ´Êı¾İÓĞĞ§ĞÅºÅ
+	//å¤–è®¾ä¿¡å·è¾“å‡º--å†™æ•°æ®æœ‰æ•ˆä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wvalid_o <= 1'b0;
 		else if(dbus_wready_i == 2'b00)dbus_wvalid_o <= 1'b0;
@@ -737,15 +737,15 @@ module IIC_Write_Ctrl
 		else dbus_wvalid_o <= 1'b1;
 	end
 	
-	//ÍâÉèĞÅºÅÊä³ö--Ğ´Êı¾İ½áÊøĞÅºÅ
+	//å¤–è®¾ä¿¡å·è¾“å‡º--å†™æ•°æ®ç»“æŸä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wlast_o <= 1'b0;
 		else if(state_current == ST_WR_WAIT)dbus_wlast_o <= 1'b1;
 		else dbus_wlast_o <= 1'b0;
 	end
 	
-	//----------------ÊäÈëĞÅºÅ»º´æ-------------//
-	//Íâ²¿¿ØÖÆĞÅºÅ--ÅäÖÃ´Ó»úµØÖ·
+	//----------------è¾“å…¥ä¿¡å·ç¼“å­˜-------------//
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·--é…ç½®ä»æœºåœ°å€
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			mbus_wslave_addr_i <= 8'd0;
@@ -756,7 +756,7 @@ module IIC_Write_Ctrl
 		end
 	end
 	
-	//Íâ²¿¿ØÖÆĞÅºÅ
+	//å¤–éƒ¨æ§åˆ¶ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			mbus_waddr_mode_i <= 1'b0;
@@ -777,7 +777,7 @@ module IIC_Write_Ctrl
 		end
 	end
 	
-	//ÍâÉè¿ØÖÆĞÅºÅ
+	//å¤–è®¾æ§åˆ¶ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			dbus_wready_i <= 2'd0;
@@ -793,86 +793,86 @@ module IIC_Write_Ctrl
 endmodule
 
 
-//IICĞ´Êı¾İ
+//IICå†™æ•°æ®
 module IIC_Write_Data
 (
 	input i_clk,
 	input i_rstn,
 	
-	//--------------¿ØÖÆĞÅºÅ------------//
-	//ÅäÖÃÍ¨µÀ
-	input i_mbus_wstart,				//ÓĞÎŞÆğÊ¼ĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	input i_mbus_wstop,					//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	input i_mbus_wchange,				//ÇĞ»»
-	input i_mbus_whc,					//Ğ´Ê±ÖÓ¸ßµçÆ½ÖĞĞÄ
-	input i_mbus_wlc,					//Ğ´Ê±ÖÓµÍµçÆ½ÖĞĞÄ
+	//--------------æ§åˆ¶ä¿¡å·------------//
+	//é…ç½®é€šé“
+	input i_mbus_wstart,				//æœ‰æ— èµ·å§‹ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	input i_mbus_wstop,					//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	input i_mbus_wchange,				//åˆ‡æ¢
+	input i_mbus_whc,					//å†™æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+	input i_mbus_wlc,					//å†™æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 	
-	//Ğ´Ó¦´ğ
-	input i_mbus_wack_sel,				//ÓĞÎŞÓ¦´ğĞÅºÅÅĞ¶Ï,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÎŞ
-	input i_mbus_wack,					//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+	//å†™åº”ç­”
+	input i_mbus_wack_sel,				//æœ‰æ— åº”ç­”ä¿¡å·åˆ¤æ–­,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ— 
+	input i_mbus_wack,					//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 	
-	//Ğ´Í¨µÀ
-	input i_mbus_wrq,					//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-	input [7:0]i_mbus_wdata,			//Ğ´Êı¾İ
-	input i_mbus_wvalid,				//Ğ´Êı¾İÓĞĞ§
-	input i_mbus_wlast,					//Ğ´Êı¾İ×îºóÒ»¸ö
-	output o_mbus_wready,				//Ğ´×¼±¸ºÃ
-	output o_mbus_wstop,				//Ã»ÓĞÏìÓ¦Í£Ö¹ĞÅºÅ,À­¸ßÓĞĞ§,ÔÚÏÂÒ»´ÎÇëÇóÊ±×Ô¶¯¸´Î»µÍµçÆ½
-	output o_mbus_wbusy,				//Ğ´Ã¦Âµ
+	//å†™é€šé“
+	input i_mbus_wrq,					//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+	input [7:0]i_mbus_wdata,			//å†™æ•°æ®
+	input i_mbus_wvalid,				//å†™æ•°æ®æœ‰æ•ˆ
+	input i_mbus_wlast,					//å†™æ•°æ®æœ€åä¸€ä¸ª
+	output o_mbus_wready,				//å†™å‡†å¤‡å¥½
+	output o_mbus_wstop,				//æ²¡æœ‰å“åº”åœæ­¢ä¿¡å·,æ‹‰é«˜æœ‰æ•ˆ,åœ¨ä¸‹ä¸€æ¬¡è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½ä½ç”µå¹³
+	output o_mbus_wbusy,				//å†™å¿™ç¢Œ
 	
-	//--------------¹Ü½ÅĞÅºÅ------------//
-	input i_iic_sda,					//IICÊäÈëSDAÊı¾İĞÅºÅ
-	output o_iic_sda,					//IICÊä³öSDAÊı¾İĞÅºÅ
-	output o_iic_sda_dir				//IICÊä³öSDAĞÅºÅ·½Ïò
+	//--------------ç®¡è„šä¿¡å·------------//
+	input i_iic_sda,					//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+	output o_iic_sda,					//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+	output o_iic_sda_dir				//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 );
-	//------------------×´Ì¬²ÎÊı----------------//
+	//------------------çŠ¶æ€å‚æ•°----------------//
 	localparam ST_WR_IDLE = 2'd0;
 	localparam ST_WR_DATA = 2'd1;
 	localparam ST_WR_WAIT = 2'd2;
 	localparam ST_WR_END = 2'd3;
 	
-	//---------------Ä£¿éÊµÀı»¯ĞÅºÅ-------------//
-	//Ğ´Êı¾İ
+	//---------------æ¨¡å—å®ä¾‹åŒ–ä¿¡å·-------------//
+	//å†™æ•°æ®
 	reg dbus_wrq = 0;
 	reg [7:0]dbus_wdata = 0;
 	wire dbus_wbusy;
 	wire dbus_wnack;
 	
-	//»º´æ
+	//ç¼“å­˜
 	reg [1:0]dbus_wbusy_buff = 0;
 	reg dbus_wnack_buff = 0;
 	
-	//×´Ì¬»ú
+	//çŠ¶æ€æœº
 	reg [1:0]state_current = ST_WR_IDLE;
 	reg [1:0]state_next = ST_WR_IDLE;
 	
-	//----------------ÊäÈë»º´æĞÅºÅ--------------//
-	//Ğ´Í¨µÀ
+	//----------------è¾“å…¥ç¼“å­˜ä¿¡å·--------------//
+	//å†™é€šé“
 	reg [7:0]mbus_wdata_i = 0;
 	reg mbus_wvalid_i = 0;
 	reg mbus_wlast_i = 0;
 	
-	//------------------Êä³öĞÅºÅ---------------//
-	//Ğ´Í¨µÀ
+	//------------------è¾“å‡ºä¿¡å·---------------//
+	//å†™é€šé“
 	reg mbus_wready_o = 0;
 	reg mbus_wstop_o = 0;
 	reg mbus_wbusy_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
-	//Ğ´Í¨µÀ
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
+	//å†™é€šé“
 	assign o_mbus_wready = mbus_wready_o;
 	assign o_mbus_wstop = mbus_wstop_o;
 	assign o_mbus_wbusy = mbus_wbusy_o;
 	
-	//------------------ĞÅºÅÊä³ö---------------//
-	//Ğ´×¼±¸ºÃĞÅºÅ
+	//------------------ä¿¡å·è¾“å‡º---------------//
+	//å†™å‡†å¤‡å¥½ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_wready_o <= 1'b0;
 		else if(state_current == ST_WR_DATA && dbus_wbusy_buff == 2'b00)mbus_wready_o <= 1'b1;
 		else mbus_wready_o <= 1'b0;
 	end
 	
-	//Ğ´ÎŞÏìÓ¦Í£Ö¹ĞÅºÅ
+	//å†™æ— å“åº”åœæ­¢ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_wstop_o <= 1'b0;
 		else if(dbus_wbusy_buff == 2'b10 && dbus_wnack_buff == 1'b1)mbus_wstop_o <= 1'b1;
@@ -880,7 +880,7 @@ module IIC_Write_Data
 		else mbus_wstop_o <= mbus_wstop_o;
 	end
 	
-	//Ğ´Ã¦ĞÅºÅ
+	//å†™å¿™ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_wbusy_o <= 1'b0;
 		else if(state_current == ST_WR_END)mbus_wbusy_o <= 1'b0;
@@ -888,8 +888,8 @@ module IIC_Write_Data
 		else mbus_wbusy_o <= mbus_wbusy_o;
 	end
 	
-	//-------------------×´Ì¬»ú----------------//
-	//Ö÷×´Ì¬»ú
+	//-------------------çŠ¶æ€æœº----------------//
+	//ä¸»çŠ¶æ€æœº
 	always@(*)begin
 		case(state_current)
 			ST_WR_IDLE:begin
@@ -908,7 +908,7 @@ module IIC_Write_Data
 		endcase
 	end
 	
-	//×´Ì¬×ª»»
+	//çŠ¶æ€è½¬æ¢
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			state_current <= ST_WR_IDLE;
@@ -917,8 +917,8 @@ module IIC_Write_Data
 		end
 	end
 	
-	//----------------×´Ì¬ÈÎÎñ´¦Àí-------------//
-	//ÊµÀı»¯Ä£¿é--Ğ´ÇëÇóĞÅºÅ
+	//----------------çŠ¶æ€ä»»åŠ¡å¤„ç†-------------//
+	//å®ä¾‹åŒ–æ¨¡å—--å†™è¯·æ±‚ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wrq <= 1'b0;
 		else if(dbus_wbusy_buff == 2'b11)dbus_wrq <= 1'b0;
@@ -926,43 +926,43 @@ module IIC_Write_Data
 		else dbus_wrq <= dbus_wrq;
 	end
 	
-	//ÊµÀı»¯Ä£¿é--Ğ´Êı¾İĞÅºÅ
+	//å®ä¾‹åŒ–æ¨¡å—--å†™æ•°æ®ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wdata <= 8'd0;
 		else if(state_current == ST_WR_DATA && mbus_wvalid_i == 1'b1)dbus_wdata <= mbus_wdata_i;
 		else dbus_wdata <= dbus_wdata;
 	end
 	
-	//IIC·¢ËÍ1×Ö½Ú,8±ÈÌØÊı¾İÄ£¿éÊµÀı»¯
+	//IICå‘é€1å­—èŠ‚,8æ¯”ç‰¹æ•°æ®æ¨¡å—å®ä¾‹åŒ–
 	IIC_Send_Byte IIC_Send_Byte_Inst(
 		.i_clk(i_clk),
 		.i_rstn(i_rstn),
 		
-		//--------------¿ØÖÆĞÅºÅ------------//
-		//Ğ´ÅäÖÃ
-		.i_dbus_wstart(i_mbus_wstart),		//ÓĞÎŞÆğÊ¼ĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.i_dbus_wstop(i_mbus_wstop),		//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.i_dbus_wchange(i_mbus_wchange),	//ÇĞ»»
-		.i_dbus_whc(i_mbus_whc),			//Ğ´Ê±ÖÓ¸ßµçÆ½ÖĞĞÄ
-		.i_dbus_wlc(i_mbus_wlc),			//Ğ´Ê±ÖÓµÍµçÆ½ÖĞĞÄ
+		//--------------æ§åˆ¶ä¿¡å·------------//
+		//å†™é…ç½®
+		.i_dbus_wstart(i_mbus_wstart),		//æœ‰æ— èµ·å§‹ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.i_dbus_wstop(i_mbus_wstop),		//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.i_dbus_wchange(i_mbus_wchange),	//åˆ‡æ¢
+		.i_dbus_whc(i_mbus_whc),			//å†™æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+		.i_dbus_wlc(i_mbus_wlc),			//å†™æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 		
-		//Ğ´Ó¦´ğ
-		.i_dbus_wack_sel(i_mbus_wack_sel),	//ÓĞÎŞÓ¦´ğĞÅºÅÅĞ¶Ï,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÎŞ
-		.i_dbus_wack(i_mbus_wack),			//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+		//å†™åº”ç­”
+		.i_dbus_wack_sel(i_mbus_wack_sel),	//æœ‰æ— åº”ç­”ä¿¡å·åˆ¤æ–­,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ— 
+		.i_dbus_wack(i_mbus_wack),			//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 		
-		//Ğ´Êı¾İ
-		.i_dbus_wrq(dbus_wrq),				//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-		.i_dbus_wdata(dbus_wdata),			//ĞèÒª·¢ËÍµÄÊı¾İ,¹²8Î»
-		.o_dbus_wbusy(dbus_wbusy),			//·¢ËÍÃ¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ;µÍµçÆ½´ú±í¿ÕÏĞ
-		.o_dbus_nack(dbus_wnack),			//Ã»ÓĞÏìÓ¦,ÏÂÒ»´ÎĞ´ÇëÇóÊ±×Ô¶¯¸´Î»
+		//å†™æ•°æ®
+		.i_dbus_wrq(dbus_wrq),				//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+		.i_dbus_wdata(dbus_wdata),			//éœ€è¦å‘é€çš„æ•°æ®,å…±8ä½
+		.o_dbus_wbusy(dbus_wbusy),			//å‘é€å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ;ä½ç”µå¹³ä»£è¡¨ç©ºé—²
+		.o_dbus_nack(dbus_wnack),			//æ²¡æœ‰å“åº”,ä¸‹ä¸€æ¬¡å†™è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½
 
-		//--------------¹Ü½ÅĞÅºÅ------------//
-		.i_iic_sda(i_iic_sda),				//IICÊäÈëSDAÊı¾İĞÅºÅ
-		.o_iic_sda(o_iic_sda),				//IICÊä³öSDAÊı¾İĞÅºÅ
-		.o_iic_sda_dir(o_iic_sda_dir)		//IICÊä³öSDAĞÅºÅ·½Ïò
+		//--------------ç®¡è„šä¿¡å·------------//
+		.i_iic_sda(i_iic_sda),				//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+		.o_iic_sda(o_iic_sda),				//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+		.o_iic_sda_dir(o_iic_sda_dir)		//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 	);
 	
-	//----------------ÆäËûĞÅºÅ»º´æ-------------//
+	//----------------å…¶ä»–ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			dbus_wbusy_buff <= 2'd0;
@@ -973,7 +973,7 @@ module IIC_Write_Data
 		end
 	end
 	
-	//----------------ÊäÈëĞÅºÅ»º´æ-------------//
+	//----------------è¾“å…¥ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			mbus_wdata_i <= 8'd0;
@@ -988,86 +988,86 @@ module IIC_Write_Data
 	
 endmodule
 
-//IIC¶ÁÊı¾İ
+//IICè¯»æ•°æ®
 module IIC_Read_Data
 (
 	input i_clk,
 	input i_rstn,
 	
-	//--------------¿ØÖÆĞÅºÅ------------//
-	//ÅäÖÃÍ¨µÀ
-	input i_mbus_rstop,					//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	input i_mbus_rhc,					//¶ÁÊ±ÖÓ¸ßµçÆ½ÖĞĞÄ
-	input i_mbus_rlc,					//¶ÁÊ±ÖÓµÍµçÆ½ÖĞĞÄ
+	//--------------æ§åˆ¶ä¿¡å·------------//
+	//é…ç½®é€šé“
+	input i_mbus_rstop,					//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	input i_mbus_rhc,					//è¯»æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+	input i_mbus_rlc,					//è¯»æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 	
-	//¶ÁÓ¦´ğ
-	input i_mbus_rack,					//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+	//è¯»åº”ç­”
+	input i_mbus_rack,					//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 	
-	//¶ÁÍ¨µÀ
-	input i_mbus_rrq,					//¶ÁÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-	input i_mbus_rlast,					//¶ÁÊı¾İ×îºóÒ»¸ö
-	input i_mbus_rready,				//¶Á×¼±¸ºÃ
-	output [7:0]o_mbus_rdata,			//¶ÁÊı¾İ
-	output o_mbus_rvalid,				//¶ÁÊı¾İÓĞĞ§
-	output o_mbus_rbusy,				//¶ÁÃ¦Âµ
+	//è¯»é€šé“
+	input i_mbus_rrq,					//è¯»è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+	input i_mbus_rlast,					//è¯»æ•°æ®æœ€åä¸€ä¸ª
+	input i_mbus_rready,				//è¯»å‡†å¤‡å¥½
+	output [7:0]o_mbus_rdata,			//è¯»æ•°æ®
+	output o_mbus_rvalid,				//è¯»æ•°æ®æœ‰æ•ˆ
+	output o_mbus_rbusy,				//è¯»å¿™ç¢Œ
 	
-	//--------------¹Ü½ÅĞÅºÅ------------//
-	input i_iic_sda,					//IICÊäÈëSDAÊı¾İĞÅºÅ
-	output o_iic_sda,					//IICÊä³öSDAÊı¾İĞÅºÅ
-	output o_iic_sda_dir				//IICÊä³öSDAĞÅºÅ·½Ïò
+	//--------------ç®¡è„šä¿¡å·------------//
+	input i_iic_sda,					//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+	output o_iic_sda,					//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+	output o_iic_sda_dir				//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 );
-	//------------------×´Ì¬²ÎÊı----------------//
+	//------------------çŠ¶æ€å‚æ•°----------------//
 	localparam ST_RD_IDLE = 2'd0;
 	localparam ST_RD_DATA = 2'd1;
 	localparam ST_RD_WAIT = 2'd2;
 	localparam ST_RD_END = 2'd3;
 	
-	//---------------Ä£¿éÊµÀı»¯ĞÅºÅ-------------//
-	//¶ÁÊı¾İ
+	//---------------æ¨¡å—å®ä¾‹åŒ–ä¿¡å·-------------//
+	//è¯»æ•°æ®
 	reg dbus_rrq = 0;
 	wire [7:0]dbus_rdata;
 	wire dbus_rbusy;
 	
-	//»º´æ
+	//ç¼“å­˜
 	reg [1:0]dbus_rbusy_buff = 0;
 	
-	//×´Ì¬»ú
+	//çŠ¶æ€æœº
 	reg [1:0]state_current = ST_RD_IDLE;
 	reg [1:0]state_next = ST_RD_IDLE;
 	
-	//----------------ÊäÈë»º´æĞÅºÅ--------------//
-	//¶ÁÍ¨µÀ
+	//----------------è¾“å…¥ç¼“å­˜ä¿¡å·--------------//
+	//è¯»é€šé“
 	reg mbus_rready_i = 0;
 	reg mbus_rlast_i = 0;
 	
-	//------------------Êä³öĞÅºÅ---------------//
-	//¶ÁÍ¨µÀ
+	//------------------è¾“å‡ºä¿¡å·---------------//
+	//è¯»é€šé“
 	reg [7:0]mbus_rdata_o = 0;
 	reg mbus_rvalid_o = 0;
 	reg mbus_rbusy_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
-	//Ğ´Í¨µÀ
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
+	//å†™é€šé“
 	assign o_mbus_rdata = mbus_rdata_o;
 	assign o_mbus_rvalid = mbus_rvalid_o;
 	assign o_mbus_rbusy = mbus_rbusy_o;
 	
-	//------------------ĞÅºÅÊä³ö---------------//
-	//¶ÁÊı¾İĞÅºÅ
+	//------------------ä¿¡å·è¾“å‡º---------------//
+	//è¯»æ•°æ®ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_rdata_o <= 8'd0;
 		else if(dbus_rbusy_buff == 2'b10)mbus_rdata_o <= dbus_rdata;
 		else mbus_rdata_o <= mbus_rdata_o;
 	end
 	
-	//¶ÁÊı¾İÓĞĞ§ĞÅºÅ
+	//è¯»æ•°æ®æœ‰æ•ˆä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_rvalid_o <= 1'b0;
 		else if(dbus_rbusy_buff == 2'b10)mbus_rvalid_o <= 1'b1;
 		else mbus_rvalid_o <= 1'b0;
 	end
 	
-	//¶ÁÃ¦ĞÅºÅ
+	//è¯»å¿™ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)mbus_rbusy_o <= 1'b0;
 		else if(state_current == ST_RD_END)mbus_rbusy_o <= 1'b0;
@@ -1075,8 +1075,8 @@ module IIC_Read_Data
 		else mbus_rbusy_o <= mbus_rbusy_o;
 	end
 	
-	//-------------------×´Ì¬»ú----------------//
-	//Ö÷×´Ì¬»ú
+	//-------------------çŠ¶æ€æœº----------------//
+	//ä¸»çŠ¶æ€æœº
 	always@(*)begin
 		case(state_current)
 			ST_RD_IDLE:begin
@@ -1095,7 +1095,7 @@ module IIC_Read_Data
 		endcase
 	end
 	
-	//×´Ì¬×ª»»
+	//çŠ¶æ€è½¬æ¢
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			state_current <= ST_RD_IDLE;
@@ -1104,8 +1104,8 @@ module IIC_Read_Data
 		end
 	end
 	
-	//----------------×´Ì¬ÈÎÎñ´¦Àí-------------//
-	//ÊµÀı»¯Ä£¿é--¶ÁÇëÇóĞÅºÅ
+	//----------------çŠ¶æ€ä»»åŠ¡å¤„ç†-------------//
+	//å®ä¾‹åŒ–æ¨¡å—--è¯»è¯·æ±‚ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_rrq <= 1'b0;
 		else if(dbus_rbusy_buff == 2'b11)dbus_rrq <= 1'b0;
@@ -1113,32 +1113,32 @@ module IIC_Read_Data
 		else dbus_rrq <= dbus_rrq;
 	end
 
-	//IIC½ÓÊÕ1×Ö½Ú,8±ÈÌØÊı¾İÄ£¿éÊµÀı»¯
+	//IICæ¥æ”¶1å­—èŠ‚,8æ¯”ç‰¹æ•°æ®æ¨¡å—å®ä¾‹åŒ–
 	IIC_Recv_Byte IIC_Recv_Byte_Inst(
 		.i_clk(i_clk),
 		.i_rstn(i_rstn),
 		
-		//--------------¿ØÖÆĞÅºÅ------------//
-		//¶ÁÅäÖÃ
-		.i_dbus_rstop(i_mbus_rstop),		//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-		.i_dbus_rhc(i_mbus_rhc),			//¶ÁÊ±ÖÓ¸ßµçÆ½ÖĞĞÄ
-		.i_dbus_rlc(i_mbus_rlc),			//¶ÁÊ±ÖÓµÍµçÆ½ÖĞĞÄ
+		//--------------æ§åˆ¶ä¿¡å·------------//
+		//è¯»é…ç½®
+		.i_dbus_rstop(i_mbus_rstop),		//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+		.i_dbus_rhc(i_mbus_rhc),			//è¯»æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+		.i_dbus_rlc(i_mbus_rlc),			//è¯»æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 		
-		//¶ÁÓ¦´ğ
-		.i_dbus_rack(i_mbus_rack),			//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+		//è¯»åº”ç­”
+		.i_dbus_rack(i_mbus_rack),			//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 		
-		//¶ÁÊı¾İ
-		.i_dbus_rrq(dbus_rrq),				//¶ÁÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-		.o_dbus_rdata(dbus_rdata),			//¶ÁÊı¾İ,¹²8Î»
-		.o_dbus_rbusy(dbus_rbusy),			//¶ÁÃ¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ;µÍµçÆ½´ú±í¿ÕÏĞ
+		//è¯»æ•°æ®
+		.i_dbus_rrq(dbus_rrq),				//è¯»è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+		.o_dbus_rdata(dbus_rdata),			//è¯»æ•°æ®,å…±8ä½
+		.o_dbus_rbusy(dbus_rbusy),			//è¯»å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ;ä½ç”µå¹³ä»£è¡¨ç©ºé—²
 		
-		//--------------¹Ü½ÅĞÅºÅ------------//
-		.i_iic_sda(i_iic_sda),				//IICÊäÈëSDAÊı¾İĞÅºÅ
-		.o_iic_sda(o_iic_sda),				//IICÊä³öSDAÊı¾İĞÅºÅ
-		.o_iic_sda_dir(o_iic_sda_dir)		//IICÊä³öSDAĞÅºÅ·½Ïò
+		//--------------ç®¡è„šä¿¡å·------------//
+		.i_iic_sda(i_iic_sda),				//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+		.o_iic_sda(o_iic_sda),				//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+		.o_iic_sda_dir(o_iic_sda_dir)		//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 	);
 	
-	//----------------ÆäËûĞÅºÅ»º´æ-------------//
+	//----------------å…¶ä»–ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			dbus_rbusy_buff <= 2'd0;
@@ -1147,7 +1147,7 @@ module IIC_Read_Data
 		end
 	end
 	
-	//----------------ÊäÈëĞÅºÅ»º´æ-------------//
+	//----------------è¾“å…¥ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			mbus_rready_i <= 1'b0;
@@ -1160,36 +1160,36 @@ module IIC_Read_Data
 	
 endmodule
 
-//·¢ËÍÊı¾İ8Î»
+//å‘é€æ•°æ®8ä½
 module IIC_Send_Byte(
 	input i_clk,
 	input i_rstn,
 	
-	//--------------¿ØÖÆĞÅºÅ------------//
-	//Ğ´ÅäÖÃ
-	input i_dbus_wstart,				//ÓĞÎŞÆğÊ¼ĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	input i_dbus_wstop,					//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	input i_dbus_wchange,				//ÇĞ»»
-	input i_dbus_whc,					//Ğ´Ê±ÖÓ¸ßµçÆ½ÖĞĞÄ
-	input i_dbus_wlc,					//Ğ´Ê±ÖÓµÍµçÆ½ÖĞĞÄ
+	//--------------æ§åˆ¶ä¿¡å·------------//
+	//å†™é…ç½®
+	input i_dbus_wstart,				//æœ‰æ— èµ·å§‹ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	input i_dbus_wstop,					//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	input i_dbus_wchange,				//åˆ‡æ¢
+	input i_dbus_whc,					//å†™æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+	input i_dbus_wlc,					//å†™æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 	
-	//Ğ´Ó¦´ğ
-	input i_dbus_wack_sel,				//ÓĞÎŞÓ¦´ğĞÅºÅÅĞ¶Ï,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÎŞ
-	input i_dbus_wack,					//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+	//å†™åº”ç­”
+	input i_dbus_wack_sel,				//æœ‰æ— åº”ç­”ä¿¡å·åˆ¤æ–­,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ— 
+	input i_dbus_wack,					//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 	
-	//Ğ´Êı¾İ
-	input i_dbus_wrq,					//Ğ´ÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-	input [7:0]i_dbus_wdata,			//ĞèÒª·¢ËÍµÄÊı¾İ,¹²8Î»
-	output o_dbus_wbusy,				//·¢ËÍÃ¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ;µÍµçÆ½´ú±í¿ÕÏĞ
-	output o_dbus_nack,					//Ã»ÓĞÏìÓ¦,ÏÂÒ»´ÎĞ´ÇëÇóÊ±×Ô¶¯¸´Î»
+	//å†™æ•°æ®
+	input i_dbus_wrq,					//å†™è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+	input [7:0]i_dbus_wdata,			//éœ€è¦å‘é€çš„æ•°æ®,å…±8ä½
+	output o_dbus_wbusy,				//å‘é€å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ;ä½ç”µå¹³ä»£è¡¨ç©ºé—²
+	output o_dbus_nack,					//æ²¡æœ‰å“åº”,ä¸‹ä¸€æ¬¡å†™è¯·æ±‚æ—¶è‡ªåŠ¨å¤ä½
 	
-	//--------------¹Ü½ÅĞÅºÅ------------//
-	input i_iic_sda,					//IICÊäÈëSDAÊı¾İĞÅºÅ
-	output o_iic_sda,					//IICÊä³öSDAÊı¾İĞÅºÅ
-	output o_iic_sda_dir				//IICÊä³öSDAĞÅºÅ·½Ïò
+	//--------------ç®¡è„šä¿¡å·------------//
+	input i_iic_sda,					//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+	output o_iic_sda,					//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+	output o_iic_sda_dir				//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 );
 	
-	//------------------×´Ì¬²ÎÊı----------------//
+	//------------------çŠ¶æ€å‚æ•°----------------//
 	localparam ST_WR_IDLE = 6'b000001;
 	localparam ST_WR_START = 6'b000010;
 	localparam ST_WR_DATA = 6'b000100;
@@ -1197,51 +1197,51 @@ module IIC_Send_Byte(
 	localparam ST_WR_STOP = 6'b010000;
 	localparam ST_WR_END = 6'b100000;
 	
-	//¼ÆÊı
+	//è®¡æ•°
 	reg [3:0]send_cnt = 0;
 	
-	//×´Ì¬»ú
+	//çŠ¶æ€æœº
 	reg [5:0]state_current = ST_WR_IDLE;
 	reg [5:0]state_next = ST_WR_IDLE;
 	
-	//----------------ÊäÈë»º´æĞÅºÅ--------------//
-	//Ğ´ÅäÖÃ
+	//----------------è¾“å…¥ç¼“å­˜ä¿¡å·--------------//
+	//å†™é…ç½®
 	reg dbus_wstart_i = 0;
 	reg dbus_wstop_i = 0;
 	reg dbus_wchange_i = 0;
 	reg dbus_whc_i = 0;
 	reg dbus_wlc_i = 0;
 	
-	//Ğ´Ó¦´ğ
+	//å†™åº”ç­”
 	reg dbus_wack_sel_i = 0;
 	reg dbus_wack_i = 0;
 	
-	//Ğ´Êı¾İ
+	//å†™æ•°æ®
 	reg [7:0]dbus_wdata_i = 0;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	reg iic_sda_i = 0;
 	
-	//------------------Êä³öĞÅºÅ---------------//
-	//Ğ´Êı¾İ
+	//------------------è¾“å‡ºä¿¡å·---------------//
+	//å†™æ•°æ®
 	reg dbus_wbusy_o = 1'b0;
 	reg dbus_nack_o = 1'b0;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	reg iic_sda_o = 1'b1;
 	reg iic_sda_dir_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
-	//Ğ´Êı¾İ
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
+	//å†™æ•°æ®
 	assign o_dbus_wbusy = dbus_wbusy_o;
 	assign o_dbus_nack = dbus_nack_o;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	assign o_iic_sda = iic_sda_o;
 	assign o_iic_sda_dir = iic_sda_dir_o;
 	
-	//------------------ĞÅºÅÊä³ö---------------//
-	//Ğ´Ã¦ÂµĞÅºÅ
+	//------------------ä¿¡å·è¾“å‡º---------------//
+	//å†™å¿™ç¢Œä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_wbusy_o <= 1'b0;
 		else if(state_current == ST_WR_START)dbus_wbusy_o <= 1'b1;
@@ -1250,7 +1250,7 @@ module IIC_Send_Byte(
 		else dbus_wbusy_o <= dbus_wbusy_o;
 	end
 	
-	//Ã»ÓĞÏìÓ¦ĞÅºÅ
+	//æ²¡æœ‰å“åº”ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_nack_o <= 1'b0;
 		else if(state_current == ST_WR_DATA)dbus_nack_o <= 1'b0;
@@ -1258,7 +1258,7 @@ module IIC_Send_Byte(
 		else dbus_nack_o <= dbus_nack_o;
 	end
 	
-	//IIC¹Ü½ÅĞÅºÅ---Êı¾İÏß
+	//IICç®¡è„šä¿¡å·---æ•°æ®çº¿
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)iic_sda_o <= 1'b1;
 		else if(state_next == ST_WR_IDLE)iic_sda_o <= 1'b1;
@@ -1270,7 +1270,7 @@ module IIC_Send_Byte(
 		else iic_sda_o <= iic_sda_o;
 	end
 	
-	//IIC¹Ü½ÅĞÅºÅ---Êı¾İÊä³ö·½Ïò
+	//IICç®¡è„šä¿¡å·---æ•°æ®è¾“å‡ºæ–¹å‘
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)iic_sda_dir_o <= 1'b1;
 		else if(state_next == ST_WR_DATA && send_cnt == 4'd0)iic_sda_dir_o <= dbus_wstart_i;
@@ -1278,8 +1278,8 @@ module IIC_Send_Byte(
 		else iic_sda_dir_o <= 1'b1;
 	end
 	
-	//-------------------×´Ì¬»ú----------------//
-	//Ö÷×´Ì¬»ú
+	//-------------------çŠ¶æ€æœº----------------//
+	//ä¸»çŠ¶æ€æœº
 	always@(*)begin
 		case(state_current)
 			ST_WR_IDLE:begin
@@ -1310,7 +1310,7 @@ module IIC_Send_Byte(
 		endcase
 	end
 	
-	//×´Ì¬×ª»»
+	//çŠ¶æ€è½¬æ¢
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			state_current <= ST_WR_IDLE;
@@ -1319,8 +1319,8 @@ module IIC_Send_Byte(
 		end
 	end
 	
-	//----------------×´Ì¬ÈÎÎñ´¦Àí-------------//
-	//·¢ËÍ¼ÆÊı
+	//----------------çŠ¶æ€ä»»åŠ¡å¤„ç†-------------//
+	//å‘é€è®¡æ•°
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)send_cnt <= 4'd0;
 		else if(state_next == ST_WR_DATA && dbus_wlc_i == 1'b1)send_cnt <= send_cnt + 4'd1;
@@ -1328,7 +1328,7 @@ module IIC_Send_Byte(
 		else send_cnt <= 4'd0;
 	end
 	
-	//----------------ÊäÈëĞÅºÅ»º´æ-------------//
+	//----------------è¾“å…¥ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			dbus_wstart_i <= 1'b0;
@@ -1355,87 +1355,87 @@ module IIC_Send_Byte(
 	
 endmodule
 
-//½ÓÊÕÊı¾İ8Î»
+//æ¥æ”¶æ•°æ®8ä½
 module IIC_Recv_Byte(
 	input i_clk,
 	input i_rstn,
 	
-	//--------------¿ØÖÆĞÅºÅ------------//
-	//¶ÁÅäÖÃ
-	input i_dbus_rstop,					//ÓĞÎŞ½áÊøĞÅºÅ,¸ßµçÆ½´ú±íÓĞ;µÍµçÆ½´ú±íÃ»ÓĞ
-	input i_dbus_rhc,					//¶ÁÊ±ÖÓ¸ßµçÆ½ÖĞĞÄ
-	input i_dbus_rlc,					//¶ÁÊ±ÖÓµÍµçÆ½ÖĞĞÄ
+	//--------------æ§åˆ¶ä¿¡å·------------//
+	//è¯»é…ç½®
+	input i_dbus_rstop,					//æœ‰æ— ç»“æŸä¿¡å·,é«˜ç”µå¹³ä»£è¡¨æœ‰;ä½ç”µå¹³ä»£è¡¨æ²¡æœ‰
+	input i_dbus_rhc,					//è¯»æ—¶é’Ÿé«˜ç”µå¹³ä¸­å¿ƒ
+	input i_dbus_rlc,					//è¯»æ—¶é’Ÿä½ç”µå¹³ä¸­å¿ƒ
 	
-	//¶ÁÓ¦´ğ
-	input i_dbus_rack,					//Ó¦´ğĞÅºÅÄ£Ê½,1Îª·ÇÓ¦´ğNACK;0ÎªÓ¦´ğACK
+	//è¯»åº”ç­”
+	input i_dbus_rack,					//åº”ç­”ä¿¡å·æ¨¡å¼,1ä¸ºéåº”ç­”NACK;0ä¸ºåº”ç­”ACK
 	
-	//¶ÁÊı¾İ
-	input i_dbus_rrq,					//¶ÁÇëÇóĞÅºÅ,¸ßµçÆ½ÓĞĞ§
-	output [7:0]o_dbus_rdata,			//¶ÁÊı¾İ,¹²8Î»
-	output o_dbus_rbusy,				//¶ÁÃ¦ĞÅºÅ,¸ßµçÆ½´ú±íÃ¦Âµ;µÍµçÆ½´ú±í¿ÕÏĞ
+	//è¯»æ•°æ®
+	input i_dbus_rrq,					//è¯»è¯·æ±‚ä¿¡å·,é«˜ç”µå¹³æœ‰æ•ˆ
+	output [7:0]o_dbus_rdata,			//è¯»æ•°æ®,å…±8ä½
+	output o_dbus_rbusy,				//è¯»å¿™ä¿¡å·,é«˜ç”µå¹³ä»£è¡¨å¿™ç¢Œ;ä½ç”µå¹³ä»£è¡¨ç©ºé—²
 	
-	//--------------¹Ü½ÅĞÅºÅ------------//
-	input i_iic_sda,					//IICÊäÈëSDAÊı¾İĞÅºÅ
-	output o_iic_sda,					//IICÊä³öSDAÊı¾İĞÅºÅ
-	output o_iic_sda_dir				//IICÊä³öSDAĞÅºÅ·½Ïò
+	//--------------ç®¡è„šä¿¡å·------------//
+	input i_iic_sda,					//IICè¾“å…¥SDAæ•°æ®ä¿¡å·
+	output o_iic_sda,					//IICè¾“å‡ºSDAæ•°æ®ä¿¡å·
+	output o_iic_sda_dir				//IICè¾“å‡ºSDAä¿¡å·æ–¹å‘
 );
 	
-	//------------------×´Ì¬²ÎÊı----------------//
+	//------------------çŠ¶æ€å‚æ•°----------------//
 	localparam ST_RD_IDLE = 5'b00001;
 	localparam ST_RD_DATA = 5'b00010;
 	localparam ST_RD_ACK = 5'b00100;
 	localparam ST_RD_STOP = 5'b01000;
 	localparam ST_RD_END = 5'b10000;
 	
-	//Êı¾İ
+	//æ•°æ®
 	reg [7:0]read_data = 0;
 	
-	//¼ÆÊı
+	//è®¡æ•°
 	reg [3:0]recv_cnt = 0;
 	
-	//×´Ì¬»ú
+	//çŠ¶æ€æœº
 	reg [4:0]state_current = ST_RD_IDLE;
 	reg [4:0]state_next = ST_RD_IDLE;
 	
-	//----------------ÊäÈë»º´æĞÅºÅ--------------//
-	//¶ÁÅäÖÃ
+	//----------------è¾“å…¥ç¼“å­˜ä¿¡å·--------------//
+	//è¯»é…ç½®
 	reg dbus_rstop_i = 0;
 	reg dbus_rhc_i = 0;
 	reg dbus_rlc_i = 0;
 	
-	//¶ÁÓ¦´ğ
+	//è¯»åº”ç­”
 	reg dbus_rack_i = 0;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	reg iic_sda_i = 0;
 	
-	//------------------Êä³öĞÅºÅ---------------//
-	//¶ÁÊı¾İ
+	//------------------è¾“å‡ºä¿¡å·---------------//
+	//è¯»æ•°æ®
 	reg [7:0]dbus_rdata_o = 0;
 	reg dbus_rbusy_o = 0;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	reg iic_sda_o = 1'b1;
 	reg iic_sda_dir_o = 0;
 	
-	//----------------Êä³öĞÅºÅÁ¬Ïß-------------//
-	//¶ÁÊı¾İ
+	//----------------è¾“å‡ºä¿¡å·è¿çº¿-------------//
+	//è¯»æ•°æ®
 	assign o_dbus_rdata = dbus_rdata_o;
 	assign o_dbus_rbusy = dbus_rbusy_o;
 	
-	//¹Ü½ÅĞÅºÅ
+	//ç®¡è„šä¿¡å·
 	assign o_iic_sda = iic_sda_o;
 	assign o_iic_sda_dir = iic_sda_dir_o;
 	
-	//------------------ĞÅºÅÊä³ö---------------//
-	//¶ÁÊı¾İĞÅºÅ
+	//------------------ä¿¡å·è¾“å‡º---------------//
+	//è¯»æ•°æ®ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_rdata_o <= 8'd0;
 		else if(state_current == ST_RD_END)dbus_rdata_o <= read_data;
 		else dbus_rdata_o <= dbus_rdata_o;
 	end
 	
-	//¶ÁÊı¾İ×¼±¸ºÃĞÅºÅ
+	//è¯»æ•°æ®å‡†å¤‡å¥½ä¿¡å·
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)dbus_rbusy_o <= 1'b0;
 		else if(state_current == ST_RD_END)dbus_rbusy_o <= 1'b0;
@@ -1443,7 +1443,7 @@ module IIC_Recv_Byte(
 		else dbus_rbusy_o <= dbus_rbusy_o;
 	end
 	
-	//IIC¹Ü½ÅĞÅºÅ---Êı¾İÏß
+	//IICç®¡è„šä¿¡å·---æ•°æ®çº¿
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)iic_sda_o <= 1'b1;
 		else if(state_next == ST_RD_DATA)iic_sda_o <= 1'b1;
@@ -1453,15 +1453,15 @@ module IIC_Recv_Byte(
 		else iic_sda_o <= iic_sda_o;
 	end
 	
-	//IIC¹Ü½ÅĞÅºÅ---Êı¾İÊä³ö·½Ïò
+	//IICç®¡è„šä¿¡å·---æ•°æ®è¾“å‡ºæ–¹å‘
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)iic_sda_dir_o <= 1'b1;
 		else if(state_next == ST_RD_DATA)iic_sda_dir_o <= 1'b0;
 		else iic_sda_dir_o <= 1'b1;
 	end
 	
-	//-------------------×´Ì¬»ú----------------//
-	//Ö÷×´Ì¬»ú
+	//-------------------çŠ¶æ€æœº----------------//
+	//ä¸»çŠ¶æ€æœº
 	always@(*)begin
 		case(state_current)
 			ST_RD_IDLE:begin
@@ -1486,7 +1486,7 @@ module IIC_Recv_Byte(
 		endcase
 	end
 	
-	//×´Ì¬×ª»»
+	//çŠ¶æ€è½¬æ¢
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			state_current <= ST_RD_IDLE;
@@ -1495,8 +1495,8 @@ module IIC_Recv_Byte(
 		end
 	end
 	
-	//----------------×´Ì¬ÈÎÎñ´¦Àí-------------//
-	//½ÓÊÕ¼ÆÊı
+	//----------------çŠ¶æ€ä»»åŠ¡å¤„ç†-------------//
+	//æ¥æ”¶è®¡æ•°
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)recv_cnt <= 4'd0;
 		else if(state_next == ST_RD_DATA && dbus_rhc_i == 1'b1)recv_cnt <= recv_cnt + 4'd1;
@@ -1504,14 +1504,14 @@ module IIC_Recv_Byte(
 		else recv_cnt <= 4'd0;
 	end
 	
-	//¶ÁÊı¾İ
+	//è¯»æ•°æ®
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)read_data <= 8'd0;
 		else if(state_next == ST_RD_DATA && dbus_rhc_i == 1'b1)read_data <= {read_data[6:0],iic_sda_i};
 		else read_data <= read_data;
 	end
 	
-	//----------------ÊäÈëĞÅºÅ»º´æ-------------//
+	//----------------è¾“å…¥ä¿¡å·ç¼“å­˜-------------//
 	always@(posedge i_clk or negedge i_rstn)begin
 		if(i_rstn == 1'b0)begin
 			dbus_rstop_i <= 1'b0;
