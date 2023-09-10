@@ -44,7 +44,7 @@ module Video_Processor_Interface
      input i_rgb565_vsync,
      input [15:0]i_rgb565_data
    );
-  //------------实例化模块接口信�?------------//
+  //------------实例化模块接口信号------------//
   //视频信号产生模块--视频信号
   wire rgb_vde;
   wire rgb_hsync;
@@ -99,7 +99,7 @@ module Video_Processor_Interface
       wr_addr <= wr_addr;
   end
 
-  //向BRAM中读数据的地�?
+  //向BRAM中读数据的地址
   always@(posedge i_clk_pixel or negedge i_rstn)
   begin
     if(i_rstn == 1'd0)
@@ -112,7 +112,7 @@ module Video_Processor_Interface
       rd_addr <= rd_addr;
   end
 
-  //向BRAM中读数据的使�?
+  //向BRAM中读数据的使能
   always@(posedge i_clk_pixel or negedge i_rstn)
   begin
     if(i_rstn == 1'd0)
@@ -125,7 +125,7 @@ module Video_Processor_Interface
       rd_enable <= rgb_vde;
   end
 
-  //视频信号发生模块实例�?,1024*768p@60Hz
+  //视频信号发生模块实例化,1024*768p@60Hz
   Video_Generator_Interface Video_Generator_Interface_Inst(
                               .i_clk(i_clk_pixel),                        //Clock
                               .i_rstn(i_rstn),                           	//Reset signal, low reset
@@ -142,18 +142,7 @@ module Video_Processor_Interface
                               .o_set_y(set_y)								//Image coordinate Y
                             );
 
-  /*存储图片的BRAM
-  Bram_Image_16X256X384 Bram_Image_16X256X384_Inst(
-  	.clka(i_camera_clk),    // input wire clka
-  	//.ena(1'd1),      		// input wire ena
-  	.wea(i_rgb565_vde),     // input wire [0 : 0] wea
-  	.addra(wr_addr),  		// input wire [16 : 0] addra
-  	.dina(i_rgb565_data),   // input wire [15 : 0] dina
-  	.clkb(i_clk_pixel),     // input wire clkb
-  	.enb(rd_enable),      	// input wire enb
-  	.addrb(rd_addr),  		// input wire [16 : 0] addrb
-  	.doutb(rd_data)  		// output wire [15 : 0] doutb
-  );*/
+
 
   //----------------其他信号缓存-------------//
   always@(posedge i_clk_pixel or negedge i_rstn)
