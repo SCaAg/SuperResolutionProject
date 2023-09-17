@@ -22,7 +22,7 @@
 
 module Video_Processor_Interface
   #(
-     parameter IMAGE_SIZE_H	= 16'd1024,
+     parameter IMAGE_SIZE_H	= 16'd1024 ,
      parameter IMAGE_SIZE_V	= 16'd768
    )
    (
@@ -42,7 +42,7 @@ module Video_Processor_Interface
      //视频信号
      input i_rgb565_vde,
      input i_rgb565_vsync,
-     input [15:0]i_rgb565_data
+     input [11:0]i_rgb565_data
    );
   //------------实例化模块接口信号------------//
   //视频信号产生模块--视频信号
@@ -58,7 +58,7 @@ module Video_Processor_Interface
   reg [17:0]wr_addr = 0;
   reg [17:0]rd_addr = 0;
   reg rd_enable = 0;
-  wire [15:0]rd_data;
+  wire [11:0]rd_data;
 
   //----------------其他缓存信号--------------//
   reg [2:0]rgb_vde_buff = 0;
@@ -67,6 +67,11 @@ module Video_Processor_Interface
 
   //------------------输出信号---------------//
   reg [23:0]video_data_o = 0;
+
+  //------------------自定义内容-------------//
+  reg pixel_repeat=1'b0;
+  reg line_repeat=1'b0;
+  reg [10:0]my_count=11'b0;
 
   //----------------输出信号连线--------------//
   assign o_video_data = video_data_o;
@@ -82,7 +87,7 @@ module Video_Processor_Interface
     else if(rd_enable == 1'd0)
       video_data_o <= 24'd0;
     else
-      video_data_o <= {rd_data[15:11],3'd0,rd_data[10:5],2'd0,rd_data[4:0],3'd0};
+      video_data_o <= {rd_data[11:8],4'd0,rd_data[7:4],4'd0,rd_data[3:0],4'd0};
   end
 
   //----------------信号处理区域--------------//
@@ -105,12 +110,30 @@ module Video_Processor_Interface
     if(i_rstn == 1'd0)
       rd_addr <= 17'd0;
     else if(rgb_vde == 1'd1 && set_x < IMAGE_SIZE_H + 1)
-      rd_addr <= rd_addr + 17'd1;
+      rd_addr <= rd_addr + 18'b1;
     else if(set_y > IMAGE_SIZE_V)
-      rd_addr <= 17'd0;
+      rd_addr <= 18'd0;
     else
       rd_addr <= rd_addr;
   end
+
+  /*count的后续需要加入的内容
+  always@(posedge i_clk_pixel or negedge i_rstn)
+  begin
+    if(i_rstn == 1'd0)
+      my_count <= 17'd0;
+    else if(my_count==11'd1023)
+    begin
+      my_count<=11'b0;
+      line_repeat<=~line_repeat;
+    end
+    else if(rgb_vde == 1'd1 && set_x < IMAGE_SIZE_H + 1)
+      my_count<=my_count+11'b1;
+    else if(set_y > IMAGE_SIZE_V)
+      my_count <= 11'd0;
+    else
+      my_count<=my_count;
+  end*/
 
   //向BRAM中读数据的使能
   always@(posedge i_clk_pixel or negedge i_rstn)
@@ -142,7 +165,18 @@ module Video_Processor_Interface
                               .o_set_y(set_y)								//Image coordinate Y
                             );
 
-
+  //存储图片的BRAM
+  Bram_Image_12X512X384 Bram_Image_12X512X384_Inst(
+                          .clka(i_camera_clk),    // input wire clka
+                          //.ena(1'd1),      		// input wire ena
+                          .wea(i_rgb565_vde),     // input wire [0 : 0] wea
+                          .addra(wr_addr),  		// input wire [16 : 0] addra
+                          .dina(i_rgb565_data),   // input wire [15 : 0] dina
+                          .clkb(i_clk_pixel),     // input wire clkb
+                          .enb(rd_enable),      	// input wire enb
+                          .addrb(rd_addr),  		// input wire [16 : 0] addrb
+                          .doutb(rd_data)  		// output wire [15 : 0] doutb
+                        );
 
   //----------------其他信号缓存-------------//
   always@(posedge i_clk_pixel or negedge i_rstn)
