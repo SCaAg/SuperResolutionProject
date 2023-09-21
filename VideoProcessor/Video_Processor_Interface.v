@@ -69,8 +69,8 @@ module Video_Processor_Interface
   reg [23:0]video_data_o = 0;
 
   //------------------自定义内容-------------//
-  reg pixel_repeat=1'b0;
-  reg line_repeat=1'b0;
+  reg second_pixel=1'b0;
+  reg second_line=1'b0;
   reg [10:0]my_count=11'b0;
 
   //----------------输出信号连线--------------//
@@ -117,7 +117,7 @@ module Video_Processor_Interface
       rd_addr <= rd_addr;
   end
 
-  /*count的后续需要加入的内容
+  //my_count的运行
   always@(posedge i_clk_pixel or negedge i_rstn)
   begin
     if(i_rstn == 1'd0)
@@ -125,7 +125,7 @@ module Video_Processor_Interface
     else if(my_count==11'd1023)
     begin
       my_count<=11'b0;
-      line_repeat<=~line_repeat;
+      second_line<=~second_line;
     end
     else if(rgb_vde == 1'd1 && set_x < IMAGE_SIZE_H + 1)
       my_count<=my_count+11'b1;
@@ -133,7 +133,7 @@ module Video_Processor_Interface
       my_count <= 11'd0;
     else
       my_count<=my_count;
-  end*/
+  end
 
   //向BRAM中读数据的使能
   always@(posedge i_clk_pixel or negedge i_rstn)
