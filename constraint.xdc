@@ -1,5 +1,5 @@
 # clk input is from the 100 MHz oscillator on Boolean board
-create_clock -period 10.000 -name system_clock [get_ports i_clk]
+# create_clock -period 10.000 -name system_clock [get_ports i_clk]//////////////////////////
 set_property -dict {PACKAGE_PIN F14 IOSTANDARD LVCMOS33} [get_ports {i_clk}]
 
 # Set Bank 0 voltage
@@ -10,7 +10,7 @@ set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS33} [get_ports {i_rst}]
 
 # Camera Signals
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets i_camera_pclk_IBUF]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets i_camera_pclk]
 # create_clock -period 23.809 -name camera_clock [get_ports i_camera_pclk]
 create_clock -period 11.905 -name camera_clock [get_ports i_camera_pclk]
 
@@ -18,7 +18,7 @@ set_property -dict {PACKAGE_PIN N5 IOSTANDARD LVCMOS33} [get_ports {i_camera_pcl
 set_property -dict {PACKAGE_PIN P5 IOSTANDARD LVCMOS33} [get_ports {i_camera_hsync}]
 set_property -dict {PACKAGE_PIN K4 IOSTANDARD LVCMOS33} [get_ports {i_camera_vsync}]
 
-set_property -dict {PACKAGE_PIN T4 IOSTANDARD LVCMOS33} [get_ports {o_camera_xclk}]
+# set_property -dict {PACKAGE_PIN T4 IOSTANDARD LVCMOS33} [get_ports {o_camera_xclk}]/////////////////
 
 set_property -dict {PACKAGE_PIN L4 IOSTANDARD LVCMOS33} [get_ports {io_camera_sda}]
 set_property -dict {PACKAGE_PIN N4 IOSTANDARD LVCMOS33} [get_ports {o_camera_scl}]
@@ -46,9 +46,3 @@ set_property -dict { PACKAGE_PIN P16   IOSTANDARD TMDS_33  } [get_ports {o_tmds_
 set_property -dict { PACKAGE_PIN R15   IOSTANDARD TMDS_33  } [get_ports {o_tmds_data_p[0]}]
 set_property -dict { PACKAGE_PIN R16   IOSTANDARD TMDS_33  } [get_ports {o_tmds_data_p[1]}]
 set_property -dict { PACKAGE_PIN N15   IOSTANDARD TMDS_33  } [get_ports {o_tmds_data_p[2]}]
-
-# BLE UART signals
-set_property -dict {PACKAGE_PIN G5 IOSTANDARD LVCMOS33} [get_ports {ble_uart_tx}]
-set_property -dict {PACKAGE_PIN F5 IOSTANDARD LVCMOS33} [get_ports {ble_uart_rx}]
-set_property -dict {PACKAGE_PIN H6 IOSTANDARD LVCMOS33} [get_ports {ble_uart_rts}]
-set_property -dict {PACKAGE_PIN G6 IOSTANDARD LVCMOS33} [get_ports {ble_uart_cts}]
