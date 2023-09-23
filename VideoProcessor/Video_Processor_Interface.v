@@ -91,11 +91,11 @@ module Video_Processor_Interface
   always@(posedge i_camera_clk or negedge i_rstn)
   begin
     if(i_rstn == 1'd0)
-      wr_addr <= 17'd0;
+      wr_addr <= 18'd0;
     else if(i_rgb565_vde == 1'd1)
-      wr_addr <= wr_addr + 17'd1;
+      wr_addr <= wr_addr + 18'd1;
     else if(i_rgb565_vsync == 1'd0)
-      wr_addr <= 17'd0;
+      wr_addr <= 18'd0;
     else
       wr_addr <= wr_addr;
   end
@@ -104,9 +104,11 @@ module Video_Processor_Interface
   always@(posedge i_clk_pixel or negedge i_rstn)
   begin
     if(i_rstn == 1'd0)
-      rd_addr <= 17'd0;
+      rd_addr <= 18'd0;
     else if(rgb_vde == 1'd1 && set_x < IMAGE_SIZE_H + 1)
-      rd_addr <= rd_addr + 18'b1;
+    begin
+      rd_addr<=(set_x/2)+(set_y/2)*512;
+    end
     else if(set_y > IMAGE_SIZE_V)
       rd_addr <= 18'd0;
     else
