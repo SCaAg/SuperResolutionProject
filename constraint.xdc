@@ -1,5 +1,5 @@
 # clk input is from the 100 MHz oscillator on Boolean board
-# create_clock -period 10.000 -name system_clock [get_ports i_clk]//////////////////////////
+# create_clock -period 10.000 -name system_clock [get_ports i_clk]                      Modified
 set_property -dict {PACKAGE_PIN F14 IOSTANDARD LVCMOS33} [get_ports {i_clk}]
 
 # Set Bank 0 voltage
@@ -18,7 +18,7 @@ set_property -dict {PACKAGE_PIN N5 IOSTANDARD LVCMOS33} [get_ports {i_camera_pcl
 set_property -dict {PACKAGE_PIN P5 IOSTANDARD LVCMOS33} [get_ports {i_camera_hsync}]
 set_property -dict {PACKAGE_PIN K4 IOSTANDARD LVCMOS33} [get_ports {i_camera_vsync}]
 
-# set_property -dict {PACKAGE_PIN T4 IOSTANDARD LVCMOS33} [get_ports {o_camera_xclk}]/////////////////
+# set_property -dict {PACKAGE_PIN T4 IOSTANDARD LVCMOS33} [get_ports {o_camera_xclk}]   Modified
 
 set_property -dict {PACKAGE_PIN L4 IOSTANDARD LVCMOS33} [get_ports {io_camera_sda}]
 set_property -dict {PACKAGE_PIN N4 IOSTANDARD LVCMOS33} [get_ports {o_camera_scl}]
